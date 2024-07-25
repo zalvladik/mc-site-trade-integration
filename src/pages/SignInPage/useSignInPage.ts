@@ -24,29 +24,20 @@ export const useSignInPage = () => {
   useEffect(() => {
     const result = { username: '', password: '' }
 
-    if (credential.username.length > 16) {
-      result.username = 'Нікнейм задовгий'
-    }
+    const nameLength = credential.username.length
+    const passwordLength = credential.password.length
 
-    if (credential.username.length < 3) {
-      result.username = 'Нікнейм закороткий'
-    }
+    if (nameLength > 16) result.username = 'Нікнейм задовгий'
 
-    if (credential.password.length > 16) {
-      result.password = 'Пароль задовгий'
-    }
+    if (nameLength < 3) result.username = 'Нікнейм закороткий'
 
-    if (credential.password.length < 3) {
-      result.password = 'Пароль закороткий'
-    }
+    if (nameLength === 0) result.username = 'Напишіть нік'
 
-    if (credential.username.length === 0) {
-      result.username = 'Напишіть нік'
-    }
+    if (passwordLength > 16) result.password = 'Пароль задовгий'
 
-    if (credential.password.length === 0) {
-      result.password = 'Напишіть пароль'
-    }
+    if (passwordLength < 5) result.password = 'Пароль закороткий'
+
+    if (passwordLength === 0) result.password = 'Напишіть пароль'
 
     setErrors(result)
   }, [credential.password, credential.username])

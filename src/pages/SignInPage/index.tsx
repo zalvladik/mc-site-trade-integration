@@ -22,7 +22,7 @@ const SignInPage = (): JSX.Element => {
         <FormContainer>
           <InputWrapper>
             <InputSignIn
-              autoComplete="true"
+              name="username"
               placeholder="Нік"
               value={username}
               onChange={(event: ChangeEvent<HTMLInputElement>) => {
@@ -33,9 +33,8 @@ const SignInPage = (): JSX.Element => {
           </InputWrapper>
           <InputWrapper>
             <InputSignIn
-              autoComplete="true"
               placeholder="Пароль"
-              type="password"
+              name="password"
               value={password}
               onChange={(event: ChangeEvent<HTMLInputElement>) => {
                 updateCredential({ password: event.target.value })
