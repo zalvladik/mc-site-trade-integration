@@ -22,8 +22,8 @@ const SignInPage = (): JSX.Element => {
         <FormContainer>
           <InputWrapper>
             <InputSignIn
-              name="login"
-              type="login"
+              name="firstName"
+              type="firstName"
               placeholder="Нік"
               value={username}
               onChange={(event: ChangeEvent<HTMLInputElement>) => {
