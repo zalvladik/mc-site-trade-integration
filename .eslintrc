@@ -15,7 +15,6 @@
     "airbnb/hooks",
     "airbnb-typescript",
     "plugin:react/recommended",
-    "plugin:react-hook-form/recommended",
     "plugin:import/typescript",
     "plugin:prettier/recommended",
   ],
