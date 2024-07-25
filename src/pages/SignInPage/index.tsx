@@ -27,6 +27,7 @@ const SignInPage = (): JSX.Element => {
             render={({ field: { onChange, value } }) => (
               <InputWrapper>
                 <InputSignIn
+                  autoComplete="true"
                   placeholder="Нік"
                   value={value}
                   onChange={(event: ChangeEvent<HTMLInputElement>) => {
@@ -46,6 +47,7 @@ const SignInPage = (): JSX.Element => {
             render={({ field: { onChange, value } }) => (
               <InputWrapper>
                 <InputSignIn
+                  autoComplete="true"
                   placeholder="Пароль"
                   type="password"
                   value={value}
