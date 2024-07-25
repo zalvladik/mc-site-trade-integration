@@ -1,7 +1,15 @@
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useCheckAuth } from 'src/hooks/useCheckAuth'
 import { useLogin } from 'src/hooks/useLogin'
+import { RoutesPath } from 'src/router/routes'
 
 export const useSignInPage = () => {
+  const { isSuccess } = useCheckAuth()
+  const navigation = useNavigate()
+
+  if (isSuccess) navigation(RoutesPath.PROFILE)
+
   const [credential, setCredential] = useState({ username: '', password: '' })
   const [errors, setErrors] = useState({ username: '', password: '' })
 
