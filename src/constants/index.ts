@@ -135,8 +135,7 @@ export const enchantVariables = {
   [EnchantsTypesEnum.CHESTPLATE]: [],
   [EnchantsTypesEnum.LEGGINGS]: [EnchantsEnum.SWIFT_SNEAK],
   [EnchantsTypesEnum.BOOTS]: [
-    EnchantsEnum.DEPTH_STRIDER,
-    EnchantsEnum.FROST_WALKER,
+    [EnchantsEnum.DEPTH_STRIDER, EnchantsEnum.FROST_WALKER],
     EnchantsEnum.FEATHER_FALLING,
     EnchantsEnum.SOUL_SPEED,
   ],
