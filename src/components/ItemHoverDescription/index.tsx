@@ -45,6 +45,8 @@ const ItemHoverDescription = ({
       {Boolean(description?.length) && (
         <Description>
           {description!.map((item, i) => {
+            if (item === 'null') return <li key={i} />
+
             if (item.startsWith('{') && item.endsWith('}')) {
               const correctedJsonString = item.replace(/_/g, ',')
 
@@ -65,31 +67,45 @@ const ItemHoverDescription = ({
               )
             }
 
-            const [enchant, lvl] = item.split('$')
+            if (item.includes('$')) {
+              const [enchant, lvl] = item.split('$')
 
-            const isNegativeEnchant =
-              enchant === EnchantsEnum.VANISHING_CURSE ||
-              enchant === EnchantsEnum.BINDING_CURSE
+              const isNegativeEnchant =
+                enchant === EnchantsEnum.VANISHING_CURSE ||
+                enchant === EnchantsEnum.BINDING_CURSE
 
-            const color = isNegativeEnchant ? '#aa0e0e' : '#c8c8c8'
-            const textShadow = isNegativeEnchant
-              ? '3px 3px 1px #3e1515'
-              : '3px 3px #292929'
+              const color = isNegativeEnchant ? '#aa0e0e' : '#c8c8c8'
+              const textShadow = isNegativeEnchant
+                ? '3px 3px 1px #3e1515'
+                : '3px 3px #292929'
+
+              return (
+                <li
+                  style={{
+                    visibility: item === 'null' ? 'hidden' : 'visible',
+                  }}
+                  key={i}
+                >
+                  <p
+                    style={{
+                      color,
+                      textShadow,
+                    }}
+                  >
+                    {`${enchantTranslations[enchant]} ${enchantsWithMaxLvl[enchant] === 1 ? '' : enchantsLvl[lvl]}`}
+                  </p>
+                </li>
+              )
+            }
 
             return (
-              <li
-                style={{
-                  visibility: item === 'null' ? 'hidden' : 'visible',
-                }}
-                key={i}
-              >
+              <li key={i}>
                 <p
                   style={{
-                    color,
-                    textShadow,
+                    color: '#c8c8c8',
                   }}
                 >
-                  {`${enchantTranslations[enchant]} ${enchantsWithMaxLvl[enchant] === 1 ? '' : enchantsLvl[lvl]}`}
+                  {item}
                 </p>
               </li>
             )
