@@ -1,5 +1,6 @@
 {
   "storyroot": {
+    "isDone": false,
     "top": -78,
     "left": 0,
     "itemIcon": "grass_block",
@@ -7,6 +8,7 @@
     "description": "Серце та історія гри"
   },
   "minestone": {
+    "isDone": false,
     "top": -112,
     "left": 0,
     "itemIcon": "wooden_pickaxe",
@@ -14,6 +16,7 @@
     "description": "Добудьте камінь своїм новим кайлом"
   },
   "upgradetools": {
+    "isDone": false,
     "top": -146,
     "left": 0,
     "itemIcon": "stone_pickaxe",
@@ -21,6 +24,7 @@
     "description": "Змайструйте краще кайло"
   },
   "smeltiron": {
+    "isDone": false,
     "top": -180,
     "left": 0,
     "itemIcon": "iron_ingot",
@@ -28,6 +32,7 @@
     "description": "Виплавте залізний злиток"
   },
   "obtainarmor": {
+    "isDone": false,
     "top": -214,
     "left": 0,
     "itemIcon": "iron_chestplate",
@@ -35,6 +40,7 @@
     "description": "Захистіть себе частиною залізних обладунків"
   },
   "deflectarrow": {
+    "isDone": false,
     "top": -244,
     "left": 0,
     "itemIcon": "shield",
@@ -42,6 +48,7 @@
     "description": "Не сьогодні, спасибі"
   },
   "irontools": {
+    "isDone": false,
     "top": -214,
     "left": -68,
     "itemIcon": "iron_pickaxe",
@@ -49,6 +56,7 @@
     "description": "Оновіть своє кайло"
   },
   "minediamond": {
+    "isDone": false,
     "top": -244,
     "left": -68,
     "itemIcon": "diamond",
@@ -56,6 +64,7 @@
     "description": "Добудьте діаманти"
   },
   "shinygear": {
+    "isDone": false,
     "top": -282,
     "left": -52,
     "itemIcon": "diamond_chestplate",
@@ -63,6 +72,7 @@
     "description": "Діамантові обладунки рятують життя"
   },
   "enchantitem": {
+    "isDone": false,
     "top": -282,
     "left": -84,
     "itemIcon": "enchanted_book",
@@ -70,6 +80,7 @@
     "description": "Зачаруйте предмет на столі зачарування"
   },
   "lavabucket": {
+    "isDone": false,
     "top": -214,
     "left": 68,
     "itemIcon": "lava_bucket",
@@ -77,6 +88,7 @@
     "description": "Наповніть відро лавою"
   },
   "formobsidian": {
+    "isDone": false,
     "top": -244,
     "left": 68,
     "itemIcon": "obsidian",
@@ -84,6 +96,7 @@
     "description": "Отримайте блок обсидіану"
   },
   "enterthenether": {
+    "isDone": false,
     "top": -282,
     "left": 68,
     "itemIcon": "flint_and_steel",
@@ -91,6 +104,7 @@
     "description": "Збудуйте, запаліть і ввійдіть у портал у Незер"
   },
   "curezombievillager": {
+    "isDone": false,
     "top": -316,
     "left": 50,
     "itemIcon": "golden_apple",
@@ -98,6 +112,7 @@
     "description": "Послабте, а потім вилікуйте зомбоселянина"
   },
   "followendereye": {
+    "isDone": false,
     "top": -316,
     "left": 86,
     "itemIcon": "ender_eye",
@@ -105,6 +120,7 @@
     "description": "Слідуйте за оком Енду"
   },
   "entertheend": {
+    "isDone": false,
     "top": -350,
     "left": 50,
     "itemIcon": "end_stone",
@@ -112,6 +128,7 @@
     "description": "Увійдіть у портал в Енд"
   },
   "adventureroot": {
+    "isDone": false,
     "top": -10,
     "left": -79,
     "itemIcon": "map",
@@ -119,6 +136,7 @@
     "description": "Пригоди, дослідження  і боротьба"
   },
   "avoidvibration": {
+    "isDone": false,
     "top": -10,
     "left": -122,
     "itemIcon": "sculk_sensor",
@@ -126,6 +144,7 @@
     "description": "Прокрадіться повз скалковий сенсор або боронителя, щоб ви залишилися не виявленими"
   },
   "honeyblockslide": {
+    "isDone": false,
     "top": -57,
     "left": -122,
     "itemIcon": "honey_block",
@@ -133,6 +152,7 @@
     "description": "Стрибніть у медовий блок, щоб пом'якшити своє падіння"
   },
   "voluntaryexile": {
+    "isDone": false,
     "top": -57,
     "left": -156,
     "itemIcon": "pillager_banner",
@@ -140,6 +160,7 @@
     "description": "Убийте капітана набігу. Мабуть, поки слід триматись осторонь від сіл..."
   },
   "salvagesherd": {
+    "isDone": false,
     "top": -57,
     "left": -224,
     "itemIcon": "brush",
@@ -147,6 +168,7 @@
     "description": "Розчистьте підозрілий блок, аби отримати гончарний черепок"
   },
   "adventuringtime": {
+    "isDone": false,
     "top": 82,
     "left": -292,
     "figure": "star",
@@ -155,6 +177,7 @@
     "description": "Час пригод "
   },
   "arbalistic": {
+    "isDone": false,
     "top": 82,
     "left": -122,
     "figure": "star",
@@ -163,6 +186,7 @@
     "description": "Убийте п'ять різних мобів одним пострілом з арбалета"
   },
   "trimwithallexclusivearmorpatterns": {
+    "isDone": false,
     "top": -90,
     "left": -190,
     "figure": "star",
@@ -171,6 +195,7 @@
     "description": "Застосуйте ці ковальскі шаблон принаймні один раз: <<Вежа>>, <<Рило>>, <<Ребра>>, <<Боронитель>>, <<Тиша>>, <<Бісик>>, <<Хвилі>> й <<Шляхошукач>>"
   },
   "killamob": {
+    "isDone": false,
     "top": 38,
     "left": -292,
     "itemIcon": "iron_sword",
@@ -178,6 +203,7 @@
     "description": "Убийте будь-якого ворожого монстра"
   },
   "veryveryfrightening": {
+    "isDone": false,
     "top": 38,
     "left": -370,
     "itemIcon": "trident",
@@ -185,6 +211,7 @@
     "description": "Уразіть селянина блискавкою"
   },
   "lightningrodwithvillagernofire": {
+    "isDone": false,
     "top": 38,
     "left": -190,
     "itemIcon": "lightning_rod",
@@ -192,6 +219,7 @@
     "description": "Захистіть селянина від удару блискавки, не розпочавши пожежі"
   },
   "craftdecoratedpotusingonlysherds": {
+    "isDone": false,
     "top": -90,
     "left": -224,
     "itemIcon": "decorated_pot",
@@ -199,6 +227,7 @@
     "description": "Зробіть оздоблений горщик із 4 гончарних черепків"
   },
   "killmobnearsculkcatalyst": {
+    "isDone": false,
     "top": 72,
     "left": -336,
     "figure": "star",
@@ -207,6 +236,7 @@
     "description": "Убийте моба поблизу скалкового каталізатора"
   },
   "fallfromworldheight": {
+    "isDone": false,
     "top": 38,
     "left": -224,
     "itemIcon": "water_bucket",
@@ -214,6 +244,7 @@
     "description": "Упадіть із самого верху світу (межі будування) до самого низу та виживіть"
   },
   "sniperduel": {
+    "isDone": false,
     "top": 122,
     "left": -370,
     "figure": "star",
@@ -222,6 +253,7 @@
     "description": "Убийте скелета на відстані не менше 50 метрів"
   },
   "bullseye": {
+    "isDone": false,
     "top": 156,
     "left": -370,
     "figure": "star",
@@ -230,6 +262,7 @@
     "description": "Улучте в центр мішені на відстані не менше 30 метрів"
   },
   "twobirdsonearrow": {
+    "isDone": false,
     "top": 82,
     "left": -190,
     "figure": "star",
@@ -238,6 +271,7 @@
     "description": "Убийте двох фантомів пронизувальною стрілою"
   },
   "whosthepillagernow": {
+    "isDone": false,
     "top": 82,
     "left": -157,
     "itemIcon": "crossbow",
@@ -245,6 +279,7 @@
     "description": "Заплатіть розбійник його ж монетою"
   },
   "walkonpowdersnowwithleatherboots": {
+    "isDone": false,
     "top": 82,
     "left": -225,
     "itemIcon": "leather_boots",
@@ -252,6 +287,7 @@
     "description": "Пройдіть по сипкому снігу... не звалившись у нього"
   },
   "shootarrow": {
+    "isDone": false,
     "top": 140,
     "left": -336,
     "itemIcon": "bow",
@@ -259,6 +295,7 @@
     "description": "Улучте в щось стрілою"
   },
   "summonirongolem": {
+    "isDone": false,
     "top": -40,
     "left": -326,
     "figure": "oval",
@@ -267,6 +304,7 @@
     "description": "Викличте залізного ґолема, щоб допомогти захистити село"
   },
   "sleepinbed": {
+    "isDone": false,
     "top": 38,
     "left": -258,
     "itemIcon": "red_bed",
@@ -274,6 +312,7 @@
     "description": "Поспіть у ліжку, щоб змінити свою точку відродження"
   },
   "killallmobs": {
+    "isDone": false,
     "top": 106,
     "left": -336,
     "figure": "star",
@@ -282,6 +321,7 @@
     "description": "Убийте по одному ворожому монстру кожного виду"
   },
   "spyglassatparrot": {
+    "isDone": false,
     "top": -57,
     "left": -258,
     "itemIcon": "spyglass",
@@ -289,6 +329,7 @@
     "description": "Подивіться на папугу через підзорну трубу"
   },
   "totemofundying": {
+    "isDone": false,
     "top": 3,
     "left": -336,
     "figure": "oval",
@@ -297,6 +338,7 @@
     "description": "Використайте тотем безсмертя, щоб перехитрити смерть"
   },
   "spyglassatdragon": {
+    "isDone": false,
     "top": -124,
     "left": -258,
     "itemIcon": "spyglass",
@@ -304,6 +346,7 @@
     "description": "Подивіться на дракона Енду через підзорну трубу"
   },
   "tradeatworldheight": {
+    "isDone": false,
     "top": -74,
     "left": -327,
     "itemIcon": "emerald",
@@ -311,6 +354,7 @@
     "description": "Поторгуйтесь із селянином на межі висоти будування"
   },
   "playjukeboxinmeadows": {
+    "isDone": false,
     "top": 82,
     "left": -259,
     "itemIcon": "jukebox",
@@ -318,6 +362,7 @@
     "description": "Оживіть луки музикою з програвача"
   },
   "heroofthevillage": {
+    "isDone": false,
     "top": -90,
     "left": -156,
     "figure": "star",
@@ -326,6 +371,7 @@
     "description": "Успішно захистіть село від набігу"
   },
   "readpowerofchiseledbookshelf": {
+    "isDone": false,
     "top": 38,
     "left": -122,
     "itemIcon": "chiseled_bookshelf",
@@ -333,6 +379,7 @@
     "description": "Зчитайте сигнал живлення з різьбленої книжкової полиці за допомогою компаратора"
   },
   "trade": {
+    "isDone": false,
     "top": -57,
     "left": -292,
     "itemIcon": "emerald",
@@ -340,6 +387,7 @@
     "description": "Успішно поторнуйтесь із селянином"
   },
   "spyglassatghast": {
+    "isDone": false,
     "top": -90,
     "left": -258,
     "itemIcon": "spyglass",
@@ -347,6 +395,7 @@
     "description": "Подивіться на ґаста через підзорну трубу"
   },
   "trimwithanyarmorpattern": {
+    "isDone": false,
     "top": -57,
     "left": -190,
     "itemIcon": "dune_armor_trim_smithing_template",
@@ -354,6 +403,7 @@
     "description": "Змайстрейте обладунки з орнаментом на ковальському столі"
   },
   "throwtrident": {
+    "isDone": false,
     "top": 38,
     "left": -336,
     "itemIcon": "trident",
@@ -361,6 +411,7 @@
     "description": "Киньте тризубець у щось. Примітка: викидати свою останню зброю - найкраща ідея."
   },
   "olbetsy": {
+    "isDone": false,
     "top": 38,
     "left": -156,
     "itemIcon": "crossbow",
@@ -368,6 +419,7 @@
     "description": "Здійсніть постріл з арбалета"
   },
   "allaydeliveritemtoplayer": {
+    "isDone": false,
     "top": 37,
     "left": 224,
     "itemIcon": "cookie",
@@ -375,6 +427,7 @@
     "description": "Отримайте предмет від збирика"
   },
   "froglights": {
+    "isDone": false,
     "top": -124,
     "left": 224,
     "figure": "star",
@@ -383,6 +436,7 @@
     "description": "Майте всі види жаб'ячого світла у своєму інвентарі"
   },
   "rideaboatwithagoat": {
+    "isDone": false,
     "top": 37,
     "left": 156,
     "itemIcon": "oak_boat",
@@ -390,6 +444,7 @@
     "description": "Сядьте в човен і пливіть із козою"
   },
   "tameananimal": {
+    "isDone": false,
     "top": -56,
     "left": 122,
     "itemIcon": "lead",
@@ -397,6 +452,7 @@
     "description": "Приручіть тварину"
   },
   "makeasignglow": {
+    "isDone": false,
     "top": -10,
     "left": 122,
     "itemIcon": "glow_ink_sac",
@@ -404,6 +460,7 @@
     "description": "Зробіть, щоб текст на будь-якій табличці сяяв"
   },
   "leashallfrogvariants": {
+    "isDone": false,
     "top": -90,
     "left": 224,
     "itemIcon": "lead",
@@ -411,6 +468,7 @@
     "description": "Прив'яжіть кожен вид жаб на повідець"
   },
   "fishybusiness": {
+    "isDone": false,
     "top": -56,
     "left": 258,
     "itemIcon": "fishing_rod",
@@ -418,6 +476,7 @@
     "description": "Спіймайте рибу"
   },
   "bredallanimals": {
+    "isDone": false,
     "top": 71,
     "left": 190,
     "figure": "star",
@@ -426,6 +485,7 @@
     "description": "Розмножте всіх тварин!"
   },
   "tacticalfishing": {
+    "isDone": false,
     "top": -90,
     "left": 258,
     "itemIcon": "pufferfish_bucket",
@@ -433,6 +493,7 @@
     "description": "Спіймайте рибу... без вудки!"
   },
   "feedsnifflet": {
+    "isDone": false,
     "top": -90,
     "left": 190,
     "itemIcon": "torchflower_seeds",
@@ -440,6 +501,7 @@
     "description": "Нагодуйте малого нюхача"
   },
   "silktouchnest": {
+    "isDone": false,
     "top": 37,
     "left": 122,
     "itemIcon": "bee_nest",
@@ -447,6 +509,7 @@
     "description": "Перемістіть бджолине гніздо з 3 бджолами всередині за допомогою шовкового дотику"
   },
   "tadpoleinabucket": {
+    "isDone": false,
     "top": -56,
     "left": 224,
     "itemIcon": "tadpole_bucket",
@@ -454,6 +517,7 @@
     "description": "Упіймайте пуголовка у відро"
   },
   "waxoff": {
+    "isDone": false,
     "top": -124,
     "left": 156,
     "itemIcon": "stone_axe",
@@ -461,6 +525,7 @@
     "description": "Здеріть віск із мідного блока!"
   },
   "obtainsnifferegg": {
+    "isDone": false,
     "top": -56,
     "left": 190,
     "itemIcon": "sniffer_egg",
@@ -468,6 +533,7 @@
     "description": "Отримайте яйце нюхача"
   },
   "obtainnetheritehoe": {
+    "isDone": false,
     "top": 20,
     "left": 292,
     "figure": "star",
@@ -476,6 +542,7 @@
     "description": "Використайте незеритовий злиток, щоб покращити мотигу, а потім обдумайте свої життєві рішення"
   },
   "plantanysnifferseed": {
+    "isDone": false,
     "top": -124,
     "left": 190,
     "itemIcon": "pitcher_pod",
@@ -483,6 +550,7 @@
     "description": "Посадіть будь-яке насіння нюхача"
   },
   "plantseed": {
+    "isDone": false,
     "top": 37,
     "left": 258,
     "itemIcon": "wheat",
@@ -490,6 +558,7 @@
     "description": "Посадіть насіння та спостерігайте, як воно росте"
   },
   "axolotlinabucket": {
+    "isDone": false,
     "top": -124,
     "left": 258,
     "itemIcon": "axolotl_bucket",
@@ -497,6 +566,7 @@
     "description": "Упіймайте аксолотля у відро"
   },
   "allaydelivercaketonoteblock": {
+    "isDone": false,
     "top": 71,
     "left": 224,
     "itemIcon": "note_block",
@@ -504,6 +574,7 @@
     "description": "Нехай збирик скине торт на нотний блок"
   },
   "waxon": {
+    "isDone": false,
     "top": -90,
     "left": 156,
     "itemIcon": "honeycomb",
@@ -511,6 +582,7 @@
     "description": "Нанесіть медові стільники на мідний блок!"
   },
   "balanceddiet": {
+    "isDone": false,
     "top": 54,
     "left": 292,
     "figure": "star",
@@ -519,6 +591,7 @@
     "description": "З'їжте все, що зможете, навіть якщо це не піде вам на користь"
   },
   "husbandryroot": {
+    "isDone": false,
     "top": -10,
     "left": 78,
     "itemIcon": "hay_block",
@@ -526,6 +599,7 @@
     "description": "Світ повний друзів і їжі"
   },
   "safelyharvesthoney": {
+    "isDone": false,
     "top": -56,
     "left": 156,
     "itemIcon": "honey_bottle",
@@ -533,6 +607,7 @@
     "description": "Поставте багаття, щоб зібрати мед із вулика за допомогою пляшки, не розсердивши бджіл"
   },
   "killaxolotltarget": {
+    "isDone": false,
     "top": -158,
     "left": 258,
     "itemIcon": "tropical_fish_bucket",
@@ -540,6 +615,7 @@
     "description": "Об'єднайтеся з аксолотлем і виграйте бій"
   },
   "breedananimal": {
+    "isDone": false,
     "top": 37,
     "left": 190,
     "itemIcon": "wheat",
@@ -547,6 +623,7 @@
     "description": "Розмножте пару тварин"
   },
   "completecatalogue": {
+    "isDone": false,
     "top": -90,
     "left": 122,
     "figure": "star",
@@ -555,6 +632,7 @@
     "description": "Приручіть усі види котів!"
   },
   "killdragon": {
+    "isDone": false,
     "top": 117,
     "left": 56,
     "itemIcon": "dragon_head",
@@ -562,6 +640,7 @@
     "description": "Щасти!"
   },
   "dragonegg": {
+    "isDone": false,
     "top": 165,
     "left": 90,
     "figure": "oval",
@@ -570,6 +649,7 @@
     "description": "Отримайте яйце дракона"
   },
   "levitate": {
+    "isDone": false,
     "top": 234,
     "left": 39,
     "figure": "star",
@@ -578,6 +658,7 @@
     "description": "Підлетіть угору на 50 блоків від атаки шалкера"
   },
   "findendcity": {
+    "isDone": false,
     "top": 200,
     "left": 56,
     "itemIcon": "purpur_block",
@@ -585,6 +666,7 @@
     "description": "Зайду, що може трапитись?"
   },
   "enterendgateway": {
+    "isDone": false,
     "top": 165,
     "left": 56,
     "itemIcon": "ender_pearl",
@@ -592,6 +674,7 @@
     "description": "Утечіть з острова"
   },
   "respawndragon": {
+    "isDone": false,
     "top": 165,
     "left": 158,
     "figure": "oval",
@@ -600,6 +683,7 @@
     "description": "Відродіть дракона Енду"
   },
   "elytra": {
+    "isDone": false,
     "top": 234,
     "left": 74,
     "figure": "oval",
@@ -608,6 +692,7 @@
     "description": "Знайдіть елітри"
   },
   "dragonbreath": {
+    "isDone": false,
     "top": 165,
     "left": 124,
     "figure": "oval",
@@ -616,6 +701,7 @@
     "description": "Зберіть дихання дракона в скляну пляшку"
   },
   "endroot": {
+    "isDone": false,
     "top": 83,
     "left": 56,
     "itemIcon": "end_stone",
@@ -623,6 +709,7 @@
     "description": "Але чи буде він гепі?"
   },
   "obtaincryingobsidian": {
+    "isDone": false,
     "top": 140,
     "left": -113,
     "itemIcon": "crying_obsidian",
@@ -630,6 +717,7 @@
     "description": "Отримайте плакучий обсидіан"
   },
   "distractpiglin": {
+    "isDone": false,
     "top": 140,
     "left": -33,
     "itemIcon": "gold_ingot",
@@ -637,6 +725,7 @@
     "description": "Відверніть увагу піґлінів"
   },
   "allpotions": {
+    "isDone": false,
     "top": 242,
     "left": -176,
     "figure": "star",
@@ -645,6 +734,7 @@
     "description": "Відчуйте ефекти кожного можливого зілля одночасно"
   },
   "createbeacon": {
+    "isDone": false,
     "top": 208,
     "left": -176,
     "itemIcon": "beacon",
@@ -652,6 +742,7 @@
     "description": "Зберіть і розмістіть маяк"
   },
   "brewpotion": {
+    "isDone": false,
     "top": 242,
     "left": -142,
     "itemIcon": "potion",
@@ -659,6 +750,7 @@
     "description": "Зваріть зілля"
   },
   "explorenether": {
+    "isDone": false,
     "top": 242,
     "left": 1,
     "figure": "star",
@@ -667,6 +759,7 @@
     "description": "Дослітіь усі біоми Незеру"
   },
   "ridestrider": {
+    "isDone": false,
     "top": 260,
     "left": -36,
     "itemIcon": "warped_fungus_on_a_stick",
@@ -674,6 +767,7 @@
     "description": "Покатайтеся на блукачі за допомогою химерного гриба на паличці"
   },
   "alleffects": {
+    "isDone": false,
     "top": 242,
     "left": -210,
     "figure": "star",
@@ -682,6 +776,7 @@
     "description": "Відчуйте всі можливі ефекти одночасно"
   },
   "getwitherskull": {
+    "isDone": false,
     "top": 208,
     "left": -108,
     "itemIcon": "wither_skeleton_skull",
@@ -689,6 +784,7 @@
     "description": "Здобудьте череп візера-скелета"
   },
   "obtainblazerod": {
+    "isDone": false,
     "top": 242,
     "left": -108,
     "itemIcon": "blaze_rod",
@@ -696,6 +792,7 @@
     "description": "Позбавте пломеня його стрижня"
   },
   "lootbastion": {
+    "isDone": false,
     "top": 174,
     "left": -79,
     "itemIcon": "chest",
@@ -703,6 +800,7 @@
     "description": "Обшукайте скриню в залишках бастіону"
   },
   "chargerespawnanchor": {
+    "isDone": false,
     "top": 174,
     "left": -113,
     "itemIcon": "respawn_anchor",
@@ -710,6 +808,7 @@
     "description": "Повністю зарядіть якір відродження"
   },
   "returntosender": {
+    "isDone": false,
     "top": 140,
     "left": -147,
     "figure": "star",
@@ -718,6 +817,7 @@
     "description": "Знищте ґаста вогняною кулею"
   },
   "findbastion": {
+    "isDone": false,
     "top": 140,
     "left": -79,
     "itemIcon": "polished_blackstone_bricks",
@@ -725,6 +825,7 @@
     "description": "Увійдіть у залишки бастіону"
   },
   "ridestriderinoverworldlava": {
+    "isDone": false,
     "top": 276,
     "left": 1,
     "itemIcon": "warped_fungus_on_a_stick",
@@ -732,6 +833,7 @@
     "description": "Здійсніть до-о-о-о-овгу"
   },
   "obtainancientdebris": {
+    "isDone": false,
     "top": 190,
     "left": -36,
     "itemIcon": "ancient_debris",
@@ -739,6 +841,7 @@
     "description": "Отримайте стародавні залишки"
   },
   "createfullbeacon": {
+    "isDone": false,
     "top": 208,
     "left": -210,
     "itemIcon": "beacon",
@@ -746,6 +849,7 @@
     "description": "Увімкніть маяк на повну потужність"
   },
   "summonwither": {
+    "isDone": false,
     "top": 208,
     "left": -142,
     "itemIcon": "nether_star",
@@ -753,6 +857,7 @@
     "description": "Викличте візера"
   },
   "fasttravel": {
+    "isDone": false,
     "top": 140,
     "left": 1,
     "figure": "star",
@@ -761,6 +866,7 @@
     "description": "Використайте Незер, щоб промандрувати 7 км у Верхньому світі"
   },
   "uselodestone": {
+    "isDone": false,
     "top": 208,
     "left": 1,
     "itemIcon": "lodestone",
@@ -768,6 +874,7 @@
     "description": "Використайте компас на магнетиті"
   },
   "uneasyalliance": {
+    "isDone": false,
     "top": 174,
     "left": -147,
     "figure": "star",
@@ -776,6 +883,7 @@
     "description": "Урятуйте ґаста з Незеру, приведіть його безпечно додому у Верхній світ... а потім убийте його"
   },
   "findfortress": {
+    "isDone": false,
     "top": 225,
     "left": -73,
     "itemIcon": "nether_bricks",
@@ -783,6 +891,7 @@
     "description": "Пробийте собі шлях до незерської фортеці"
   },
   "netheritearmor": {
+    "isDone": false,
     "top": 174,
     "left": 1,
     "figure": "star",
@@ -791,6 +900,7 @@
     "description": "Отримайте повний комплект незеритових обладунків"
   },
   "netherroot": {
+    "isDone": false,
     "top": 83,
     "left": -56,
     "itemIcon": "red_nether_bricks",

@@ -11,7 +11,9 @@ export const useAdvancementsMap = (username: string) => {
   const advancements = data?.advancements ?? []
 
   advancements.forEach((item: string) => {
-    schemaAdvancements[item].isDone = true
+    if (schemaAdvancements[item]) {
+      schemaAdvancements[item].isDone = true
+    }
   })
 
   const userAdvancements = Object.values(schemaAdvancements)
