@@ -25,9 +25,7 @@ const Navbar = (): JSX.Element => {
   return (
     <Header className={isScrollingUp ? '' : 'header hidden'}>
       <HeaderContainer>
-        <ButtonBack
-          onClick={handleClick}
-        >
+        <ButtonBack onClick={handleClick}>
           <img src="/assets/logo.svg" alt="header logo" />
         </ButtonBack>
 
@@ -73,6 +71,16 @@ const Navbar = (): JSX.Element => {
               }
             >
               Торгівля
+            </button>
+
+            <button
+              style={{ opacity: currentPath === RoutesPath.MAP ? 1 : 0.5 }}
+              aria-disabled
+              onClick={() =>
+                currentPath === RoutesPath.MAP ? undefined : navigate(RoutesPath.MAP)
+              }
+            >
+              Карта
             </button>
 
             {/* {isSuccess && (
