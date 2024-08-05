@@ -72,7 +72,7 @@ const Navbar = (): JSX.Element => {
             >
               Торгівля
             </button>
-
+            {/* 
             <button
               style={{ opacity: currentPath === RoutesPath.MAP ? 1 : 0.5 }}
               aria-disabled
@@ -81,7 +81,7 @@ const Navbar = (): JSX.Element => {
               }
             >
               Карта
-            </button>
+            </button> */}
 
             {/* {isSuccess && (
                 <button
