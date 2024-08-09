@@ -5,7 +5,7 @@ const MapPage = (): JSX.Element => {
     <Container>
       <iframe
         title="map"
-        src="http://51.75.74.159:25602/"
+        src="https://map.uk-land.space/"
         width="100%"
         height="100%"
       />
