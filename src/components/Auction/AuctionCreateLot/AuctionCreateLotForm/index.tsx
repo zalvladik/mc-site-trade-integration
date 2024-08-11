@@ -22,7 +22,13 @@ const AuctionCreateLotForm = ({
         onChange={e => {
           const value = Number(e.target.value)
 
-          if (value < 0 || value > 15552) return '15552'
+          if (value < 0) return
+
+          if (value > 15552) {
+            setItemPrice(e.target.value)
+
+            return
+          }
 
           setItemPrice(e.target.value)
         }}
