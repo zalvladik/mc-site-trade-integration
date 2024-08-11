@@ -12,9 +12,7 @@ export const useAuctionCreateLotForm = () => {
     mutateByeLotsHandle()
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = e.target
-
+  const handleChange = (value: string) => {
     if (/^[0-9]*$/.test(value)) setItemPrice(value)
   }
 
