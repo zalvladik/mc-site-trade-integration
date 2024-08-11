@@ -12,6 +12,12 @@ export const useAuctionCreateLotForm = () => {
     mutateByeLotsHandle()
   }
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target
+
+    if (/^[0-9]*$/.test(value)) setItemPrice(value)
+  }
+
   const { isLoading: isLoadingCreateItemLot, mutate: mutateCreateItemLot } =
     useCreateItemLot(afterSuccess)
   const { isLoading: isLoadingCreateShulkerLot, mutate: mutateCreateShulkerLot } =
@@ -35,7 +41,7 @@ export const useAuctionCreateLotForm = () => {
 
   return {
     itemPrice,
-    setItemPrice,
+    setItemPrice: handleChange,
     createLotHanlder,
     isLoading: isLoadingCreateItemLot || isLoadingCreateShulkerLot,
   }

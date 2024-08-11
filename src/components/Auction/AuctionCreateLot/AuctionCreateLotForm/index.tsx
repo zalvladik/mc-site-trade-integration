@@ -24,7 +24,7 @@ const AuctionCreateLotForm = ({
 
           if (value < 0 || value > 15552) return
 
-          setItemPrice(e.target.value)
+          setItemPrice(e)
         }}
       />
       <DefaultButton
