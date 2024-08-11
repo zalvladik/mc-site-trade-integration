@@ -1,15 +1,22 @@
 import { useState } from 'react'
 import { CategoryEnum } from 'src/constants'
 import { useAuction } from 'src/contexts/AuctionProvider/useAuction'
+import { useToast } from 'src/contexts/ToastProvider/useToast'
 import { useCreateItemLot } from 'src/hooks/useCreateItemLot'
 import { useCreateShulkerLot } from 'src/hooks/useCreateShulkerLot'
 
 export const useAuctionCreateLotForm = () => {
   const { mutateByeLotsHandle } = useAuction()
+  const toast = useToast()
+
   const [itemPrice, setItemPrice] = useState('')
 
   const afterSuccess = () => {
     mutateByeLotsHandle()
+  }
+
+  const handleError = () => {
+    toast.error({ message: ['Максимальна ціна: 15552'] })
   }
 
   const handleChange = (value: string) => {
@@ -42,5 +49,6 @@ export const useAuctionCreateLotForm = () => {
     setItemPrice: handleChange,
     createLotHanlder,
     isLoading: isLoadingCreateItemLot || isLoadingCreateShulkerLot,
+    handleError,
   }
 }
