@@ -16,7 +16,7 @@ export const useCreatePp = () => {
         data,
       ])
 
-      toast.success({ message: ['Еффект добавлено'] })
+      toast.success({ message: ['Ефект добавлено', 'перезайдіть в гру!'] })
     },
     onError: (error: Error) => {
       toast.error({ message: [error.message] })

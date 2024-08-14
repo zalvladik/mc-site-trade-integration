@@ -16,7 +16,7 @@ export const useDeletePp = () => {
         effects => effects?.filter(item => item.uuid !== data.uuid) ?? [],
       )
 
-      toast.success({ message: ['Еффект видалено'] })
+      toast.success({ message: ['Ефект видалено'] })
     },
     onError: (error: Error) => {
       toast.error({ message: [error.message] })

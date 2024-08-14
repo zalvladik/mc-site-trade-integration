@@ -34,7 +34,7 @@ const ProfilePage = (): JSX.Element => {
             <DefaultButton onClick={openAdvancementsModal}>Досягнення</DefaultButton>
 
             <DefaultButton disabled={isLoading} onClick={openEffectsModal}>
-              Еффекти
+              Ефекти
             </DefaultButton>
 
             <DefaultButton disabled={isLoading} onClick={openVipModal}>

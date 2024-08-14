@@ -59,7 +59,7 @@ const ModalEffects = ({
         >
           {isCreateEffect && (
             <>
-              <h1>Виберіть тип еффекту</h1>
+              <h1>Виберіть тип ефекту</h1>
               <EffectStylesContainer>
                 {ppStyles.map(item => (
                   <div
@@ -78,7 +78,7 @@ const ModalEffects = ({
                 ))}
               </EffectStylesContainer>
 
-              <h1>Виберіть сам еффект</h1>
+              <h1>Виберіть сам ефект</h1>
               <GalleryContainer className="board-scroll-x">
                 <GalleryRow>
                   {ppEffects.map((image, index) => (
@@ -106,13 +106,13 @@ const ModalEffects = ({
                   addEffect()
                 }}
               >
-                Добавити еффект
+                Добавити ефект
               </DefaultButton>
             </>
           )}
         </AddEffectForm>
         <EffectInfoContainer>
-          <h1>Еффекти</h1>
+          <h1>Ефекти</h1>
 
           <EffectsList>
             {data &&
