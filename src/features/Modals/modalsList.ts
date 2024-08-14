@@ -1,5 +1,6 @@
 import { Modals } from 'src/features/Modals/constants'
 import ModalAdvancements from 'src/features/Modals/ModalAdvancements'
+import ModalEffects from 'src/features/Modals/ModalEffects'
 import ModalItemsInShulker from 'src/features/Modals/ModalItemsInShulker'
 import ModalItemsInTicket from 'src/features/Modals/ModalItemsInTicket'
 import ModalLot from 'src/features/Modals/ModalLot'
@@ -11,6 +12,7 @@ const modalsList = [
   { name: Modals.ITEM_TICKETS, component: ModalItemsInTicket },
   { name: Modals.SHULKER_ITEMS, component: ModalItemsInShulker },
   { name: Modals.VIP, component: ModalVip },
+  { name: Modals.EFFECTS, component: ModalEffects },
 ]
 
 export default modalsList

@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   background: rgb(78, 78, 78);
-  background: rgb(78, 78, 78);
   background: linear-gradient(
     137deg,
     rgba(78, 78, 78, 1) 0%,
