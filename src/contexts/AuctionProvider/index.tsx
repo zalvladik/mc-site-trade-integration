@@ -232,6 +232,8 @@ const AuctionProvider = ({ children }: AuctionProviderT): JSX.Element => {
   const mutateByeLotsHandleButton = (): void => {
     if (!isCanNewFetchGetByeLots) return
 
+    updateNewByeLotsSearchParams({ page: 1 })
+
     updatePrevByeLotsSearchParams()
 
     mutateByeLots({ ...newByeLotsSearchParams, ...filterListParams, page: 1 })
@@ -247,6 +249,8 @@ const AuctionProvider = ({ children }: AuctionProviderT): JSX.Element => {
 
   const mutateEnchantLotsHandleButton = (): void => {
     if (!isCanNewFetchGetEnchantItems) return
+
+    updateNewEnchantSearchParams({ page: 1 })
 
     updatePrevEnchantSearchParams({})
 
