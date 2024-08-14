@@ -234,12 +234,12 @@ const AuctionProvider = ({ children }: AuctionProviderT): JSX.Element => {
 
     updatePrevByeLotsSearchParams()
 
-    mutateByeLotsHandle()
+    mutateByeLots({ ...newByeLotsSearchParams, ...filterListParams, page: 1 })
 
     navigate(
       auctionUrlQueryParams(
         currentByeLotsCategory,
-        currentByeLotPage,
+        1,
         currentByeLotDisplay_nameOrType,
       ),
     )
@@ -250,17 +250,11 @@ const AuctionProvider = ({ children }: AuctionProviderT): JSX.Element => {
 
     updatePrevEnchantSearchParams({})
 
-    mutateEnchantLotsHandle()
+    mutateEnchantLots({ ...newEnchantSearchParams, ...filterListParams, page: 1 })
 
     setDidShowEnchantControlPanel(false)
 
-    navigate(
-      auctionUrlQueryParams(
-        undefined,
-        currentEnchantLotPage,
-        currenEnchantLotDisplay_nameOrType,
-      ),
-    )
+    navigate(auctionUrlQueryParams(undefined, 1, currenEnchantLotDisplay_nameOrType))
   }
 
   const providerValue: AuctionContextDataT = useMemo(
