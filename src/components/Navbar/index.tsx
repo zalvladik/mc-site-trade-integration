@@ -19,7 +19,7 @@ const Navbar = (): JSX.Element => {
   } = useNavBar()
 
   const handleClick = (): void => {
-    window.location.href = 'https://mc-front-end.vercel.app/'
+    window.location.href = 'https://uk-land-site.vercel.app/'
   }
 
   return (
