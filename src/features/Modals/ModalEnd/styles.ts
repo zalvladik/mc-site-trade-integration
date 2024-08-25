@@ -4,8 +4,24 @@ export const Container = styled.div`
   display: flex;
 `
 
+export const EnderDragonImage = styled.div`
+  position: absolute;
+  translate: -50% -80%;
+  left: 50%;
+  top: 0px;
+  width: 400px;
+  height: 300px;
+  rotate: -20deg;
+
+  background-image: url('/assets/ender_dragon.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+`
+
 export const FormContainer = styled.div`
+  position: relative;
   max-width: 800px;
+
   background: rgb(78, 78, 78);
   background: linear-gradient(
     137deg,

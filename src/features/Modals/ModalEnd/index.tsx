@@ -3,6 +3,7 @@ import DefaultButton from 'src/components/DefaultButton'
 
 import {
   Container,
+  EnderDragonImage,
   FormContainer,
   InfoEndList,
 } from 'src/features/Modals/ModalEnd/styles'
@@ -26,6 +27,7 @@ const ModalEnd = ({
       <ButtonModalClose onClose={closeModal} />
       <Container onClick={handleContainerClick}>
         <FormContainer>
+          <EnderDragonImage />
           <InfoEndList>
             <li style={{ color: 'rgb(220, 20, 220)' }}>
               1 вересня (неділя) буде розширення енду до 16к на 16к.
