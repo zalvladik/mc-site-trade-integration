@@ -8,7 +8,7 @@ class WlEnd {
   }
 
   async postWlEnd(): Promise<WlEndT> {
-    return api.get(FetchEndpoint.WL_END).json()
+    return api.post(FetchEndpoint.WL_END).json()
   }
 }
 

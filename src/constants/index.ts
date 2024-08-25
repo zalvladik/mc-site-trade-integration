@@ -5,6 +5,8 @@ export const FETCH_URL = import.meta.env.VITE_URL_BY_BACKEND
 
 export const FETCH_URL_IMG = `${FETCH_URL}/public`
 
+export const WL_END_COST = 64 * 2
+
 export enum SocketTypes {
   INCREMENT_MONEY,
   DECREMENT_MONEY,
