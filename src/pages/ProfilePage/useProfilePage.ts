@@ -23,6 +23,10 @@ const useProfilePage = () => {
     onOpen({ name: Modals.VIP, data: { afterSubmit, user } })
   }
 
+  const openEndModal = (): void => {
+    onOpen({ name: Modals.END })
+  }
+
   const openEffectsModal = (): void => {
     onOpen({ name: Modals.EFFECTS, data: { user } })
   }
@@ -36,6 +40,7 @@ const useProfilePage = () => {
     openAdvancementsModal,
     openEffectsModal,
     openVipModal,
+    openEndModal,
   }
 }
 

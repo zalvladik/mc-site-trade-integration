@@ -6,4 +6,5 @@ export enum Modals {
   SHULKER_ITEMS = 'shulker_items',
   VIP = 'vip',
   EFFECTS = 'effects',
+  END = 'end',
 }

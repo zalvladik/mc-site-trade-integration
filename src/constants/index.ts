@@ -70,6 +70,7 @@ export enum CacheKeys {
   USER_ADVANCEMENTS = 'user_advancements',
   USER_SHULKERS = 'user_shulkers',
   USER_SHULKER_ITEMS = 'user_shulker_items',
+  WL_END = 'wl_end',
 }
 
 export enum AuctionFragment {
@@ -98,6 +99,7 @@ export enum FetchEndpoint {
   USER_SHULKERS = 'user/shulkers',
   WHITELIST = 'whitelist',
   PP = 'pp',
+  WL_END = 'wl_end',
 }
 
 export enum LocalStorageKey {
