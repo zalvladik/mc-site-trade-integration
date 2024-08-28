@@ -73,6 +73,8 @@ export enum CacheKeys {
   USER_SHULKERS = 'user_shulkers',
   USER_SHULKER_ITEMS = 'user_shulker_items',
   WL_END = 'wl_end',
+  SELLER_TRADE_HISTORY = 'seller_trade_history',
+  BUYER_TRADE_HISTORY = 'buyer_trade_history',
 }
 
 export enum AuctionFragment {
@@ -80,6 +82,7 @@ export enum AuctionFragment {
   CREATE_LOTS = 'create_lots',
   USER_LOTS = 'user_lots',
   ENCHANT_LOTS = 'enchant_lots',
+  TRADE_HISTORY = 'trade_history',
 }
 
 export enum FetchEndpoint {
@@ -102,6 +105,7 @@ export enum FetchEndpoint {
   WHITELIST = 'whitelist',
   PP = 'pp',
   WL_END = 'wl_end',
+  TRADE_HISTORY = 'lot/trade_history',
 }
 
 export enum LocalStorageKey {

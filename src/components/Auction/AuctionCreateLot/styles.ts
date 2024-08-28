@@ -11,6 +11,7 @@ import PaginationTab from 'src/features/PaginationTab'
 
 export const Container = styled.div`
   position: relative;
+  flex-direction: column;
 `
 
 export const InventoryWrapper = styled.div`

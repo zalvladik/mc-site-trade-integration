@@ -28,12 +28,13 @@ export const useAuctionPagination = () => {
     isCreateLotFragment,
     isBuyFragment,
     isEnchantFinderFragment,
+    isTradeHistoryFragment,
   } = isFragment
 
   const didShowUserLotsCount = isUserLotsFragment || isCreateLotFragment
 
   const didVanishPagesInfo = () => {
-    if (isCreateLotFragment) return true
+    if (isCreateLotFragment || isTradeHistoryFragment) return true
 
     if (isEnchantFinderFragment) {
       return didShowEnchantControlPanel

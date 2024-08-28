@@ -1,4 +1,4 @@
-import { formatVipExpirationDate } from 'src/helpers/formatVipExprirationDate'
+import { formatDateToUK } from 'src/helpers/formatVipExprirationDate'
 import {
   ButtonList,
   Container,
@@ -52,8 +52,9 @@ const ProfilePage = (): JSX.Element => {
             {(() => {
               if (!user.vipExpirationDate) return <></>
 
-              const { day, month, hours, minutes, seconds } =
-                formatVipExpirationDate(user.vipExpirationDate)
+              const { day, month, hours, minutes, seconds } = formatDateToUK(
+                user.vipExpirationDate,
+              )
 
               return (
                 <VipDateInfoContainer>

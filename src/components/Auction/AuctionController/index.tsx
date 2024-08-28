@@ -13,13 +13,13 @@ const AuctionController = (): JSX.Element => {
   return (
     <Container>
       <ButtonsContainer>
-        {buttonsTexts.map(({ fragment, text }) => {
+        {buttonsTexts.map(({ fragment, text, styles }) => {
           const isCurrentFragment = fragment === auctionFragment
 
           return (
             <DefaultButton
               onClick={() => setAuctionFragment(fragment)}
-              style={{ width: '100%' }}
+              style={{ width: '100%', ...styles }}
               key={fragment}
               disabled={isCurrentFragment}
             >

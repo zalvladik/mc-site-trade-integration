@@ -18,6 +18,7 @@ import {
   AuctionPagination,
   AuctionUserLots,
 } from 'src/components/Auction'
+import AuctionTradeHistory from 'src/components/Auction/AuctionTradeHistory'
 import DefaultButton from 'src/components/DefaultButton'
 import DefaultInput from 'src/components/inputs/DefaultInput'
 import MoneyTable from 'src/components/MoneyTable'
@@ -42,6 +43,7 @@ const AuctionPage = (): JSX.Element => {
       [AuctionFragment.CREATE_LOTS]: <AuctionCreateLot />,
       [AuctionFragment.USER_LOTS]: <AuctionUserLots />,
       [AuctionFragment.ENCHANT_LOTS]: <AuctionEnchantFinder />,
+      [AuctionFragment.TRADE_HISTORY]: <AuctionTradeHistory />,
     }
 
     return components[auctionFragment]
@@ -52,9 +54,11 @@ const AuctionPage = (): JSX.Element => {
     isCreateLotFragment,
     isEnchantFinderFragment,
     isBuyFragment,
+    isTradeHistoryFragment,
   } = isFragment
 
-  const isDisabledCategory = isUserLotsFragment || isCreateLotFragment
+  const isDisabledCategory =
+    isUserLotsFragment || isCreateLotFragment || isTradeHistoryFragment
 
   return (
     <Container>
@@ -66,7 +70,10 @@ const AuctionPage = (): JSX.Element => {
               onChange={e => setSearchValue(e.target.value)}
               placeholder="Пошук предмета..."
               disabled={
-                isCreateLotFragment || isEnchantFinderFragment || isLoadingByeLots
+                isCreateLotFragment ||
+                isEnchantFinderFragment ||
+                isLoadingByeLots ||
+                isTradeHistoryFragment
               }
               style={{ width: 320 }}
             />

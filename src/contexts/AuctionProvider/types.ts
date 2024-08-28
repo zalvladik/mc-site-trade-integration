@@ -40,6 +40,7 @@ export type AuctionContextDataT = {
     isCreateLotFragment: boolean
     isUserLotsFragment: boolean
     isEnchantFinderFragment: boolean
+    isTradeHistoryFragment: boolean
   }
   newEnchantSearchParams: EnchantSearchParamsT
   updateEnchantSearchParams: (value: UpdateNewEnchantSearchParamsT) => void
