@@ -2,14 +2,19 @@ import type { FormatVipExprirationDateT } from 'src/helpers/formatVipExpriration
 import { UkrainianMonths } from 'src/types'
 
 export const formatDateToUK = (dateStr: Date): FormatVipExprirationDateT => {
+  const clientUTCOffset = -new Date().getTimezoneOffset() / 60
   const date = new Date(dateStr)
 
-  const day = date.getUTCDate()
-  const year = date.getUTCFullYear()
-  const month = UkrainianMonths[date.getUTCMonth()]
-  const hours = date.getUTCHours().toString().padStart(2, '0')
-  const minutes = date.getUTCMinutes().toString().padStart(2, '0')
-  const seconds = date.getUTCSeconds().toString().padStart(2, '0')
+  const userOffsetInMinutes = clientUTCOffset * 60
+
+  const userDate = new Date(date.getTime() + userOffsetInMinutes * 60 * 1000)
+
+  const day = userDate.getUTCDate()
+  const year = userDate.getUTCFullYear()
+  const month = UkrainianMonths[userDate.getUTCMonth()]
+  const hours = userDate.getUTCHours().toString().padStart(2, '0')
+  const minutes = userDate.getUTCMinutes().toString().padStart(2, '0')
+  const seconds = userDate.getUTCSeconds().toString().padStart(2, '0')
 
   return { year, day, month, hours, minutes, seconds }
 }
