@@ -25,16 +25,16 @@ const AuctionTradeHistory = (): JSX.Element => {
         <h1>Покупки</h1>
 
         <BuyerHistoryContainer className="scroll-y">
-          {dataBuyer.map(({ lot, id, tradeTime }, i) => {
+          {dataBuyer.map(({ lot, id, createdAt }, i) => {
             const lotElement = (lot?.shulker || lot?.item)!
 
-            const { day, month, hours, minutes, seconds } = formatDateToUK(tradeTime)
+            const { day, month, hours, minutes, seconds } = formatDateToUK(createdAt)
 
             let isSameDate = false
 
             if (i) {
               const { day: dayPrevLot, month: monthPrevLot } = formatDateToUK(
-                dataBuyer[i - 1].tradeTime,
+                dataBuyer[i - 1].createdAt,
               )
 
               isSameDate = `${day} ${month}` === `${dayPrevLot} ${monthPrevLot}`
@@ -98,16 +98,16 @@ const AuctionTradeHistory = (): JSX.Element => {
       <div>
         <h1>Продажі</h1>
         <SellerHistoryContainer className="scroll-y">
-          {dataSeller.map(({ lot, id, tradeTime }, i) => {
+          {dataSeller.map(({ lot, id, createdAt }, i) => {
             const lotElement = (lot?.shulker || lot?.item)!
 
-            const { day, month, hours, minutes, seconds } = formatDateToUK(tradeTime)
+            const { day, month, hours, minutes, seconds } = formatDateToUK(createdAt)
 
             let isSameDate = false
 
             if (i) {
               const { day: dayPrevLot, month: monthPrevLot } = formatDateToUK(
-                dataSeller[i - 1].tradeTime,
+                dataSeller[i - 1].createdAt,
               )
 
               isSameDate = `${day} ${month}` === `${dayPrevLot} ${monthPrevLot}`
