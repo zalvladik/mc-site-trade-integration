@@ -1,18 +1,27 @@
 import { api } from 'src/configs/ky'
 import { FetchEndpoint } from 'src/constants'
-
 import type {
   GetBuyerTradeHistoryResponse,
+  GetBuyerTradeHistoryService,
   GetSellerTradeHistoryReponse,
-} from './types'
+  GetSellerTradeHistoryService,
+} from 'src/services/api/TradeHistory/types'
 
 class TradeHistory {
-  async getSellerTradeHistory(): Promise<GetSellerTradeHistoryReponse> {
-    return api(`${FetchEndpoint.TRADE_HISTORY}?isSeller=true`).json()
+  async getSellerTradeHistory({
+    page = 1,
+  }: GetSellerTradeHistoryService): Promise<GetSellerTradeHistoryReponse> {
+    return api(
+      `${FetchEndpoint.TRADE_HISTORY}?isSeller=true&page=${encodeURIComponent(page)}`,
+    ).json()
   }
 
-  async getBuyerTradeHistory(): Promise<GetBuyerTradeHistoryResponse> {
-    return api(`${FetchEndpoint.TRADE_HISTORY}?isSeller=false`).json()
+  async getBuyerTradeHistory({
+    page = 1,
+  }: GetBuyerTradeHistoryService): Promise<GetBuyerTradeHistoryResponse> {
+    return api(
+      `${FetchEndpoint.TRADE_HISTORY}?isSeller=false&page=${encodeURIComponent(page)}`,
+    ).json()
   }
 }
 

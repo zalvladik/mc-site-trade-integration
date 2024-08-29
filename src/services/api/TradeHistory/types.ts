@@ -15,3 +15,11 @@ export type GetBuyerTradeHistoryResponse = {
   lots: TradeHistory[]
   totalPages: number
 }
+
+export type GetBuyerTradeHistoryService = {
+  page?: number
+}
+
+export type GetSellerTradeHistoryService = {
+  page?: number
+}

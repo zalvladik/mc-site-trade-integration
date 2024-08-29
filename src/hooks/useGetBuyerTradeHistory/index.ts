@@ -1,17 +1,19 @@
 import { useMutation } from 'react-query'
 import { CacheKeys } from 'src/constants'
 import TradeHistory from 'src/services/api/TradeHistory'
+import type { GetBuyerTradeHistoryService } from 'src/services/api/TradeHistory/types'
 
 export const useGetBuyerTradeHistory = () => {
-  const { mutate, data, isLoading } = useMutation({
+  const { data, isLoading, mutateAsync } = useMutation({
     mutationKey: CacheKeys.BUYER_TRADE_HISTORY,
-    mutationFn: TradeHistory.getBuyerTradeHistory,
+    mutationFn: ({ page }: GetBuyerTradeHistoryService) =>
+      TradeHistory.getBuyerTradeHistory({ page }),
   })
 
   return {
-    mutate,
+    mutateAsync,
     data: data?.lots ?? [],
-    totalPage: data?.totalPages,
+    totalPage: data?.totalPages ?? 0,
     isLoading,
   }
 }

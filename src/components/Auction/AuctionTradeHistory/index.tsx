@@ -11,12 +11,12 @@ import ItemSlotIcon from 'src/components/ItemSlotIcon'
 
 const AuctionTradeHistory = (): JSX.Element => {
   const {
-    // isLoadingSeller,
-    // isLoadingBuyer,
-    dataSeller,
-    dataBuyer,
+    totalBuyerLots,
+    totalSellerLots,
     itemSlotIconProps,
     openShulkerModal,
+    containerSellerRef,
+    containerBuyerRef,
   } = useAuctionTradeHistory()
 
   return (
@@ -24,8 +24,8 @@ const AuctionTradeHistory = (): JSX.Element => {
       <div>
         <h1>Покупки</h1>
 
-        <BuyerHistoryContainer className="scroll-y">
-          {dataBuyer.map(({ lot, id, createdAt }, i) => {
+        <BuyerHistoryContainer className="scroll-y" ref={containerBuyerRef}>
+          {totalBuyerLots.map(({ lot, id, createdAt }, i) => {
             const lotElement = (lot?.shulker || lot?.item)!
 
             const { day, month, hours, minutes, seconds } = formatDateToUK(createdAt)
@@ -34,7 +34,7 @@ const AuctionTradeHistory = (): JSX.Element => {
 
             if (i) {
               const { day: dayPrevLot, month: monthPrevLot } = formatDateToUK(
-                dataBuyer[i - 1].createdAt,
+                totalBuyerLots[i - 1].createdAt,
               )
 
               isSameDate = `${day} ${month}` === `${dayPrevLot} ${monthPrevLot}`
@@ -97,8 +97,8 @@ const AuctionTradeHistory = (): JSX.Element => {
       </div>
       <div>
         <h1>Продажі</h1>
-        <SellerHistoryContainer className="scroll-y">
-          {dataSeller.map(({ lot, id, createdAt }, i) => {
+        <SellerHistoryContainer className="scroll-y" ref={containerSellerRef}>
+          {totalSellerLots.map(({ lot, id, createdAt }, i) => {
             const lotElement = (lot?.shulker || lot?.item)!
 
             const { day, month, hours, minutes, seconds } = formatDateToUK(createdAt)
@@ -107,7 +107,7 @@ const AuctionTradeHistory = (): JSX.Element => {
 
             if (i) {
               const { day: dayPrevLot, month: monthPrevLot } = formatDateToUK(
-                dataSeller[i - 1].createdAt,
+                totalSellerLots[i - 1].createdAt,
               )
 
               isSameDate = `${day} ${month}` === `${dayPrevLot} ${monthPrevLot}`
