@@ -33,7 +33,7 @@ const Navbar = (): JSX.Element => {
           <NavList>
             <div
               style={{
-                opacity: isProfilePage ? 1 : 0.5,
+                opacity: isProfilePage ? 1 : 0.3,
               }}
               aria-disabled
               onClick={() =>
@@ -44,12 +44,12 @@ const Navbar = (): JSX.Element => {
                     : navigate(RoutesPath.PROFILE)
               }
             >
-              <IoPersonOutline size={48} />
+              <IoPersonOutline size={46} />
             </div>
 
             <div
               style={{
-                opacity: currentPath === RoutesPath.INVENTORY ? 1 : 0.5,
+                opacity: currentPath === RoutesPath.INVENTORY ? 1 : 0.3,
               }}
               aria-disabled
               onClick={() =>
@@ -58,12 +58,12 @@ const Navbar = (): JSX.Element => {
                   : navigate(RoutesPath.INVENTORY)
               }
             >
-              <BsBoxSeam size={48} />
+              <BsBoxSeam size={46} />
             </div>
 
             <div
               style={{
-                opacity: currentPath.includes(RoutesPath.AUCTION) ? 1 : 0.5,
+                opacity: currentPath.includes(RoutesPath.AUCTION) ? 1 : 0.3,
               }}
               aria-disabled
               onClick={() =>
@@ -72,19 +72,19 @@ const Navbar = (): JSX.Element => {
                   : navigate(RoutesPath.AUCTION)
               }
             >
-              <IoDiamondOutline size={48} />
+              <IoDiamondOutline size={46} />
             </div>
 
             <div
               style={{
-                opacity: currentPath === RoutesPath.MAP ? 1 : 0.5,
+                opacity: currentPath === RoutesPath.MAP ? 1 : 0.3,
               }}
               aria-disabled
               onClick={() =>
                 currentPath === RoutesPath.MAP ? undefined : navigate(RoutesPath.MAP)
               }
             >
-              <IoMapOutline size={48} />
+              <IoMapOutline size={46} />
             </div>
 
             {/* {isSuccess && (

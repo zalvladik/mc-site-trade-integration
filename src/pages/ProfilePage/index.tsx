@@ -3,7 +3,6 @@ import {
   ButtonList,
   Container,
   PlayerInfo,
-  UserContainer,
   VipDateInfo,
   VipDateInfoContainer,
   VipImage,
@@ -26,59 +25,57 @@ const ProfilePage = (): JSX.Element => {
 
   return (
     <Container>
-      <UserContainer>
-        <SkinComponent />
-        <PlayerInfo>
-          <ButtonList>
-            <DefaultButton onClick={openAdvancementsModal}>Досягнення</DefaultButton>
+      <SkinComponent />
+      <PlayerInfo>
+        <ButtonList>
+          <DefaultButton onClick={openAdvancementsModal}>Досягнення</DefaultButton>
 
-            <DefaultButton disabled={isLoading} onClick={openEffectsModal}>
-              Ефекти
-            </DefaultButton>
+          <DefaultButton disabled={isLoading} onClick={openEffectsModal}>
+            Ефекти
+          </DefaultButton>
 
-            <DefaultButton disabled={isLoading} onClick={openVipModal}>
-              VIP
-            </DefaultButton>
+          <DefaultButton disabled={isLoading} onClick={openVipModal}>
+            VIP
+          </DefaultButton>
 
-            <DefaultButton disabled={isLoading} onClick={openEndModal}>
-              Енд
-            </DefaultButton>
+          <DefaultButton disabled={isLoading} onClick={openEndModal}>
+            Енд
+          </DefaultButton>
 
-            <DefaultButton disabled={isLoading} onClick={logout}>
-              Вийти
-            </DefaultButton>
-            {(() => {
-              if (!user.vipExpirationDate) return <></>
+          <DefaultButton disabled={isLoading} onClick={logout}>
+            Вийти
+          </DefaultButton>
+          {(() => {
+            if (!user.vipExpirationDate) return <></>
 
-              const { day, month, hours, minutes, seconds } = formatDateToUK(
-                user.vipExpirationDate,
-              )
+            const { day, month, hours, minutes, seconds } = formatDateToUK(
+              user.vipExpirationDate,
+            )
 
-              return (
-                <VipDateInfoContainer>
-                  <VipImage
-                    style={{
-                      backgroundImage: `url(/assets/items_for_ui/${user.vip}_block.webp)`,
-                    }}
-                  />
-                  <h3>Тривалість VIP</h3>
-                  {user.vipExpirationDate && (
-                    <VipDateInfo>
-                      <div>
-                        до {day} {month}
-                      </div>
-                      |
-                      <div>
-                        {hours} : {minutes} : {seconds}
-                      </div>
-                    </VipDateInfo>
-                  )}
-                </VipDateInfoContainer>
-              )
-            })()}
-          </ButtonList>
-        </PlayerInfo>
-      </UserContainer>
+            return (
+              <VipDateInfoContainer>
+                <VipImage
+                  style={{
+                    backgroundImage: `url(/assets/items_for_ui/${user.vip}_block.webp)`,
+                  }}
+                />
+                <h3>Тривалість VIP</h3>
+                {user.vipExpirationDate && (
+                  <VipDateInfo>
+                    <div>
+                      до {day} {month}
+                    </div>
+                    |
+                    <div>
+                      {hours} : {minutes} : {seconds}
+                    </div>
+                  </VipDateInfo>
+                )}
+              </VipDateInfoContainer>
+            )
+          })()}
+        </ButtonList>
+      </PlayerInfo>
     </Container>
   )
 }

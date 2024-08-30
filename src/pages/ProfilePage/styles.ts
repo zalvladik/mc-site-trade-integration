@@ -1,11 +1,15 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  padding: 150px 50px 150px 50px;
+  padding: 0px 40px 0px 120px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 100px;
+  gap: 40px;
 `
 
 export const PlayerInfo = styled.div``
@@ -22,11 +26,6 @@ export const ButtonList = styled.div`
 
     margin-top: 25px;
   }
-`
-
-export const UserContainer = styled.div`
-  display: flex;
-  gap: 40px;
 `
 
 export const VipDateInfoContainer = styled.div`
