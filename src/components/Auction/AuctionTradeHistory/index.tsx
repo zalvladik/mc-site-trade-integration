@@ -5,6 +5,7 @@ import {
   Container,
   ItemTextInfoContainer,
   SellerHistoryContainer,
+  StickyData,
 } from 'src/components/Auction/AuctionTradeHistory/styles'
 import { useAuctionTradeHistory } from 'src/components/Auction/AuctionTradeHistory/useAuctionTradeHistory'
 import ItemSlotIcon from 'src/components/ItemSlotIcon'
@@ -43,15 +44,7 @@ const AuctionTradeHistory = (): JSX.Element => {
             return (
               <>
                 {!isSameDate && (
-                  <div
-                    id={day + month}
-                    style={{
-                      padding: '10px 0px',
-                      margin: '16px 0px 0px 0px',
-                      borderTop: i ? '4px solid gray' : '',
-                      borderRadius: 10,
-                    }}
-                  >
+                  <StickyData id={day + month}>
                     <ItemTextInfoContainer style={{ margin: '0px auto' }}>
                       <div>
                         <div style={{ fontSize: 26, color: 'rgb(23, 118, 173)' }}>
@@ -59,12 +52,12 @@ const AuctionTradeHistory = (): JSX.Element => {
                         </div>
                       </div>
                     </ItemTextInfoContainer>
-                  </div>
+                  </StickyData>
                 )}
                 <div key={id}>
                   <ItemTextInfoContainer>
                     <div>
-                      <div style={{ color: 'rgb(230, 14, 14)', marginRight: 20 }}>
+                      <div style={{ color: 'rgb(230, 14, 14)', margin: '0px 16px' }}>
                         -{lot.price}
                       </div>
                     </div>
@@ -74,7 +67,7 @@ const AuctionTradeHistory = (): JSX.Element => {
                       style={{ cursor: lot?.shulker ? 'pointer' : 'default' }}
                       {...itemSlotIconProps}
                       {...lotElement}
-                      fontSize={20}
+                      fontSize={18}
                       onClick={() => {
                         if (lot?.shulker) {
                           openShulkerModal(lotElement.id)
@@ -116,15 +109,7 @@ const AuctionTradeHistory = (): JSX.Element => {
             return (
               <>
                 {!isSameDate && (
-                  <div
-                    id={day + month}
-                    style={{
-                      padding: '10px 0px',
-                      margin: '16px 0px 0px 0px',
-                      borderTop: i ? '4px solid gray' : '',
-                      borderRadius: 10,
-                    }}
-                  >
+                  <StickyData id={day + month}>
                     <ItemTextInfoContainer style={{ margin: '0px auto' }}>
                       <div>
                         <div style={{ fontSize: 26, color: 'rgb(23, 118, 173)' }}>
@@ -132,7 +117,7 @@ const AuctionTradeHistory = (): JSX.Element => {
                         </div>
                       </div>
                     </ItemTextInfoContainer>
-                  </div>
+                  </StickyData>
                 )}
                 <div key={id}>
                   <ItemTextInfoContainer>
@@ -140,7 +125,7 @@ const AuctionTradeHistory = (): JSX.Element => {
                       <div
                         style={{
                           color: 'rgb(14, 230, 68)',
-                          marginRight: 20,
+                          margin: '0px 16px',
                         }}
                       >
                         +{lot.price}
@@ -150,7 +135,7 @@ const AuctionTradeHistory = (): JSX.Element => {
                       style={{ cursor: lot?.shulker ? 'pointer' : 'default' }}
                       {...itemSlotIconProps}
                       {...lotElement}
-                      fontSize={20}
+                      fontSize={18}
                       onClick={() => {
                         if (lot?.shulker) {
                           openShulkerModal(lotElement.id)

@@ -125,7 +125,7 @@ export const useAuctionTradeHistory = () => {
     onOpen({ name: Modals.SHULKER_ITEMS, data: { shulkerId } })
   }
 
-  const itemSlotIconProps = { containerSize: 64, itemSize: 46 }
+  const itemSlotIconProps = { containerSize: 54, itemSize: 36 }
 
   return {
     isLoadingSeller,
