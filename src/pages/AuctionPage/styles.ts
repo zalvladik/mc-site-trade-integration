@@ -32,14 +32,14 @@ export const DefaultInputWrapper = styled.div`
 `
 
 export const Container = styled.div`
+  margin-top: 40px;
+
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   height: 760px;
-
-  margin-top: 60px;
 
   border-radius: 8px;
 

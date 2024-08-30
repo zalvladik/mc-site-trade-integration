@@ -1,3 +1,5 @@
+import { BsBoxSeam } from 'react-icons/bs'
+import { IoDiamondOutline, IoMapOutline, IoPersonOutline } from 'react-icons/io5'
 import { RoutesPath } from 'src/router/routes'
 
 import {
@@ -5,15 +7,11 @@ import {
   Header,
   HeaderContainer,
   NavList,
-  NickNameContainer,
 } from 'src/components/Navbar/styles'
 import { useNavBar } from 'src/components/Navbar/useNavbar'
 
-import MoneyTable from '../MoneyTable'
-
 const Navbar = (): JSX.Element => {
   const {
-    user,
     navigate,
     isScrollingUp,
     currentPath,
@@ -29,25 +27,11 @@ const Navbar = (): JSX.Element => {
   return (
     <Header className={isScrollingUp ? '' : 'header hidden'}>
       <HeaderContainer>
-        <div>
-          <ButtonBack onClick={handleClick}>
-            <img src="/assets/logo.svg" alt="header logo" />
-          </ButtonBack>
-          <NickNameContainer>
-            <div>{user.username} </div>
-            <div>
-              <MoneyTable
-                money={user.money}
-                style={{ flexDirection: 'row', gap: 60 }}
-                fontSize={28}
-              />
-            </div>
-          </NickNameContainer>
-        </div>
+        <ButtonBack onClick={handleClick} />
 
         {!isLoading && isSuccess && (
           <NavList>
-            <button
+            <div
               style={{
                 opacity: isProfilePage ? 1 : 0.5,
               }}
@@ -60,11 +44,13 @@ const Navbar = (): JSX.Element => {
                     : navigate(RoutesPath.PROFILE)
               }
             >
-              Кабінет
-            </button>
+              <IoPersonOutline size={48} />
+            </div>
 
-            <button
-              style={{ opacity: currentPath === RoutesPath.INVENTORY ? 1 : 0.5 }}
+            <div
+              style={{
+                opacity: currentPath === RoutesPath.INVENTORY ? 1 : 0.5,
+              }}
               aria-disabled
               onClick={() =>
                 currentPath === RoutesPath.INVENTORY
@@ -72,10 +58,10 @@ const Navbar = (): JSX.Element => {
                   : navigate(RoutesPath.INVENTORY)
               }
             >
-              Інвентар
-            </button>
+              <BsBoxSeam size={48} />
+            </div>
 
-            <button
+            <div
               style={{
                 opacity: currentPath.includes(RoutesPath.AUCTION) ? 1 : 0.5,
               }}
@@ -86,18 +72,20 @@ const Navbar = (): JSX.Element => {
                   : navigate(RoutesPath.AUCTION)
               }
             >
-              Торгівля
-            </button>
+              <IoDiamondOutline size={48} />
+            </div>
 
-            <button
-              style={{ opacity: currentPath === RoutesPath.MAP ? 1 : 0.5 }}
+            <div
+              style={{
+                opacity: currentPath === RoutesPath.MAP ? 1 : 0.5,
+              }}
               aria-disabled
               onClick={() =>
                 currentPath === RoutesPath.MAP ? undefined : navigate(RoutesPath.MAP)
               }
             >
-              Карта
-            </button>
+              <IoMapOutline size={48} />
+            </div>
 
             {/* {isSuccess && (
                 <button

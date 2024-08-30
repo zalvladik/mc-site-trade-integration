@@ -1,14 +1,17 @@
 import { styled } from 'styled-components'
 
 export const Header = styled.div`
-  width: 100%;
+  height: 100%;
+
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(40, 40, 50, 0.1);
   backdrop-filter: blur(5px);
   transition: transform 0.3s ease-in-out;
   z-index: 9;
+
+  border-bottom: 1px solid gray;
 
   &.hidden {
     transform: translateY(-100%);
@@ -16,20 +19,21 @@ export const Header = styled.div`
 `
 
 export const ButtonBack = styled.div`
-  display: flex;
+  position: absolute;
+
+  top: 30px;
+  left: 50%;
+
+  translate: -50% 0%;
+
   width: 60px;
   height: 55px;
+
   transition: scale 0.2s ease;
 
-  @media screen and (max-width: 767px) {
-    height: 50px;
-    width: 50px;
-  }
-
-  @media screen and (max-width: 390px) {
-    height: 40px;
-    width: 40px;
-  }
+  background-image: url('/assets/logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
 
   &:hover {
     scale: 1.05;
@@ -38,59 +42,27 @@ export const ButtonBack = styled.div`
 `
 
 export const HeaderContainer = styled.div`
-  padding: 15px 100px;
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
-
-  @media screen and (max-width: 767px) {
-    padding: 15px 50px;
-  }
-
-  @media screen and (max-width: 390px) {
-    padding: 15px 20px;
-  }
-
-  & > div {
-    display: flex;
-    gap: 40px;
-  }
-`
-
-export const NickNameContainer = styled.div`
+  height: 100%;
   display: flex;
 
-  gap: 40px;
-
-  & > div {
-    font-family: 'Minecraft', sans-serif;
-
-    margin: auto 0px;
-
-    color: rgb(255, 255, 255);
-
-    font-weight: 500;
-    font-size: 28px;
-    transition: opacity 0.1s ease-in-out;
-  }
+  flex-direction: column;
 `
 
 export const NavList = styled.div`
   display: flex;
+  flex-direction: column;
 
-  gap: 20px;
+  margin: auto;
 
-  & > button {
-    font-family: 'Minecraft', sans-serif;
+  gap: 40px;
 
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
+  & > div {
+    margin: -20px -20px -20px -20px;
 
-    padding: 30px 0px;
-    margin: -30px 0px;
-    font-weight: 500;
-    font-size: 25px;
-    transition: opacity 0.1s ease-in-out;
+    padding: 20px 40px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &:hover {
       cursor: pointer;
@@ -101,12 +73,6 @@ export const NavList = styled.div`
     &:hover {
       cursor: pointer;
       transform: scale(1.05);
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-    & > button + button {
-      margin-left: 20px;
     }
   }
 `

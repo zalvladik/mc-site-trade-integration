@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const ContainerWrapper = styled.div`
   position: relative;
 
-  margin-top: 100px;
+  margin: 100px 50px;
 
   background: radial-gradient(
     circle,
@@ -12,6 +12,7 @@ export const ContainerWrapper = styled.div`
   );
 
   height: 493px;
+  width: max-content;
 
   -webkit-box-shadow:
     inset 0px 0px 96px 28px rgba(0, 0, 0, 0.75),
