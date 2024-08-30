@@ -6,12 +6,12 @@ export const Header = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(40, 40, 50, 0.1);
+  background: rgba(40, 40, 60, 0.1);
   backdrop-filter: blur(5px);
   transition: transform 0.3s ease-in-out;
   z-index: 9;
 
-  border-bottom: 1px solid gray;
+  border-right: 1px solid rgba(100, 100, 100, 0.2);
 
   &.hidden {
     transform: translateY(-100%);
