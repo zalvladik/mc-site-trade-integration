@@ -60,6 +60,8 @@ export const HeaderContainer = styled.div`
 export const NickNameContainer = styled.div`
   display: flex;
 
+  gap: 40px;
+
   & > div {
     font-family: 'Minecraft', sans-serif;
 

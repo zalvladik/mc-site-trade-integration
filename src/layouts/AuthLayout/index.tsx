@@ -4,7 +4,10 @@ import ProvideModals from 'src/contexts/ModalProvider'
 import UserProvider from 'src/contexts/UserProvider'
 import { useCheckAuth } from 'src/hooks/useCheckAuth'
 import { useGetUser } from 'src/hooks/useGetUser'
+import { Container } from 'src/layouts/AuthLayout/styles'
 import LoadingPage from 'src/pages/LoadingPage'
+
+import Navbar from 'src/components/Navbar'
 
 const AuthLayout = (): JSX.Element | null => {
   const { isLoading, isSuccess } = useCheckAuth()
@@ -17,7 +20,10 @@ const AuthLayout = (): JSX.Element | null => {
     <UserProvider user={user}>
       <ProvideItemHoverDescription>
         <ProvideModals>
-          <Outlet />
+          <Container>
+            <Navbar />
+            <Outlet />
+          </Container>
         </ProvideModals>
       </ProvideItemHoverDescription>
     </UserProvider>

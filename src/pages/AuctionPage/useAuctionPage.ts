@@ -1,9 +1,6 @@
 import { useAuction } from 'src/contexts/AuctionProvider/useAuction'
-import { useUser } from 'src/contexts/UserProvider/useUser'
 
 export const useAuctionPage = () => {
-  const { user } = useUser()
-
   const {
     auctionFragment,
     setAuctionFragment,
@@ -22,7 +19,6 @@ export const useAuctionPage = () => {
     setAuctionFragment,
     isFragment,
     mutateByeLotsHandleButton,
-    money: user.money,
     searchValue,
     setSearchValue,
     isLoadingByeLots,

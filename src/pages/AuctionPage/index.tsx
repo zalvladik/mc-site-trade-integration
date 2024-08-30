@@ -21,7 +21,6 @@ import {
 import AuctionTradeHistory from 'src/components/Auction/AuctionTradeHistory'
 import DefaultButton from 'src/components/DefaultButton'
 import DefaultInput from 'src/components/inputs/DefaultInput'
-import MoneyTable from 'src/components/MoneyTable'
 
 const AuctionPage = (): JSX.Element => {
   const {
@@ -30,7 +29,6 @@ const AuctionPage = (): JSX.Element => {
     auctionFragment,
     isFragment,
     mutateByeLotsHandleButton,
-    money,
     isLoadingByeLots,
     isCanNewFetchGetByeLots,
     isCanNewFetchGetEnchantItems,
@@ -95,7 +93,6 @@ const AuctionPage = (): JSX.Element => {
               Пошук
             </DefaultButton>
           </div>
-          <MoneyTable money={money} style={{ flexDirection: 'row', gap: 60 }} />
         </DefaultInputWrapper>
         <BodyContainer>
           <AuctionCategoryWrapper>

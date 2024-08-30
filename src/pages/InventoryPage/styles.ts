@@ -16,9 +16,4 @@ export const UserInventoryWrapper = styled.div`
   width: max-content;
   flex-direction: column;
   gap: 25px;
-
-  & > div:first-child {
-    width: 270px;
-    max-height: 160px;
-  }
 `

@@ -9,8 +9,11 @@ import {
 } from 'src/components/Navbar/styles'
 import { useNavBar } from 'src/components/Navbar/useNavbar'
 
+import MoneyTable from '../MoneyTable'
+
 const Navbar = (): JSX.Element => {
   const {
+    user,
     navigate,
     isScrollingUp,
     currentPath,
@@ -31,7 +34,14 @@ const Navbar = (): JSX.Element => {
             <img src="/assets/logo.svg" alt="header logo" />
           </ButtonBack>
           <NickNameContainer>
-            <div>France</div>
+            <div>{user.username} </div>
+            <div>
+              <MoneyTable
+                money={user.money}
+                style={{ flexDirection: 'row', gap: 60 }}
+                fontSize={28}
+              />
+            </div>
           </NickNameContainer>
         </div>
 
