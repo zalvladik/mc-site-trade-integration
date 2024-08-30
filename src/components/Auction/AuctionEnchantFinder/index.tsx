@@ -8,6 +8,7 @@ import {
   ButtonsContainer,
   Container,
   DefaultButtonWrapper,
+  EnchantItemsContainer,
   // EnchantImg,
 } from 'src/components/Auction/AuctionEnchantFinder/styles'
 import { useAuctionEnchantFinder } from 'src/components/Auction/AuctionEnchantFinder/useAuctionEnchantFinder'
@@ -146,7 +147,7 @@ const AuctionEnchantFinder = (): JSX.Element => {
           )}
         </Container>
       ) : (
-        <div>
+        <EnchantItemsContainer>
           <TheadContainer>
             {['Предмет', 'Ціна'].map(item => (
               <div key={item}>
@@ -206,7 +207,7 @@ const AuctionEnchantFinder = (): JSX.Element => {
               })}
             </TbodyContainer>
           </StyledSkeleton>
-        </div>
+        </EnchantItemsContainer>
       )}
     </>
   )
