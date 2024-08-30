@@ -1,4 +1,4 @@
-import { moneyCalculator, moneyCalculatorShulker } from 'src/helpers'
+import { moneyCalculator } from 'src/helpers'
 
 import { MoneyAmountContainer } from 'src/components/MoneyTable/styles'
 import type { MoneyTableProps } from 'src/components/MoneyTable/types'
