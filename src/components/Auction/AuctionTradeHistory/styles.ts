@@ -59,7 +59,7 @@ export const StickyData = styled.div`
   top: 5px;
 `
 
-export const SellerHistoryContainer = styled.div`
+export const HistoryListContainer = styled.div`
   height: 560px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -68,27 +68,7 @@ export const SellerHistoryContainer = styled.div`
 
   border-radius: 8px;
 
-  padding: 0px 10px 0px 10px;
-  & > div {
-    display: flex;
-    margin-left: 5%;
-
-    &:not(:first-child) {
-      margin-top: 10px;
-    }
-  }
-`
-
-export const BuyerHistoryContainer = styled.div`
-  height: 570px;
-  overflow-y: auto;
-  overflow-x: hidden;
-
-  border: 4px solid rgba(128, 128, 128, 0.5);
-
-  border-radius: 8px;
-
-  padding: 0px 10px 0px 10px;
+  padding: 0px 10px 20px 10px;
   & > div {
     display: flex;
     margin-left: 5%;

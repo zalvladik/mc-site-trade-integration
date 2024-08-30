@@ -1,10 +1,9 @@
 import { formatDateToUK } from 'src/helpers/formatVipExprirationDate'
 
 import {
-  BuyerHistoryContainer,
   Container,
+  HistoryListContainer,
   ItemTextInfoContainer,
-  SellerHistoryContainer,
   StickyData,
 } from 'src/components/Auction/AuctionTradeHistory/styles'
 import { useAuctionTradeHistory } from 'src/components/Auction/AuctionTradeHistory/useAuctionTradeHistory'
@@ -25,7 +24,7 @@ const AuctionTradeHistory = (): JSX.Element => {
       <div>
         <h1>Покупки</h1>
 
-        <BuyerHistoryContainer className="scroll-y" ref={containerBuyerRef}>
+        <HistoryListContainer className="scroll-y" ref={containerBuyerRef}>
           {totalBuyerLots.map(({ lot, id, createdAt }, i) => {
             const lotElement = (lot?.shulker || lot?.item)!
 
@@ -86,11 +85,11 @@ const AuctionTradeHistory = (): JSX.Element => {
               </>
             )
           })}
-        </BuyerHistoryContainer>
+        </HistoryListContainer>
       </div>
       <div>
         <h1>Продажі</h1>
-        <SellerHistoryContainer className="scroll-y" ref={containerSellerRef}>
+        <HistoryListContainer className="scroll-y" ref={containerSellerRef}>
           {totalSellerLots.map(({ lot, id, createdAt }, i) => {
             const lotElement = (lot?.shulker || lot?.item)!
 
@@ -154,7 +153,7 @@ const AuctionTradeHistory = (): JSX.Element => {
               </>
             )
           })}
-        </SellerHistoryContainer>
+        </HistoryListContainer>
       </div>
     </Container>
   )
