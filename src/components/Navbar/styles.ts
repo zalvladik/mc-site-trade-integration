@@ -16,6 +16,7 @@ export const Header = styled.div`
 `
 
 export const ButtonBack = styled.div`
+  display: flex;
   width: 60px;
   height: 55px;
   transition: scale 0.2s ease;
@@ -52,7 +53,23 @@ export const HeaderContainer = styled.div`
 
   & > div {
     display: flex;
-    gap: 60px;
+    gap: 40px;
+  }
+`
+
+export const NickNameContainer = styled.div`
+  display: flex;
+
+  & > div {
+    font-family: 'Minecraft', sans-serif;
+
+    margin: auto 0px;
+
+    color: rgb(255, 255, 255);
+
+    font-weight: 500;
+    font-size: 28px;
+    transition: opacity 0.1s ease-in-out;
   }
 `
 

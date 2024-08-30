@@ -2,7 +2,6 @@ import { formatDateToUK } from 'src/helpers/formatVipExprirationDate'
 import {
   ButtonList,
   Container,
-  NickName,
   PlayerInfo,
   UserContainer,
   VipDateInfo,
@@ -30,7 +29,6 @@ const ProfilePage = (): JSX.Element => {
       <UserContainer>
         <SkinComponent />
         <PlayerInfo>
-          <NickName>{user.username}</NickName>
           <ButtonList>
             <DefaultButton onClick={openAdvancementsModal}>Досягнення</DefaultButton>
 
