@@ -20,7 +20,7 @@ const ProfilePage = (): JSX.Element => {
     openAdvancementsModal,
     openVipModal,
     openEffectsModal,
-    openEndModal,
+    // openEndModal,
   } = useProfilePage()
 
   return (
@@ -38,9 +38,9 @@ const ProfilePage = (): JSX.Element => {
             VIP
           </DefaultButton>
 
-          <DefaultButton disabled={isLoading} onClick={openEndModal}>
+          {/* <DefaultButton disabled={isLoading} onClick={openEndModal}>
             Енд
-          </DefaultButton>
+          </DefaultButton> */}
 
           <DefaultButton disabled={isLoading} onClick={logout}>
             Вийти
