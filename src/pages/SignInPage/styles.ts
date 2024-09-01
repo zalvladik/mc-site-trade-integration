@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import DefaultButton from 'src/components/DefaultButton'
 
 export const Container = styled.div`
+  min-height: 100vh;
   padding: 150px 50px 50px 50px;
   display: flex;
 `
