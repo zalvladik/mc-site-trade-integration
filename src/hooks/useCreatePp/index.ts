@@ -16,7 +16,9 @@ export const useCreatePp = () => {
         data,
       ])
 
-      toast.success({ message: ['Ефект добавлено', 'перезайдіть в гру!'] })
+      queryClient.invalidateQueries(CacheKeys.PP)
+
+      toast.success({ message: ['Ефект добавлено !'] })
     },
     onError: (error: Error) => {
       toast.error({ message: [error.message] })
