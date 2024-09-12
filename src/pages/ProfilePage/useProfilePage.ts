@@ -11,9 +11,9 @@ const useProfilePage = () => {
 
   const { mutate, isLoading } = useLogout()
 
-  const openAdvancementsModal = (): void => {
-    onOpen({ name: Modals.ADVANCEMENTS, data: { username: user.username } })
-  }
+  // const openAdvancementsModal = (): void => {
+  //   onOpen({ name: Modals.ADVANCEMENTS, data: { username: user.username } })
+  // }
 
   const afterSubmit = (user: UserT) => {
     updateUser(user)
@@ -37,7 +37,7 @@ const useProfilePage = () => {
     user,
     isLoading,
     logout,
-    openAdvancementsModal,
+    // openAdvancementsModal,
     openEffectsModal,
     openVipModal,
     openEndModal,

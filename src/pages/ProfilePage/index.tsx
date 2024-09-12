@@ -17,7 +17,7 @@ const ProfilePage = (): JSX.Element => {
     user,
     isLoading,
     logout,
-    openAdvancementsModal,
+    // openAdvancementsModal,
     openVipModal,
     openEffectsModal,
     // openEndModal,
@@ -28,7 +28,7 @@ const ProfilePage = (): JSX.Element => {
       <SkinComponent />
       <PlayerInfo>
         <ButtonList>
-          <DefaultButton onClick={openAdvancementsModal}>Досягнення</DefaultButton>
+          {/* <DefaultButton onClick={openAdvancementsModal}>Досягнення</DefaultButton> */}
 
           <DefaultButton disabled={isLoading} onClick={openEffectsModal}>
             Ефекти
