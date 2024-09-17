@@ -141,3 +141,9 @@ export type VipParamsT = {
   vipItemCount: number
   vipLotCount: number
 }
+
+export enum TimeRangeEnum {
+  WEEK = 'week',
+  MOUNTH = 'mounth',
+  YEAR = 'year',
+}

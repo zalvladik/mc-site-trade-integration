@@ -1,5 +1,6 @@
 import { BsBoxSeam } from 'react-icons/bs'
 import { IoDiamondOutline, IoMapOutline, IoPersonOutline } from 'react-icons/io5'
+import { LuLineChart } from 'react-icons/lu'
 import { RoutesPath } from 'src/router/routes'
 
 import {
@@ -73,6 +74,20 @@ const Navbar = (): JSX.Element => {
               }
             >
               <IoDiamondOutline size={46} />
+            </div>
+
+            <div
+              style={{
+                opacity: currentPath.includes(RoutesPath.TRADE_CHART) ? 1 : 0.3,
+              }}
+              aria-disabled
+              onClick={() =>
+                currentPath.includes(RoutesPath.TRADE_CHART)
+                  ? undefined
+                  : navigate(RoutesPath.TRADE_CHART)
+              }
+            >
+              <LuLineChart size={46} />
             </div>
 
             <div

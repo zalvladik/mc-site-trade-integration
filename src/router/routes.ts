@@ -6,4 +6,5 @@ export enum RoutesPath {
   INVENTORY = '/user/inventory',
   AUCTION = '/user/auction',
   MAP = '/user/map',
+  TRADE_CHART = '/user/trade_chart',
 }

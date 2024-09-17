@@ -75,6 +75,7 @@ export enum CacheKeys {
   WL_END = 'wl_end',
   SELLER_TRADE_HISTORY = 'seller_trade_history',
   BUYER_TRADE_HISTORY = 'buyer_trade_history',
+  TRADE_HISTORY_PRICE = 'trade_history_price',
 }
 
 export enum AuctionFragment {
@@ -106,6 +107,7 @@ export enum FetchEndpoint {
   PP = 'pp',
   WL_END = 'wl_end',
   TRADE_HISTORY = 'lot/trade_history',
+  TRADE_HISTORY_PRICE = 'lot/trade_history/price',
 }
 
 export enum LocalStorageKey {

@@ -25,7 +25,7 @@ export const NickNameInfoContainer = styled.div`
   top: 30px;
 
   padding: 4px 12px 8px 12px;
-  border-radius: 8px;
+  border-radius: 6px;
 
   border: 1px solid gray;
   background: rgb(112, 112, 112);

@@ -2,6 +2,7 @@ import { lazy } from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import AuctionLayout from 'src/layouts/AuctionLayout'
 import AuthLayout from 'src/layouts/AuthLayout'
+import BarCharPage from 'src/pages/BarCharPage'
 import { RoutesPath } from 'src/router/routes'
 
 const ErrorPage = lazy(() => import('src/pages/ErrorPage'))
@@ -28,6 +29,7 @@ export const Router = createBrowserRouter([
             element: <AuctionLayout />,
           },
           { path: RoutesPath.MAP, element: <MapPage /> },
+          { path: RoutesPath.TRADE_CHART, element: <BarCharPage /> },
           // { path: RoutesPath.WIKI, element: <WikiPage /> },
         ],
       },
