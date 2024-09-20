@@ -20,7 +20,7 @@ export const useMapPage = () => {
 
   const showInfoArt = () => {
     toast.error({
-      message: ['Покищо розділ для артів відутній.'],
+      message: ['Покищо розділ для артів відсутній.'],
       autoHideDuration: 8,
       fontSize: 20,
     })
