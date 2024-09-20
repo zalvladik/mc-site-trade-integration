@@ -5,7 +5,7 @@ import { useLogin } from 'src/hooks/useLogin'
 import { RoutesPath } from 'src/router/routes'
 
 export const useSignInPage = () => {
-  const { isSuccess } = useCheckAuth()
+  const { isSuccess, isLoading: isLoadingCheckAuth } = useCheckAuth()
   const navigation = useNavigate()
 
   if (isSuccess) navigation(RoutesPath.PROFILE)
@@ -62,5 +62,6 @@ export const useSignInPage = () => {
     password: credential.password,
     username: credential.username,
     errors,
+    isLoadingCheckAuth,
   }
 }
