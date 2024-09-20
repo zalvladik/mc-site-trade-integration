@@ -31,6 +31,10 @@ const useProfilePage = () => {
     onOpen({ name: Modals.EFFECTS, data: { user } })
   }
 
+  const openTwinksModal = (): void => {
+    onOpen({ name: Modals.TWINKS, data: { user } })
+  }
+
   const logout = (): void => mutate()
 
   return {
@@ -41,6 +45,7 @@ const useProfilePage = () => {
     openEffectsModal,
     openVipModal,
     openEndModal,
+    openTwinksModal,
   }
 }
 

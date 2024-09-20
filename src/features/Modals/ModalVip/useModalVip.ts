@@ -48,26 +48,22 @@ export const useModalVip = () => {
         return 'Недостатньо коштів'
       }
 
-      if (!selectedVipType) return ''
+      if (!selectedVipType) return 'Виберіть VIP'
 
       return 'Купити'
     }
 
-    if (!isByeVip) {
-      if (user.vip === VipEnum.NETHERITE) {
-        return 'У вас максимальна VIP'
-      }
-
-      if (!selectedVipType) return ''
-
-      if (user.money < vipPrice[selectedVipType as VipEnum]) {
-        return 'Недостатньо коштів'
-      }
-
-      return 'Покращити'
+    if (user.vip === VipEnum.NETHERITE) {
+      return 'У вас максимальна VIP'
     }
 
-    return ''
+    if (!selectedVipType) return 'Виберіть VIP'
+
+    if (user.money < vipPrice[selectedVipType as VipEnum]) {
+      return 'Недостатньо коштів'
+    }
+
+    return 'Покращити'
   }
 
   return {

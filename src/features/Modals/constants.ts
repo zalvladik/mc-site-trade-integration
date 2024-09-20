@@ -7,4 +7,5 @@ export enum Modals {
   VIP = 'vip',
   EFFECTS = 'effects',
   END = 'end',
+  TWINKS = 'twinks',
 }

@@ -7,6 +7,14 @@ export const FETCH_URL_IMG = `${FETCH_URL}/public`
 
 export const WL_END_COST = 64 * 2
 
+export const TWINKS_COUNT = 3
+
+export const TWINKS_PRICE = {
+  FIRST_TWINK: 64 * 2,
+  SECOND_TWINK: 64 * 3,
+  THIRD_TWINK: 64 * 4,
+}
+
 export enum SocketTypes {
   INCREMENT_MONEY,
   DECREMENT_MONEY,
@@ -76,6 +84,7 @@ export enum CacheKeys {
   SELLER_TRADE_HISTORY = 'seller_trade_history',
   BUYER_TRADE_HISTORY = 'buyer_trade_history',
   TRADE_HISTORY_PRICE = 'trade_history_price',
+  TWINKS = 'twinks',
 }
 
 export enum AuctionFragment {
@@ -108,6 +117,7 @@ export enum FetchEndpoint {
   WL_END = 'wl_end',
   TRADE_HISTORY = 'lot/trade_history',
   TRADE_HISTORY_PRICE = 'lot/trade_history/price',
+  TWINK = 'twink',
 }
 
 export enum LocalStorageKey {

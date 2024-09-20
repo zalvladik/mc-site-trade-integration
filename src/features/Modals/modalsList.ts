@@ -5,6 +5,7 @@ import ModalEnd from 'src/features/Modals/ModalEnd'
 import ModalItemsInShulker from 'src/features/Modals/ModalItemsInShulker'
 import ModalItemsInTicket from 'src/features/Modals/ModalItemsInTicket'
 import ModalLot from 'src/features/Modals/ModalLot'
+import ModalTwinks from 'src/features/Modals/ModalTwinks'
 import ModalVip from 'src/features/Modals/ModalVip'
 
 const modalsList = [
@@ -15,6 +16,7 @@ const modalsList = [
   { name: Modals.VIP, component: ModalVip },
   { name: Modals.EFFECTS, component: ModalEffects },
   { name: Modals.END, component: ModalEnd },
+  { name: Modals.TWINKS, component: ModalTwinks },
 ]
 
 export default modalsList
