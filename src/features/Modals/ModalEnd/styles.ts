@@ -18,6 +18,19 @@ export const EnderDragonImage = styled.div`
   background-size: contain;
 `
 
+export const ShowUsersContainer = styled.div`
+  padding: 20px 50px 10px 0px;
+  text-align: center;
+
+  font-family: 'Minecraft', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+
+  color: rgb(150, 150, 150);
+
+  text-shadow: 2.5px 2.5px 2px rgba(0, 0, 0, 1);
+`
+
 export const FormContainer = styled.div`
   position: relative;
   max-width: 800px;
@@ -58,6 +71,8 @@ export const InfoEndList = styled.ul`
   gap: 20px;
 
   & > li {
+    text-align: center;
+
     font-family: 'Minecraft', sans-serif;
     font-size: 20px;
     font-weight: 500;

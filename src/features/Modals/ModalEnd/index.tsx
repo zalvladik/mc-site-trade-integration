@@ -1,11 +1,13 @@
 import ButtonModalClose from 'src/components/ButtonModalClose'
 import DefaultButton from 'src/components/DefaultButton'
+import InformationButton from 'src/components/InformationButton'
 
 import {
   Container,
   EnderDragonImage,
   FormContainer,
   InfoEndList,
+  ShowUsersContainer,
 } from 'src/features/Modals/ModalEnd/styles'
 import type { ModalEndProps } from 'src/features/Modals/ModalEnd/types'
 import { useModalEnd } from 'src/features/Modals/ModalEnd/useModalEnd'
@@ -16,7 +18,7 @@ const ModalEnd = ({
   closeModal,
   handleContainerClick,
 }: ModalEndProps): JSX.Element => {
-  const { isBought, isLoading, mutate, isCanBye } = useModalEnd()
+  const { isBought, isLoading, mutate, isCanBye, showInfo, data } = useModalEnd()
 
   return (
     <SettingsModalsLayout
@@ -30,12 +32,9 @@ const ModalEnd = ({
           <EnderDragonImage />
           <InfoEndList>
             <li style={{ color: 'rgb(220, 20, 220)' }}>
-              1 вересня (неділя) буде розширення енду до 16к на 16к.
+              5 жовтня (субота) буде розширення енду до 20к на 20к.
             </li>
-            <li>
-              Наразі енд 8к на 8к. Приблизно можна буде залутати біля 5-6 шалкерів
-              елітр.
-            </li>
+            <li>Наразі енд 16к на 16к.</li>
 
             <li>
               Але, одразу після розширення енду, 1 годину неможна буде попасти в енд
@@ -58,6 +57,18 @@ const ModalEnd = ({
                 ? 'Купити доступ'
                 : 'Недостатньо коштів'}
           </DefaultButton>
+
+          {Boolean(data.length) && (
+            <ShowUsersContainer>
+              {'Гравці які купили доступ ->'}
+              <InformationButton
+                onClick={() => {
+                  showInfo()
+                }}
+                style={{ right: 210, bottom: 12 }}
+              />
+            </ShowUsersContainer>
+          )}
         </FormContainer>
       </Container>
     </SettingsModalsLayout>
