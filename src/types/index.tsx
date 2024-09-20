@@ -147,3 +147,9 @@ export enum TimeRangeEnum {
   MOUNTH = 'mounth',
   YEAR = 'year',
 }
+
+export enum MapPartsEnum {
+  MAP = 'map',
+  BUILDS = 'builds',
+  ARTS = 'arts',
+}

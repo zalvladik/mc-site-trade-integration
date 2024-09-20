@@ -1,6 +1,7 @@
 import { BsBoxSeam } from 'react-icons/bs'
-import { IoDiamondOutline, IoMapOutline, IoPersonOutline } from 'react-icons/io5'
+import { IoDiamondOutline, IoPersonOutline } from 'react-icons/io5'
 import { LuLineChart } from 'react-icons/lu'
+import { PiCompassRoseDuotone } from 'react-icons/pi'
 import { RoutesPath } from 'src/router/routes'
 
 import {
@@ -14,7 +15,7 @@ import { useNavBar } from 'src/components/Navbar/useNavbar'
 const Navbar = (): JSX.Element => {
   const {
     navigate,
-    isScrollingUp,
+
     currentPath,
     isProfilePage,
     isSuccess,
@@ -26,7 +27,7 @@ const Navbar = (): JSX.Element => {
   }
 
   return (
-    <Header className={isScrollingUp ? '' : 'header hidden'}>
+    <Header>
       <HeaderContainer>
         <ButtonBack onClick={handleClick} />
 
@@ -99,7 +100,7 @@ const Navbar = (): JSX.Element => {
                 currentPath === RoutesPath.MAP ? undefined : navigate(RoutesPath.MAP)
               }
             >
-              <IoMapOutline size={46} />
+              <PiCompassRoseDuotone size={46} />
             </div>
 
             {/* {isSuccess && (
