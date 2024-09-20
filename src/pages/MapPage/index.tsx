@@ -84,7 +84,7 @@ const MapPage = (): JSX.Element => {
 
                 <BuildDescription>Вам Бог помагає!</BuildDescription>
                 <BuildDescription>За вас правда, за вас слава</BuildDescription>
-                <BuildDescription>І воля святая!"</BuildDescription>
+                <BuildDescription>І воля святая!</BuildDescription>
               </BuildInfo>
               <BuildPasport>
                 <div>Автор - ByLbA</div>
