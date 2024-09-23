@@ -34,7 +34,7 @@ const MapPage = (): JSX.Element => {
         <ContainerMap>
           <iframe
             title="map"
-            src="https://map.uk-land.space/"
+            src="https://map.vinland.space/"
             width="100%"
             height="100%"
           />
@@ -76,7 +76,7 @@ const MapPage = (): JSX.Element => {
               <BuildInfo>
                 <BuildTitle>Архів похоті</BuildTitle>
                 <BuildDescription>
-                  В світі UK-land, дуже давно жила міфічна Богиня Діанесса. Хоть вона
+                  В світі Vinland, дуже давно жила міфічна Богиня Діанесса. Хоть вона
                   і була Богинею похоті, але віддана була тільки одному.
                 </BuildDescription>
                 <BuildDescription>
@@ -85,7 +85,7 @@ const MapPage = (): JSX.Element => {
                   розсудок і її поглинула глибока печаль і тьма.
                 </BuildDescription>
                 <BuildDescription>
-                  Ми не знаєм де вона зараз, але на землях UK-land ходить її
+                  Ми не знаєм де вона зараз, але на землях vinland ходить її
                   реінкарнація, сосуд... Ну як мінімум так кажуть жителі цих земель.
                 </BuildDescription>
               </BuildInfo>

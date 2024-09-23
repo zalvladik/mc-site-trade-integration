@@ -25,7 +25,7 @@ const NavbarLeft = (): JSX.Element => {
   } = useNavbarLeft()
 
   const handleClick = (): void => {
-    window.location.href = 'https://uk-land-site.vercel.app/'
+    window.location.href = 'https://vinland-site.vercel.app/'
   }
 
   return (
