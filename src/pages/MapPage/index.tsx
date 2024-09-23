@@ -1,5 +1,3 @@
-import { HiOutlineBuildingOffice2 } from 'react-icons/hi2'
-import { IoBrushOutline, IoMapOutline } from 'react-icons/io5'
 import {
   BuildDescription,
   BuildImage,
@@ -9,52 +7,30 @@ import {
   BuildTitle,
   ContainerBuilds,
   ContainerMap,
-  MapNavContainer,
 } from 'src/pages/MapPage/styles'
 import { MapPartsEnum } from 'src/types'
 
-import InformationButton from 'src/components/InformationButton'
+import NavBarTop from 'src/components/NavBarTop'
 
 import { useMapPage } from './useMapPage'
 
 const MapPage = (): JSX.Element => {
-  const { setNavMap, navMap, showInfo, showInfoArt } = useMapPage()
+  const { navType, setNavType, showInfoText, navTypes, buttons } = useMapPage()
 
   return (
     <>
-      <MapNavContainer>
-        <div
-          style={{
-            opacity: navMap === MapPartsEnum.MAP ? 1 : 0.3,
-          }}
-          onClick={() => {
-            setNavMap(MapPartsEnum.MAP)
-          }}
-        >
-          <IoMapOutline size={46} />
-        </div>
-        <div
-          style={{
-            opacity: navMap === MapPartsEnum.BUILDS ? 1 : 0.3,
-          }}
-          onClick={() => {
-            setNavMap(MapPartsEnum.BUILDS)
-          }}
-        >
-          <HiOutlineBuildingOffice2 size={46} />
-        </div>
-        <div
-          style={{
-            opacity: navMap === MapPartsEnum.ARTS ? 1 : 0.3,
-          }}
-          onClick={showInfoArt}
-        >
-          <IoBrushOutline style={{ color: 'red' }} size={46} />
-        </div>
-        <InformationButton onClick={showInfo} style={{ right: -60, top: 22 }} />
-      </MapNavContainer>
+      <NavBarTop
+        {...{
+          navType,
+          setNavType,
+          buttons,
+          navTypes,
+          showInfoText,
+          strokeDasharray: 164,
+        }}
+      />
 
-      {navMap === MapPartsEnum.MAP && (
+      {navType === MapPartsEnum.MAP && (
         <ContainerMap>
           <iframe
             title="map"
@@ -65,7 +41,7 @@ const MapPage = (): JSX.Element => {
         </ContainerMap>
       )}
 
-      {navMap === MapPartsEnum.BUILDS && (
+      {navType === MapPartsEnum.BUILDS && (
         <ContainerBuilds>
           <BuildsList>
             <div>

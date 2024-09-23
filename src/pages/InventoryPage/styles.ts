@@ -6,7 +6,6 @@ export const Container = styled.div`
   top: 50%;
   left: 50%;
   width: 100%;
-  height: 90%;
 
   transform: translate(-50%, -50%);
   display: flex;
@@ -14,11 +13,4 @@ export const Container = styled.div`
   flex-wrap: wrap;
 
   justify-content: center;
-`
-
-export const UserInventoryWrapper = styled.div`
-  display: flex;
-  width: max-content;
-  flex-direction: column;
-  gap: 25px;
 `

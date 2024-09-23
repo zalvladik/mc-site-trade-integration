@@ -6,13 +6,15 @@ import { RoutesPath } from 'src/router/routes'
 
 import {
   ButtonBack,
+  CatContainer,
   Header,
   HeaderContainer,
+  NavEffect,
   NavList,
-} from 'src/components/Navbar/styles'
-import { useNavBar } from 'src/components/Navbar/useNavbar'
+} from 'src/components/NavbarLeft/styles'
+import { useNavbarLeft } from 'src/components/NavbarLeft/useNavbarLeft'
 
-const Navbar = (): JSX.Element => {
+const NavbarLeft = (): JSX.Element => {
   const {
     navigate,
 
@@ -20,7 +22,7 @@ const Navbar = (): JSX.Element => {
     isProfilePage,
     isSuccess,
     isLoading,
-  } = useNavBar()
+  } = useNavbarLeft()
 
   const handleClick = (): void => {
     window.location.href = 'https://uk-land-site.vercel.app/'
@@ -29,8 +31,8 @@ const Navbar = (): JSX.Element => {
   return (
     <Header>
       <HeaderContainer>
+        <NavEffect />
         <ButtonBack onClick={handleClick} />
-
         {!isLoading && isSuccess && (
           <NavList>
             <div
@@ -117,9 +119,11 @@ const Navbar = (): JSX.Element => {
               )} */}
           </NavList>
         )}
+
+        <CatContainer />
       </HeaderContainer>
     </Header>
   )
 }
 
-export default Navbar
+export default NavbarLeft

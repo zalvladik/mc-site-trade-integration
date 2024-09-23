@@ -153,3 +153,9 @@ export enum MapPartsEnum {
   BUILDS = 'builds',
   ARTS = 'arts',
 }
+
+export enum InventoryPartsEnum {
+  ITEMS = 'items',
+  SHULKERS = 'shulkers',
+  TICKETS = 'tickets',
+}

@@ -20,8 +20,8 @@ export const Container = styled.div`
 
   background: radial-gradient(
     circle,
-    rgba(80, 80, 80, 1) 0%,
-    rgba(40, 40, 40, 1) 100%
+    rgba(60, 60, 60, 0.6) 0%,
+    rgba(25, 25, 25, 0.6) 100%
   );
 
   -webkit-box-shadow:

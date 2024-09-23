@@ -54,14 +54,11 @@
 }
 
 .scroll-y::-webkit-scrollbar-track {
-  /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
-  /* background-color: #050a11; */
   border-radius: 3px;
 }
 
 .scroll-y::-webkit-scrollbar {
   width: 10px;
-  /* background-color: #050a11; */
   border-radius: 3px;
 }
 
@@ -69,4 +66,36 @@
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: gray;
   border-radius: 3px;
+}
+
+.heartbeat-outline {
+  outline-width: 6px;
+  outline-offset: 0;
+  outline-color: rgba(0, 150, 170, 0.75);
+  outline-style: solid;
+  animation: animateOutline 3s ease infinite;
+}
+
+@keyframes animateOutline {
+  0% {
+    outline-width: 1px;
+    outline-offset: 0;
+    outline-color: rgba(0, 150, 170, 0);
+  }
+
+  10% {
+    outline-color: rgba(0, 150, 170, 0.75);
+  }
+
+  50% {
+    outline-width: 8px;
+    outline-offset: 4px;
+    outline-color: rgba(0, 150, 170, 0);
+  }
+
+  100% {
+    outline-width: 8px;
+    outline-offset: 4px;
+    outline-color: rgba(102, 102, 102, 0);
+  }
 }

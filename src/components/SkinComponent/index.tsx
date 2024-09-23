@@ -3,6 +3,7 @@ import { Role } from 'src/constants'
 import HoverDescription from 'src/components/HoverDescription'
 import Skeleton from 'src/components/Skeleton'
 import {
+  CatContainer,
   Container,
   PlayerRoleImage,
   PlayerRoleImageWrapper,
@@ -14,7 +15,7 @@ const SkinComponent = (): JSX.Element => {
   const { isLoading, showRoleInfo, canvasRef, role, roleUa } = useSkinComponent()
 
   return (
-    <Container style={{ width: 350, height: 500 }}>
+    <Container className="heartbeat-outline">
       <Skeleton
         isLoading={isLoading}
         isDataExist={1}
@@ -22,6 +23,7 @@ const SkinComponent = (): JSX.Element => {
         size={80}
       >
         <SkinContainer>
+          <CatContainer />
           <canvas ref={canvasRef} id="canvas" />
           {role !== Role.USER && (
             <PlayerRoleImageWrapper>
@@ -32,6 +34,7 @@ const SkinComponent = (): JSX.Element => {
                   }}
                   onClick={() => showRoleInfo()}
                 />
+
                 <HoverDescription
                   style={{
                     translate: '-50% -120%',

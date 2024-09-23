@@ -1,14 +1,10 @@
 import { Outlet } from 'react-router-dom'
 import ProvideModals from 'src/contexts/ModalProvider'
 import { useUser } from 'src/contexts/UserProvider/useUser'
-import {
-  Container,
-  MoneyInfoContainer,
-  NickNameInfoContainer,
-} from 'src/layouts/AuthLayout/styles'
+import { Container, MoneyInfoContainer } from 'src/layouts/AuthLayout/styles'
 
 import MoneyTable from 'src/components/MoneyTable'
-import Navbar from 'src/components/Navbar'
+import NavbarLeft from 'src/components/NavbarLeft'
 
 const ModalLayout = (): JSX.Element => {
   const { user } = useUser()
@@ -16,12 +12,8 @@ const ModalLayout = (): JSX.Element => {
   return (
     <ProvideModals>
       <Container>
-        <Navbar />
+        <NavbarLeft />
         <Outlet />
-
-        <NickNameInfoContainer>
-          <div>{user.username}</div>
-        </NickNameInfoContainer>
 
         <MoneyInfoContainer>
           <MoneyTable

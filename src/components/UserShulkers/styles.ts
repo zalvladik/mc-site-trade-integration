@@ -1,23 +1,5 @@
 import styled from 'styled-components'
 
-export const ShulkerIdWrapper = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-  & > div {
-    position: absolute;
-
-    color: white;
-    font-family: 'Minecraft', sans-serif;
-
-    top: 50%;
-    left: 50%;
-
-    translate: -50% -50%;
-  }
-`
-
 export const Container = styled.div`
   position: relative;
 
@@ -27,16 +9,15 @@ export const Container = styled.div`
 
   padding: 30px;
 
-  height: 100%;
-  overflow: hidden;
+  height: 60%;
 
   transition: height 0.5s ease;
 
   background: radial-gradient(
     circle,
-    rgba(100, 110, 120, 1) 0%,
-    rgba(50, 55, 60, 1) 70%,
-    rgba(50, 55, 60, 1) 100%
+    rgba(100, 110, 120, 0.6) 0%,
+    rgba(50, 55, 60, 0.6) 70%,
+    rgba(50, 55, 60, 0.6) 100%
   );
 
   -webkit-box-shadow:
@@ -49,7 +30,8 @@ export const Container = styled.div`
     inset 0px 0px 96px 28px rgba(0, 0, 0, 0.75),
     0px 0px 12px -5px rgba(255, 255, 255, 1);
 
-  width: 630px;
+  width: 800px;
+  height: 440px;
 
   border-radius: 10px;
 
@@ -85,5 +67,23 @@ export const Container = styled.div`
         font-size: 20px;
       }
     }
+  }
+`
+
+export const ShulkerIdWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  & > div {
+    position: absolute;
+
+    color: white;
+    font-family: 'Minecraft', sans-serif;
+
+    top: 50%;
+    left: 50%;
+
+    translate: -50% -50%;
   }
 `

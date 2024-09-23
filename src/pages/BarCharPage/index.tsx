@@ -38,7 +38,7 @@ const BarChartExample = (): JSX.Element => {
       <CharContainer>
         <Bar
           style={{
-            backgroundColor: 'rgba(58, 58, 58, 0.3)',
+            backgroundColor: 'rgba(20, 20, 20, 0.6)',
             borderRadius: 8,
             padding: 16,
             border: '1px solid gray',

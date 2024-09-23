@@ -59,7 +59,7 @@ const AuctionPage = (): JSX.Element => {
     isUserLotsFragment || isCreateLotFragment || isTradeHistoryFragment
 
   return (
-    <Container>
+    <Container className="heartbeat-outline">
       <div>
         <DefaultInputWrapper>
           <div>

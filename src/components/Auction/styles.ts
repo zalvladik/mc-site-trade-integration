@@ -103,7 +103,7 @@ export const TbodyContainer = styled.div`
 
   background: radial-gradient(
     circle,
-    rgba(100, 110, 120, 1) 0%,
+    rgba(0, 50, 60, 0.4) 0%,
     rgba(30, 35, 40, 1) 100%
   );
 

@@ -4,6 +4,7 @@ import { Suspense, useEffect } from 'react'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { RouterProvider } from 'react-router-dom'
 
+import ParallaxStars from './features/ParallaxStars'
 import LoadingPage from './pages/LoadingPage'
 import { Router } from './router'
 
@@ -24,6 +25,7 @@ const App = (): JSX.Element => {
 
   return (
     <Suspense fallback={<LoadingPage />}>
+      <ParallaxStars />
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={Router} />
       </QueryClientProvider>

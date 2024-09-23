@@ -19,6 +19,19 @@ export const useUserInventory = () => {
 
   const { data = [], isLoading, isRefetching } = useGetItemsFromUser()
 
+  const showInfo = () => {
+    toast.info({
+      message: [
+        'Щоб забрати преедмети,',
+        'виберіть і натисніть забрати.',
+        'Потім заберіть їх за допомогою квитка',
+        '/trade предмети(забрати) id-квитка ',
+      ],
+      autoHideDuration: 8,
+      fontSize: 20,
+    })
+  }
+
   const {
     data: itemTicketData,
     mutate,
@@ -140,6 +153,7 @@ export const useUserInventory = () => {
     itemCategoryFilterProps,
     itemListProps,
     searchValue,
+    showInfo,
     selectedItemsLength: selectedItems.length,
   }
 }

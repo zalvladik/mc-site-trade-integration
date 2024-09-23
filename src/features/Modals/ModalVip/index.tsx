@@ -115,12 +115,7 @@ const ModalVip = ({
           {buttonText()}
         </DefaultButton>
 
-        <InformationButton
-          onClick={() => {
-            showInfo()
-          }}
-          style={{ left: 0, bottom: 0 }}
-        />
+        <InformationButton onClick={showInfo} style={{ left: 0, bottom: 0 }} />
       </Container>
     </SettingsModalsLayout>
   )

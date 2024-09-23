@@ -1,27 +1,38 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  background: radial-gradient(
-    circle,
-    rgba(11, 31, 50, 1) 0%,
-    rgba(10, 28, 38, 1) 25%,
-    rgba(15, 39, 52, 1) 50%,
-    rgba(10, 28, 38, 1) 75%,
-    rgba(11, 31, 50, 1) 100%
-  );
+  width: 350;
+  height: 520;
+  background-color: rgba(20, 20, 20, 0.6);
 
+  padding-top: 20px;
+
+  border: 1px solid gray;
+
+  border-radius: 8px;
   -webkit-box-shadow:
-    inset 0px 0px 96px 28px rgba(0, 0, 0, 0.75),
-    0px 0px 15px -5px rgba(255, 255, 255, 1);
+    inset 0px 0px 20px 10px rgba(10, 10, 10, 0.75),
+    0px 0px 12px -5px rgba(255, 255, 255, 1);
   -moz-box-shadow:
-    inset 0px 0px 96px 28px rgba(0, 0, 0, 0.75),
-    0px 0px 15px -5px rgba(255, 255, 255, 1);
+    inset 0px 0px 20px 10px rgba(10, 10, 10, 0.75),
+    0px 0px 12px -5px rgba(255, 255, 255, 1);
   box-shadow:
-    inset 0px 0px 96px 28px rgba(0, 0, 0, 0.75),
-    0px 0px 15px -5px rgba(255, 255, 255, 1);
+    inset 0px 0px 20px 10px rgba(10, 10, 10, 0.75),
+    0px 0px 12px -5px rgba(255, 255, 255, 1);
+`
 
-  border: 2px solid gray;
-  border-radius: 10px;
+export const CatContainer = styled.div`
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+  translate: -20% -105%;
+  width: 80px;
+  height: 80px;
+  background-image: url('/assets/gifs/cute-cat-white.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 `
 
 export const PlayerRoleImageWrapper = styled.div`

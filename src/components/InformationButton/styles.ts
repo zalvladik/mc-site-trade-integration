@@ -13,18 +13,15 @@ export const Container = styled.div`
   border: 0.5px solid white;
   border-radius: 6px;
 
-  opacity: 0.3;
+  opacity: 0.4;
 
-  translate: 20% -20%;
+  translate: -50% -50%;
   padding: 4px;
 
-  transition:
-    transform 500ms ease,
-    opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
 
   &:hover {
     cursor: pointer;
-    transform: scale(1.05);
     opacity: 1;
   }
 `

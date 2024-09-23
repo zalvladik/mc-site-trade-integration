@@ -1,16 +1,33 @@
-import { Container, UserInventoryWrapper } from 'src/pages/InventoryPage/styles'
+import { Container } from 'src/pages/InventoryPage/styles'
+import { useInventoryPage } from 'src/pages/InventoryPage/useInventoryPage'
+import { InventoryPartsEnum } from 'src/types'
 
+import NavBarTop from 'src/components/NavBarTop'
 import UserInventory from 'src/components/UserInventory'
-import UserItemTicket from 'src/components/UserTickets'
+import UserItemTickets from 'src/components/UserItemTickets'
+import UserShulker from 'src/components/UserShulkers'
 
 const InventoryPage = (): JSX.Element => {
+  const { navType, setNavType, buttons, navTypes, showInfoText } = useInventoryPage()
+
   return (
-    <Container>
-      <UserInventoryWrapper>
-        <UserInventory />
-      </UserInventoryWrapper>
-      <UserItemTicket />
-    </Container>
+    <>
+      <NavBarTop
+        {...{
+          navType,
+          setNavType,
+          buttons,
+          navTypes,
+          showInfoText,
+          strokeDasharray: 164,
+        }}
+      />
+      <Container>
+        {navType === InventoryPartsEnum.ITEMS && <UserInventory />}
+        {navType === InventoryPartsEnum.SHULKERS && <UserShulker />}
+        {navType === InventoryPartsEnum.TICKETS && <UserItemTickets />}
+      </Container>
+    </>
   )
 }
 

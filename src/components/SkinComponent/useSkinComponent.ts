@@ -26,7 +26,7 @@ export const useSkinComponent = () => {
       const viewer = new skinview3d.SkinViewer({
         canvas: canvasRef.current,
         width: 350,
-        height: 500,
+        height: 520,
         skin: data?.textures.SKIN.url,
         enableControls: true,
         animation: new skinview3d.IdleAnimation(),

@@ -18,9 +18,9 @@ export const Container = styled.div`
   background: linear-gradient(
     90deg,
     rgba(5, 10, 15) 0%,
-    rgba(25, 35, 45) 20%,
-    rgba(25, 35, 45) 50%,
-    rgba(25, 35, 45) 80%,
+    rgba(0, 20, 40, 0.6) 20%,
+    rgba(0, 20, 40, 0.6) 50%,
+    rgba(0, 20, 40, 0.6) 80%,
     rgba(5, 10, 15) 100%
   );
 `

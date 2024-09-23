@@ -3,19 +3,19 @@ import styled from 'styled-components'
 export const Container = styled.div`
   background: radial-gradient(
     circle,
-    rgba(30, 67, 89, 1) 0%,
-    rgba(20, 47, 61, 1) 100%
+    rgba(30, 67, 89, 0.5) 0%,
+    rgba(20, 47, 61, 0.4) 100%
   );
 
   -webkit-box-shadow:
-    inset 0px 0px 96px 28px rgba(0, 0, 0, 0.75),
-    0px 0px 18px -5px rgba(255, 255, 255, 1);
+    inset 0px 0px 40px 28px rgba(0, 0, 0, 0.75),
+    0px 0px 14px -5px rgba(255, 255, 255, 1);
   -moz-box-shadow:
-    inset 0px 0px 96px 28px rgba(0, 0, 0, 0.75),
-    0px 0px 18px -5px rgba(255, 255, 255, 1);
+    inset 0px 0px 40px 28px rgba(0, 0, 0, 0.75),
+    0px 0px 14px -5px rgba(255, 255, 255, 1);
   box-shadow:
-    inset 0px 0px 96px 28px rgba(0, 0, 0, 0.75),
-    0px 0px 18px -5px rgba(255, 255, 255, 1);
+    inset 0px 0px 40px 28px rgba(0, 0, 0, 0.75),
+    0px 0px 14px -5px rgba(255, 255, 255, 1);
 
   position: relative;
   border: 1px solid black;
@@ -34,6 +34,8 @@ export const Container = styled.div`
 `
 
 export const InventoryWrapper = styled.div`
+  margin-top: 140px;
+  border-radius: 8px;
   display: flex;
   position: relative;
   width: max-content;

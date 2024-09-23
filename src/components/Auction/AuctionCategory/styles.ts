@@ -6,7 +6,7 @@ import type {
 } from 'src/components/Auction/AuctionCategory/types'
 
 export const Container = styled.div`
-  background-color: rgba(15, 25, 35, 1);
+  background-color: rgba(0, 20, 40, 0.6);
   padding: 16px 10px 16px 10px;
 
   width: 320px;

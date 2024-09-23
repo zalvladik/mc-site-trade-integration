@@ -27,8 +27,8 @@ export const InventoryWrapper = styled.div`
 
   background: radial-gradient(
     circle,
-    rgba(30, 57, 65, 1) 0%,
-    rgba(20, 46, 65, 1) 100%
+    rgba(30, 57, 65, 0.5) 0%,
+    rgba(20, 46, 65, 0.5) 100%
   );
 
   border-radius: 8px;

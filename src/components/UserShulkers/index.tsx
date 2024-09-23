@@ -1,10 +1,7 @@
 import InformationButton from 'src/components/InformationButton'
 import Skeleton from 'src/components/Skeleton'
-import {
-  Container,
-  ShulkerIdWrapper,
-} from 'src/components/UserTickets/UserShulkers/styles'
-import { useShulkers } from 'src/components/UserTickets/UserShulkers/useShulkers'
+import { Container, ShulkerIdWrapper } from 'src/components/UserShulkers/styles'
+import { useShulkers } from 'src/components/UserShulkers/useShulkers'
 
 const UserShulker = (): JSX.Element => {
   const { data, isLoading, showInfo, shulkerIconRefs, openModal, vipShulkerCount } =
@@ -49,10 +46,8 @@ const UserShulker = (): JSX.Element => {
       </Skeleton>
 
       <InformationButton
-        onClick={() => {
-          showInfo()
-        }}
-        style={{ left: 0, bottom: 0 }}
+        onClick={showInfo}
+        style={{ left: '50%', bottom: '-20%' }}
       />
     </Container>
   )

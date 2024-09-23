@@ -3,7 +3,7 @@ import { useCheckAuth } from 'src/hooks/useCheckAuth'
 import { useGetUser } from 'src/hooks/useGetUser'
 import { RoutesPath } from 'src/router/routes'
 
-export const useNavBar = () => {
+export const useNavbarLeft = () => {
   const navigate = useNavigate()
   const { isSuccess, isLoading } = useCheckAuth()
   const { isUserLoading } = useGetUser(isSuccess)
