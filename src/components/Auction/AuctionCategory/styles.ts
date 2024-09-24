@@ -78,7 +78,7 @@ export const ButtonCategory = styled.div<ButtonCategoryProps>`
 
   align-items: center;
 
-  background-color: rgba(40, 60, 80, 0.2);
+  background-color: rgba(50, 50, 50, 0.4);
 
   background: ${({ isSelected }) =>
     isSelected
@@ -103,7 +103,7 @@ export const ButtonCategory = styled.div<ButtonCategoryProps>`
     z-index: 99;
     cursor: pointer;
     transform: scale(1.1);
-    background-color: rgba(40, 60, 80, 0.6);
+    background-color: rgba(20, 70, 80, 0.6);
 
     & > .hover_description {
       display: flex;

@@ -18,6 +18,29 @@ export const Header = styled.div`
     rgba(0, 0, 0, 1) 100%
   );
 
+  background-size: 100% 110%;
+  animation: gradient-shift 10s infinite ease-in-out;
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 0%;
+    }
+    20% {
+      background-position: 0% 60%;
+    }
+    40% {
+      background-position: 0% 40%;
+    }
+    60% {
+      background-position: 0% 70%;
+    }
+    80% {
+      background-position: 0% 40%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
   backdrop-filter: blur(5px);
   transition: transform 0.3s ease-in-out;
   z-index: 9;

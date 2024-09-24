@@ -102,32 +102,17 @@
 
 .color-fill {
   fill: rgb(255, 0, 0);
-  animation: rgb-shift 20s infinite;
+  animation: rgb-shift 5s infinite;
 }
 
 @keyframes rgb-shift {
   0% {
-    fill: rgb(255, 0, 0);
+    fill: rgb(0, 100, 120);
   }
-  14% {
-    fill: rgb(255, 125, 0);
-  }
-  28% {
-    fill: rgb(255, 255, 0);
-  }
-  42% {
-    fill: rgb(0, 255, 0);
-  }
-  57% {
-    fill: rgb(0, 255, 255);
-  }
-  71% {
-    fill: rgb(0, 0, 255);
-  }
-  85% {
-    fill: rgb(255, 0, 255);
+  50% {
+    fill: rgb(0, 200, 255);
   }
   100% {
-    fill: rgb(255, 0, 0);
+    fill: rgb(0, 100, 120);
   }
 }
