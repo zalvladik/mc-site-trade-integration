@@ -36,7 +36,7 @@ const ProfileTwinks = (): JSX.Element => {
       <StyledSkeleton
         isLoading={isLoading}
         isDataExist={data.length}
-        skeletonLength={1}
+        skeletonLength={3}
         emptyText="Твінки відсутні"
         size={30}
       >
