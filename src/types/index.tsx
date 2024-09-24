@@ -167,3 +167,9 @@ export enum ProfilePartsEnum {
   VIP = 'vip',
   TWINKS = 'twinks',
 }
+
+export enum ExpansionWorldsEnum {
+  WORLD = 'world',
+  WORLD_NETHER = 'world_nether',
+  WORLD_END = 'world_end',
+}

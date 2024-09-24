@@ -1,7 +1,7 @@
 import { BsBoxSeam } from 'react-icons/bs'
 import { IoDiamondOutline, IoPersonOutline } from 'react-icons/io5'
 import { LuLineChart } from 'react-icons/lu'
-import { PiCompassRoseDuotone } from 'react-icons/pi'
+import { PiArrowsOutCardinal, PiCompassRoseDuotone } from 'react-icons/pi'
 import { RiLogoutBoxLine } from 'react-icons/ri'
 import { RoutesPath } from 'src/router/routes'
 
@@ -105,6 +105,21 @@ const NavbarLeft = (): JSX.Element => {
             >
               <PiCompassRoseDuotone size={46} />
             </div>
+
+            <div
+              style={{
+                opacity: currentPath === RoutesPath.EXPANSION_WORLDS ? 1 : 0.3,
+              }}
+              aria-disabled
+              onClick={() =>
+                currentPath === RoutesPath.EXPANSION_WORLDS
+                  ? undefined
+                  : navigate(RoutesPath.EXPANSION_WORLDS)
+              }
+            >
+              <PiArrowsOutCardinal size={46} />
+            </div>
+
             <div onClick={logoutProfile}>
               <RiLogoutBoxLine size={46} />
             </div>

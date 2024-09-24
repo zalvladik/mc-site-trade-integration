@@ -141,7 +141,7 @@ export const NavList = styled.div`
   margin: auto;
 
   & > div {
-    padding: 20px 20px;
+    padding: 12px 20px;
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -154,7 +154,10 @@ export const NavList = styled.div`
     }
   }
 
-  & > div:nth-child(6) {
+  & > div:last-child {
+    position: absolute;
+    bottom: 100px;
+
     opacity: 0.3;
     transition: 300ms ease;
 

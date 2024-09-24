@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom'
 import AuctionLayout from 'src/layouts/AuctionLayout'
 import AuthLayout from 'src/layouts/AuthLayout'
 import BarCharPage from 'src/pages/BarCharPage'
+import ExpansionWorldsPage from 'src/pages/ExpansionWorldsPage'
 import { RoutesPath } from 'src/router/routes'
 
 const ErrorPage = lazy(() => import('src/pages/ErrorPage'))
@@ -30,6 +31,7 @@ export const Router = createBrowserRouter([
           },
           { path: RoutesPath.MAP, element: <MapPage /> },
           { path: RoutesPath.TRADE_CHART, element: <BarCharPage /> },
+          { path: RoutesPath.EXPANSION_WORLDS, element: <ExpansionWorldsPage /> },
           // { path: RoutesPath.WIKI, element: <WikiPage /> },
         ],
       },

@@ -9,7 +9,7 @@ export const Input = styled.input`
   font-size: 30px;
   font-family: 'Minecraft';
   border-radius: 6px;
-  border: 2px solid white;
+  border: 2px solid rgba(255, 255, 255, 0.8);
   background: #161616;
 
   transition:
