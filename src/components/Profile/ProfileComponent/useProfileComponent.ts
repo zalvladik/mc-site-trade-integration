@@ -5,7 +5,7 @@ import { useToast } from 'src/contexts/ToastProvider/useToast'
 import { useUser } from 'src/contexts/UserProvider/useUser'
 import { useGetUserSkin } from 'src/hooks/useGetUserSkin'
 
-export const useSkinComponent = () => {
+export const useProfileComponent = () => {
   const { user } = useUser()
   const toast = useToast()
 
@@ -76,6 +76,7 @@ export const useSkinComponent = () => {
   return {
     showRoleInfo,
     isLoading,
+    user,
     canvasRef,
     role: role(),
     roleUa: roleToUa(),

@@ -159,3 +159,11 @@ export enum InventoryPartsEnum {
   SHULKERS = 'shulkers',
   TICKETS = 'tickets',
 }
+
+export enum ProfilePartsEnum {
+  ADVANCEMENT = 'advancemen',
+  FRIENDS = 'friends',
+  EFFECTS = 'effecst',
+  VIP = 'vip',
+  TWINKS = 'twinks',
+}

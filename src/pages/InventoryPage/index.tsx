@@ -19,7 +19,6 @@ const InventoryPage = (): JSX.Element => {
           buttons,
           navTypes,
           showInfoText,
-          strokeDasharray: 164,
         }}
       />
       <Container>

@@ -2,11 +2,12 @@ import styled from 'styled-components'
 
 export const ContainerWrapper = styled.div`
   z-index: 99;
+  margin-left: 43px;
 
   position: absolute;
   left: 50%;
   top: 24px;
-  translate: -35% 0%;
+  translate: -50% 0%;
 `
 
 export const Container = styled.div`

@@ -5,7 +5,7 @@ import { useUser } from 'src/contexts/UserProvider/useUser'
 import { useCreateTwink } from 'src/hooks/useCreateTwink'
 import { useGetTwinks } from 'src/hooks/useGetTwinks'
 
-export const useModalTwinks = () => {
+export const useProfileTwinks = () => {
   const [twinkName, setTwinkName] = useState('')
 
   const { data, isLoading: isLoadingGetTwinks } = useGetTwinks()

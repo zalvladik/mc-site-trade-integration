@@ -6,11 +6,11 @@ import { useByeVip } from 'src/hooks/useByeVip'
 import { useUpgradeVip } from 'src/hooks/useUpgradeVip'
 import { VipEnum } from 'src/types'
 
-export const useModalVip = () => {
+export const useProfileVip = () => {
   const { user } = useUser()
   const isByeVip = !user.vipExpirationDate
 
-  const [selectedVipType, setSelectedVipType] = useState<VipEnum>()
+  const [selectedVipType, setSelectedVipType] = useState<VipEnum>(VipEnum.IRON)
 
   const { isLoading: isLoadingByeVip, mutate: mutateByeVip } = useByeVip()
   const { isLoading: isLoadingUpgradeVip, mutate: mutateUpgradeVip } =

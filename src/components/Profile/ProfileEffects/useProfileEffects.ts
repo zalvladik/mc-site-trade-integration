@@ -4,7 +4,7 @@ import { useCreatePp } from 'src/hooks/useCreatePp'
 import { useDeletePp } from 'src/hooks/useDeletePp'
 import { useGetPp } from 'src/hooks/useGetPp'
 
-export const useModalEffects = () => {
+export const useProfileEffects = () => {
   const [isCreateEffect, setIsCreateEffect] = useState(false)
 
   const [effectStyle, setEffectStyle] = useState<string>('')

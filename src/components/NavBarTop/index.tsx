@@ -45,7 +45,7 @@ const NavBarTop = ({
       <div>
         <InformationButton
           onClick={showInfo}
-          style={{ right: '-40%', top: '50%' }}
+          style={{ right: '-100px', top: '50%' }}
         />
       </div>
     </ContainerWrapper>

@@ -26,7 +26,6 @@ const MapPage = (): JSX.Element => {
           buttons,
           navTypes,
           showInfoText,
-          strokeDasharray: 164,
         }}
       />
 
