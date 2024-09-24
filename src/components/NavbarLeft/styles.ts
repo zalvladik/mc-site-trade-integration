@@ -94,7 +94,7 @@ export const ButtonBack = styled.div`
   border-radius: 25%;
   overflow: hidden;
 
-  background-image: url('/assets/nav_logo.png');
+  background-image: url('/assets/logo_gif.gif');
   background-size: contain;
   background-repeat: no-repeat;
 
