@@ -114,7 +114,7 @@ const ProfileEffects = (): JSX.Element => {
 
       <InformationButton
         onClick={showInfo}
-        style={{ left: '50%', bottom: '-100px' }}
+        style={{ left: '50%', bottom: '-80px' }}
       />
 
       <EffectInfoContainer>

@@ -7,6 +7,7 @@ import {
   Container,
   DescriptionPrice,
   FormAddTwink,
+  StyledSkeleton,
   TwinkUserNameList,
 } from 'src/components/Profile/ProfileTwinks/styles'
 import { useProfileTwinks } from 'src/components/Profile/ProfileTwinks/useProfileTwinks'
@@ -32,12 +33,20 @@ const ProfileTwinks = (): JSX.Element => {
 
   return (
     <Container className="heartbeat-outline">
-      <TwinkUserNameList>
-        {!isLoading && data.length
-          ? data.map(item => <div key={item.id}>{item.username}</div>)
-          : null}
-        <div>{twinkCountText}</div>
-      </TwinkUserNameList>
+      <StyledSkeleton
+        isLoading={isLoading}
+        isDataExist={data.length}
+        skeletonLength={1}
+        emptyText="Твінки відсутні"
+        size={30}
+      >
+        <TwinkUserNameList>
+          {!isLoading && data.length
+            ? data.map(item => <div key={item.id}>{item.username}</div>)
+            : null}
+          <div>{twinkCountText}</div>
+        </TwinkUserNameList>
+      </StyledSkeleton>
 
       <hr />
 

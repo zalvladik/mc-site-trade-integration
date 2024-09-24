@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import Skeleton from 'src/components/Skeleton'
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -54,6 +56,29 @@ export const TwinkUserNameList = styled.div`
   }
 
   & > div:not(:last-child) {
+    background-color: rgba(60, 60, 60, 0.5);
+
+    -webkit-box-shadow:
+      inset 0px 0px 20px 6px rgba(0, 0, 0, 0.5),
+      0px 0px 12px -3px rgba(255, 255, 255, 0.5);
+    -moz-box-shadow:
+      inset 0px 0px 20px 6px rgba(0, 0, 0, 0.5),
+      0px 0px 12px -3px rgba(255, 255, 255, 0.5);
+    box-shadow:
+      inset 0px 0px 20px 6px rgba(0, 0, 0, 0.5),
+      0px 0px 12px -3px rgba(255, 255, 255, 0.5);
+  }
+`
+
+export const StyledSkeleton = styled(Skeleton)`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & .loadingContainer {
+    height: 52px;
+    border-radius: 4px;
+
     background-color: rgba(60, 60, 60, 0.5);
 
     -webkit-box-shadow:

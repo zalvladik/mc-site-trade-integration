@@ -3,13 +3,13 @@ import type { Keyframes } from 'styled-components/dist/types'
 
 export const Container = styled.div`
   position: relative;
-  margin-top: 200px;
+  margin-top: 220px;
   display: flex;
   flex-direction: column;
 
-  width: 1000px;
+  width: 900px;
 
-  gap: 24px;
+  gap: 20px;
 `
 
 export const AddEffectForm = styled.div`
@@ -41,12 +41,12 @@ export const GalleryRow = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 
-  gap: 20px;
+  gap: 16px;
 `
 
 export const GalleryItem = styled.div`
-  width: 86px;
-  height: 86px;
+  width: 78px;
+  height: 78px;
 
   background-size: contain;
   background-repeat: no-repeat;
@@ -99,8 +99,8 @@ export const EffectStylesContainer = styled.div`
   flex-wrap: nowrap;
 
   & > div {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
     background-size: contain;
     background-repeat: no-repeat;
 
@@ -112,7 +112,7 @@ export const EffectStylesContainer = styled.div`
 
     &:hover {
       cursor: pointer;
-      transform: scale(1.2);
+      transform: scale(1.3);
     }
   }
 `

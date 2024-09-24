@@ -1,11 +1,10 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  width: 350;
-  height: 520;
-  background-color: rgba(20, 20, 20, 0.6);
+  width: 348px;
+  height: 518px;
 
-  padding-top: 20px;
+  background-color: rgba(20, 20, 20, 0.6);
 
   border: 1px solid gray;
 
@@ -26,7 +25,7 @@ export const CatContainer = styled.div`
   top: 0px;
   right: 0px;
 
-  translate: -20% -105%;
+  translate: -20% -80%;
   width: 80px;
   height: 80px;
   background-image: url('/assets/gifs/cute-cat-white.gif');
@@ -93,7 +92,7 @@ export const PlayerRoleImage = styled.div`
 export const VipDateInfoContainer = styled.div`
   position: relative;
 
-  background-color: gray;
+  background-color: rgba(30, 30, 30, 0.8);
 
   padding: 20px 0px;
   border-radius: 6px;
@@ -101,12 +100,6 @@ export const VipDateInfoContainer = styled.div`
   border: 2px solid rgba(50, 50, 50, 1);
 
   text-align: center;
-
-  background: radial-gradient(
-    circle,
-    rgba(100, 110, 120, 1) 0%,
-    rgba(30, 35, 40, 1) 100%
-  );
 
   -webkit-box-shadow:
     inset 0px 0px 10px 4px rgba(0, 0, 0, 1),
