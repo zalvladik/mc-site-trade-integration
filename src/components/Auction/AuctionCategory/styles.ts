@@ -24,7 +24,7 @@ export const CategoryIcon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0px;
+  margin-bottom: 5px;
 
   opacity: 0.6;
 `
@@ -145,8 +145,8 @@ export const ButtonItems = styled.div<ButtonItemsProps>`
   align-items: center;
 
   & > div:first-child {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
 
     display: flex;
     align-items: center;
