@@ -65,8 +65,7 @@ const SignInPage = (): JSX.Element => {
               Підтвердити
             </StyledDefaultButton>
 
-            <Description>Реєстрація проходить тільки через заявку</Description>
-            <Description>Пароль і логін такий же як у вас на сервері</Description>
+            <Description>Логін і пароль такий же як у вас на сервері</Description>
           </FormContainer>
         </FormImage>
       )}

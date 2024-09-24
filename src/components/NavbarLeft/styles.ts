@@ -146,15 +146,20 @@ export const NavList = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
 
-    &:hover {
-      cursor: pointer;
-    }
-
     transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 
     &:hover {
       cursor: pointer;
       transform: scale(1.05);
+    }
+  }
+
+  & > div:nth-child(6) {
+    opacity: 0.3;
+    transition: 300ms ease;
+
+    &:hover {
+      opacity: 1;
     }
   }
 `

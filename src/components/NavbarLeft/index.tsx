@@ -2,6 +2,7 @@ import { BsBoxSeam } from 'react-icons/bs'
 import { IoDiamondOutline, IoPersonOutline } from 'react-icons/io5'
 import { LuLineChart } from 'react-icons/lu'
 import { PiCompassRoseDuotone } from 'react-icons/pi'
+import { RiLogoutBoxLine } from 'react-icons/ri'
 import { RoutesPath } from 'src/router/routes'
 
 import {
@@ -17,7 +18,7 @@ import { useNavbarLeft } from 'src/components/NavbarLeft/useNavbarLeft'
 const NavbarLeft = (): JSX.Element => {
   const {
     navigate,
-
+    logoutProfile,
     currentPath,
     isProfilePage,
     isSuccess,
@@ -104,19 +105,9 @@ const NavbarLeft = (): JSX.Element => {
             >
               <PiCompassRoseDuotone size={46} />
             </div>
-
-            {/* {isSuccess && (
-                <button
-                  style={{ opacity: currentPath === RoutesPath.WIKI ? 1 : 0.5 }}
-                  onClick={() =>
-                    currentPath === RoutesPath.WIKI
-                      ? undefined
-                      : navigate(RoutesPath.WIKI)
-                  }
-                >
-                  Wiki
-                </button>
-              )} */}
+            <div onClick={logoutProfile}>
+              <RiLogoutBoxLine size={46} />
+            </div>
           </NavList>
         )}
 
