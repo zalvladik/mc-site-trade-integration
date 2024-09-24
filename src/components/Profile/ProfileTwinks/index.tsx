@@ -39,7 +39,7 @@ const ProfileTwinks = (): JSX.Element => {
         <div>{twinkCountText}</div>
       </TwinkUserNameList>
 
-      <hr className="divider" />
+      <hr />
 
       <FormAddTwink>
         <DefaultInput
@@ -84,7 +84,10 @@ const ProfileTwinks = (): JSX.Element => {
         ))}
       </DescriptionPrice>
 
-      <InformationButton onClick={showInfo} style={{ left: -64, top: 16 }} />
+      <InformationButton
+        onClick={showInfo}
+        style={{ left: '50%', bottom: '-100px' }}
+      />
     </Container>
   )
 }

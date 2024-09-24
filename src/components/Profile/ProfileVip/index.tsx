@@ -31,7 +31,6 @@ const ProfileVip = (): JSX.Element => {
 
   return (
     <Container>
-      {/* <h1>Покупка VIP</h1> */}
       <VipTypeIcons>
         {Object.values(VipEnum).map(item => {
           const isDisalbed = vipPrice[user.vip as VipEnum] >= vipPrice[item]
@@ -57,10 +56,20 @@ const ProfileVip = (): JSX.Element => {
 
       <VipInfoContainer className="heartbeat-outline">
         <VipInfo>
-          <div>Предметів: {ITEMS_COUNT * vipMultipliers[selectedVipType]}</div>
-          <div>Шалкери: {SHULKERS_COUNT * vipMultipliers[selectedVipType]}</div>
-          <div>Лоти: {LOTS_COUNT * vipMultipliers[selectedVipType]}</div>
+          <div>
+            Ціна: {vipPrice[selectedVipType]} <div />
+          </div>
+          <div>
+            <span>Предметів:</span> {ITEMS_COUNT * vipMultipliers[selectedVipType]}
+          </div>
+          <div>
+            <span>Шалкери:</span> {SHULKERS_COUNT * vipMultipliers[selectedVipType]}
+          </div>
+          <div>
+            <span>Лоти:</span> {LOTS_COUNT * vipMultipliers[selectedVipType]}
+          </div>
         </VipInfo>
+
         <DefaultButton
           disabled={
             !selectedVipType ||
@@ -80,7 +89,7 @@ const ProfileVip = (): JSX.Element => {
 
       <InformationButton
         onClick={showInfo}
-        style={{ left: '50%', bottom: '-30%' }}
+        style={{ left: '50%', bottom: '-100px' }}
       />
     </Container>
   )

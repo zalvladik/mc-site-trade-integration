@@ -56,7 +56,7 @@ const UserInventory = (): JSX.Element => {
       />
       <InformationButton
         onClick={showInfo}
-        style={{ left: '50%', bottom: '-20%' }}
+        style={{ left: '50%', bottom: '-100px' }}
       />
     </InventoryWrapper>
   )

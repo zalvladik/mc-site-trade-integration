@@ -8,9 +8,17 @@ import { VipEnum } from 'src/types'
 
 export const useProfileVip = () => {
   const { user } = useUser()
-  const isByeVip = !user.vipExpirationDate
+  const isByeVip = !!user.vipExpirationDate
 
-  const [selectedVipType, setSelectedVipType] = useState<VipEnum>(VipEnum.IRON)
+  const getUserVipTypeForSelectedVipType = (): VipEnum => {
+    const vipEnumsArray = Object.values(VipEnum)
+
+    return vipEnumsArray[user.vip ? vipEnumsArray.indexOf(user.vip) + 1 : 0]
+  }
+
+  const [selectedVipType, setSelectedVipType] = useState<VipEnum>(
+    getUserVipTypeForSelectedVipType(),
+  )
 
   const { isLoading: isLoadingByeVip, mutate: mutateByeVip } = useByeVip()
   const { isLoading: isLoadingUpgradeVip, mutate: mutateUpgradeVip } =
@@ -20,7 +28,7 @@ export const useProfileVip = () => {
   const toogleVip = () => {
     if (!selectedVipType) return
 
-    if (isByeVip) {
+    if (!isByeVip) {
       mutateByeVip(selectedVipType)
 
       return
@@ -43,7 +51,7 @@ export const useProfileVip = () => {
   }
 
   const getButtonText = (): string => {
-    if (isByeVip) {
+    if (!isByeVip) {
       if (user.money < vipPrice[selectedVipType as VipEnum]) {
         return 'Недостатньо коштів'
       }

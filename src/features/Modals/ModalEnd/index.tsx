@@ -63,7 +63,7 @@ const ModalEnd = ({
               {'Гравці які купили доступ ->'}
               <InformationButton
                 onClick={showInfo}
-                style={{ right: 210, bottom: 12 }}
+                style={{ right: 210, bottom: '-100px' }}
               />
             </ShowUsersContainer>
           )}

@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+import type { Keyframes } from 'styled-components/dist/types'
 
 export const Container = styled.div`
   position: relative;
@@ -18,6 +19,18 @@ export const DisabledVipType = styled.div`
   background-image: url('/assets/items_for_ui/barrier.png');
   background-size: contain;
   background-repeat: no-repeat;
+`
+
+const floatAnimation = (distance: number): Keyframes => keyframes`
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-${distance}px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 `
 
 export const VipTypeIcons = styled.div`
@@ -41,67 +54,19 @@ export const VipTypeIcons = styled.div`
     }
 
     &:nth-child(1) {
-      animation: float 6s ease-in-out infinite;
-
-      @keyframes float {
-        0% {
-          transform: translatey(0px);
-        }
-        50% {
-          transform: translatey(-20px);
-        }
-        100% {
-          transform: translatey(0px);
-        }
-      }
+      animation: ${floatAnimation(20)} 6s ease-in-out infinite;
     }
 
     &:nth-child(2) {
-      animation: float 4s ease-in-out infinite;
-
-      @keyframes float {
-        0% {
-          transform: translatey(0px);
-        }
-        50% {
-          transform: translatey(-16px);
-        }
-        100% {
-          transform: translatey(0px);
-        }
-      }
+      animation: ${floatAnimation(16)} 4s ease-in-out infinite;
     }
 
     &:nth-child(3) {
-      animation: float 8s ease-in-out infinite;
-
-      @keyframes float {
-        0% {
-          transform: translatey(0px);
-        }
-        50% {
-          transform: translatey(-24px);
-        }
-        100% {
-          transform: translatey(0px);
-        }
-      }
+      animation: ${floatAnimation(24)} 8s ease-in-out infinite;
     }
 
     &:nth-child(4) {
-      animation: float 5s ease-in-out infinite;
-
-      @keyframes float {
-        0% {
-          transform: translatey(0px);
-        }
-        50% {
-          transform: translatey(-22px);
-        }
-        100% {
-          transform: translatey(0px);
-        }
-      }
+      animation: ${floatAnimation(22)} 5s ease-in-out infinite;
     }
   }
 `
@@ -133,5 +98,38 @@ export const VipInfo = styled.div`
 
     text-shadow: 2.5px 2.5px 2px rgba(0, 0, 0, 1);
     text-align: center;
+
+    & > span {
+      font-family: 'Minecraft', sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+
+      text-shadow: 2.5px 2.5px 2px rgba(0, 0, 0, 1);
+      text-align: center;
+
+      color: rgb(150, 150, 150);
+    }
+
+    &:nth-child(1) {
+      margin-bottom: 20px;
+      font-size: 30px;
+      padding-right: 40px;
+
+      & > div {
+        position: absolute;
+
+        width: 48px;
+        height: 48px;
+
+        top: 50%;
+        right: 180px;
+
+        translate: 0% -50%;
+
+        background-image: url('/assets/items_for_ui/deepslate_diamond_ore.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
   }
 `

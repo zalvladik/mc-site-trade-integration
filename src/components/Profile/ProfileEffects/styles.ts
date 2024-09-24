@@ -1,57 +1,52 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+import type { Keyframes } from 'styled-components/dist/types'
 
 export const Container = styled.div`
+  position: relative;
+  margin-top: 200px;
   display: flex;
+  flex-direction: column;
+
+  width: 1000px;
+
+  gap: 24px;
 `
 
 export const AddEffectForm = styled.div`
   transition: width 0.5s ease;
-  flex: 1;
+
+  padding: 32px;
 
   border-radius: 8px;
 
-  background-color: rgba(15, 25, 35, 1);
+  background: radial-gradient(
+    circle,
+    rgba(10, 40, 40, 0.6) 0%,
+    rgba(10, 40, 40, 0.5) 100%
+  );
 
   -webkit-box-shadow:
-    inset 0px 0px 16px 12px rgba(0, 0, 0, 0.6),
-    0px 0px 12px -5px rgba(255, 255, 255, 1);
+    inset 0px 0px 20px 10px rgba(0, 0, 0, 0.75),
+    0px 0px 8px -2px rgba(255, 255, 255, 1);
   -moz-box-shadow:
-    inset 0px 0px 16px 12px rgba(0, 0, 0, 0.6),
-    0px 0px 12px -5px rgba(255, 255, 255, 1);
+    inset 0px 0px 20px 10px rgba(0, 0, 0, 0.75),
+    0px 0px 8px -2px rgba(255, 255, 255, 1);
   box-shadow:
-    inset 0px 0px 16px 12px rgba(0, 0, 0, 0.6),
-    0px 0px 12px -5px rgba(255, 255, 255, 1);
-
-  & > h1 {
-    font-family: 'Minecraft', sans-serif;
-    font-size: 30px;
-    font-weight: 500;
-
-    text-shadow: 2.5px 2.5px 2px rgba(0, 0, 0, 1);
-
-    margin-bottom: 16px;
-
-    text-align: center;
-  }
-`
-
-export const GalleryContainer = styled.div`
-  display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
-
-  padding: 10px;
-
-  height: 220px;
+    inset 0px 0px 20px 10px rgba(0, 0, 0, 0.75),
+    0px 0px 8px -2px rgba(255, 255, 255, 1);
 `
 
 export const GalleryRow = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 20px;
 `
 
 export const GalleryItem = styled.div`
-  width: 167px;
-  height: 167px;
+  width: 86px;
+  height: 86px;
 
   background-size: contain;
   background-repeat: no-repeat;
@@ -60,24 +55,48 @@ export const GalleryItem = styled.div`
 
   transition:
     transform 0.4s cubic-bezier(0.075, 0.82, 0.165, 1),
-    opacity 0.2s ease;
+    opacity 0.1s ease;
 
   &:hover {
+    z-index: 99;
     cursor: pointer;
-    transform: scale(1.05);
+    transform: scale(2.5);
   }
+`
 
-  & + & {
-    margin-left: 20px;
+export const PageButtonsList = styled.div`
+  display: flex;
+  gap: 20px;
+
+  margin-top: 20px;
+
+  justify-content: center;
+
+  & > div {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 50px;
+    width: 50px;
+
+    border: 1px solid gray;
+    border-radius: 4px;
+    background-color: rgba(40, 40, 40, 0.6);
+
+    font-family: 'Minecraft', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+
+    text-shadow: 2.5px 2.5px 2px rgba(0, 0, 0, 1);
   }
 `
 
 export const EffectStylesContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: nowrap;
-
-  margin-bottom: 60px;
 
   & > div {
     width: 140px;
@@ -93,40 +112,18 @@ export const EffectStylesContainer = styled.div`
 
     &:hover {
       cursor: pointer;
-      transform: scale(1.05);
+      transform: scale(1.2);
     }
   }
 `
 
 export const EffectInfoContainer = styled.div`
-  background: rgb(78, 78, 78);
-  background: linear-gradient(
-    137deg,
-    rgba(78, 78, 78, 1) 0%,
-    rgba(68, 68, 68, 1) 18%,
-    rgba(60, 60, 60, 1) 30%,
-    rgba(73, 73, 73, 1) 42%,
-    rgba(66, 66, 66, 1) 55%,
-    rgba(60, 60, 60, 1) 66%,
-    rgba(59, 59, 59, 1) 82%,
-    rgba(91, 91, 91, 1) 100%
-  );
+  position: absolute;
 
-  -webkit-box-shadow:
-    inset 0px 0px 32px 8px rgba(0, 0, 0, 1),
-    0px 0px 12px -5px rgba(255, 255, 255, 1);
-  -moz-box-shadow:
-    inset 0px 0px 32px 8px rgba(0, 0, 0, 1),
-    0px 0px 12px -5px rgba(255, 255, 255, 1);
-  box-shadow:
-    inset 0px 0px 32px 8px rgba(0, 0, 0, 1),
-    0px 0px 12px -5px rgba(255, 255, 255, 1);
+  top: -0%;
+  left: 50%;
 
-  position: relative;
-  border-radius: 8px;
-  border: 2px solid rgba(50, 50, 50, 1);
-
-  padding: 20px;
+  translate: -50% -120%;
 
   display: flex;
   flex-direction: column;
@@ -147,26 +144,54 @@ export const EffectInfoContainer = styled.div`
   }
 `
 
+const floatAnimation = (distance: number): Keyframes => keyframes`
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-${distance}px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+`
+
 export const EffectsList = styled.div`
   position: relative;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
 
-  width: 380px;
+  justify-content: center;
+
+  gap: 16px;
+  width: 100%;
 
   & > div {
-    background-color: rgba(25, 35, 45, 1);
+    background-color: rgba(30, 30, 30, 0.6);
+    flex: 1;
 
-    width: 100%;
+    transition: scale 0.4s ease;
+
+    &:nth-child(1) {
+      animation: ${floatAnimation(20)} 6s ease-in-out infinite;
+    }
+
+    &:nth-child(2) {
+      animation: ${floatAnimation(16)} 4s ease-in-out infinite;
+    }
+
+    &:nth-child(3) {
+      animation: ${floatAnimation(24)} 8s ease-in-out infinite;
+    }
   }
 `
 
 export const EffectListContainer = styled.div`
   display: flex;
 
-  border: 4px solid #9c9c9c;
+  border: 1px solid #9c9c9c;
   border-radius: 16px;
+
+  max-width: 322.5px;
 
   justify-content: space-around;
 
@@ -195,20 +220,20 @@ export const EffectListContainer = styled.div`
   }
 
   & > div:not(:last-child) {
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
     background-repeat: no-repeat;
     background-size: contain;
 
-    border: 2px solid whitesmoke;
+    border: 1px solid whitesmoke;
     border-radius: 8px;
   }
 
   & > div:last-child {
     opacity: 0;
 
-    width: 180px;
-    height: 180px;
+    width: 120px;
+    height: 120px;
 
     position: absolute;
     left: 50%;
@@ -229,54 +254,3 @@ export const EffectListContainer = styled.div`
     opacity: 0.6;
   }
 `
-
-export const AddNewEffectContainer = styled.div`
-  display: flex;
-
-  border: 4px solid grey;
-  border-radius: 16px;
-
-  padding: 14px;
-
-  overflow: hidden;
-  gap: 20px;
-
-  justify-content: center;
-
-  -webkit-box-shadow:
-    inset 0px 0px 32px 8px rgba(0, 0, 0, 0.5),
-    0px 0px 12px -5px rgba(255, 255, 255, 0.5);
-  -moz-box-shadow:
-    inset 0px 0px 32px 8px rgba(0, 0, 0, 0.5),
-    0px 0px 12px -5px rgba(255, 255, 255, 0.5);
-  box-shadow:
-    inset 0px 0px 32px 8px rgba(0, 0, 0, 0.5),
-    0px 0px 12px -5px rgba(255, 255, 255, 0.5);
-
-  transition:
-    transform 0.4s cubic-bezier(0.075, 0.82, 0.165, 1),
-    opacity 0.2s ease;
-
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.03);
-  }
-`
-
-export const AddNewEffect = styled.div`
-  display: flex;
-  align-items: center;
-
-  & > div {
-    font-family: 'Minecraft', sans-serif;
-    font-size: 30px;
-    font-weight: 500;
-
-    text-shadow: 2.5px 2.5px 2px rgba(0, 0, 0, 1);
-    white-space: nowrap;
-  }
-`
-
-export const EffectContainer = styled.div``
-
-export const StyleContainer = styled.div``
