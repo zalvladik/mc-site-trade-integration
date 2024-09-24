@@ -2,27 +2,6 @@ import styled from 'styled-components'
 
 import Skeleton from 'src/components/Skeleton'
 
-export const TitleContainer = styled.div`
-  background-color: rgba(25, 35, 45, 1);
-
-  border: 1px solid gray;
-  text-align: center;
-
-  width: 80%;
-
-  padding: 5px 10px;
-  margin: 0px auto;
-  margin-bottom: 16px;
-
-  border-radius: 4px;
-
-  & > p {
-    font-family: 'Minecraft', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-  }
-`
-
 export const TheadContainer = styled.div`
   font-family: 'Minecraft', sans-serif;
   font-size: 20px;

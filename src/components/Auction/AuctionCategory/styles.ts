@@ -7,9 +7,8 @@ import type {
 
 export const Container = styled.div`
   background-color: rgba(0, 20, 40, 0.6);
-  padding: 16px 10px 16px 10px;
+  padding: 12px 4px 16px 4px;
 
-  width: 320px;
   height: 100%;
 
   border-radius: 8px;
@@ -21,14 +20,13 @@ export const Container = styled.div`
   box-shadow: inset 0px 0px 16px 12px rgba(0, 0, 0, 0.6);
 `
 
-export const DescriptionCategory = styled.div`
-  text-align: start;
+export const CategoryIcon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;
 
-  & > p {
-    font-family: 'Minecraft', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-  }
+  opacity: 0.6;
 `
 
 export const EnchantTypes = styled.div`
@@ -80,7 +78,7 @@ export const ButtonCategory = styled.div<ButtonCategoryProps>`
 
   align-items: center;
 
-  background-color: rgba(40, 60, 80, 0.15);
+  background-color: rgba(40, 60, 80, 0.2);
 
   background: ${({ isSelected }) =>
     isSelected
@@ -92,18 +90,27 @@ export const ButtonCategory = styled.div<ButtonCategoryProps>`
         rgba(212, 175, 55, 0.3) 60%,
         rgba(212, 175, 55, 0.1) 70%,
         rgba(212, 175, 55, 0.05) 80%,
-        rgba(212, 175, 55, 0) 90%,
+        rgba(212, 175, 55, 0.05) 90%,
         rgba(212, 175, 55, 0) 100%
                     )`
       : ''};
 
   transition:
     transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
-    background-color 0.3s ease-in-out;
+    background-color 0.2s ease-in-out;
 
   &:hover {
+    z-index: 99;
     cursor: pointer;
-    transform: scale(1.02);
+    transform: scale(1.1);
+    background-color: rgba(40, 60, 80, 0.6);
+
+    & > .hover_description {
+      display: flex;
+      width: max-content;
+      translate: -50% -120%;
+      opacity: 1;
+    }
   }
 `
 
@@ -138,8 +145,8 @@ export const ButtonItems = styled.div<ButtonItemsProps>`
   align-items: center;
 
   & > div:first-child {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
 
     display: flex;
     align-items: center;

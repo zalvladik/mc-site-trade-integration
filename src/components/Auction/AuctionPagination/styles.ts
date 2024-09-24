@@ -30,11 +30,9 @@ export const PaginationController = styled.div<IsDisabledProps>`
   width: 820px;
   gap: 20px;
 
-  justify-content: space-between;
-
   align-items: center;
 
-  margin: 0px auto;
+  margin-left: 160px;
 
   transition: opacity 200ms ease;
 
@@ -151,7 +149,7 @@ export const DoubleButttonLeft = styled.div<IsDisabledProps>`
 `
 
 export const Pages = styled.ul`
-  width: 100%;
+  width: 60%;
   display: flex;
   gap: 30px;
 

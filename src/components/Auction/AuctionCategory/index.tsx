@@ -1,12 +1,13 @@
+import { BiCategory } from 'react-icons/bi'
 import { itemTypesEnchantsFinderTranslations } from 'src/constants'
 import type { EnchantsTypesEnum, ItemTypesEnchantsFinderEnum } from 'src/types'
 
 import {
   ButtonCategory,
   ButtonItems,
+  CategoryIcon,
   CategoryList,
   Container,
-  DescriptionCategory,
   EnchantSearchInfo,
   EnchantSearchInfoDelete,
   EnchantTypeCategoryContainer,
@@ -15,7 +16,7 @@ import {
 import type { AuctionCategoryProps } from 'src/components/Auction/AuctionCategory/types'
 import { useAuctionCategory } from 'src/components/Auction/AuctionCategory/useAuctionCategory'
 import { useAuctionCategoryEnchantTypes } from 'src/components/Auction/AuctionCategory/useAuctionCategoryEnchantTypes'
-import { TitleContainer } from 'src/components/Auction/styles'
+import HoverDescription from 'src/components/HoverDescription'
 import ItemSlotIcon from 'src/components/ItemSlotIcon'
 
 const AuctionCategory = ({ ...props }: AuctionCategoryProps): JSX.Element => {
@@ -42,9 +43,9 @@ const AuctionCategory = ({ ...props }: AuctionCategoryProps): JSX.Element => {
     <Container {...props}>
       {!isFragment.isEnchantFinderFragment ? (
         <div>
-          <TitleContainer>
-            <p>Категорії</p>
-          </TitleContainer>
+          <CategoryIcon>
+            <BiCategory size={50} className="color-fill" />
+          </CategoryIcon>
           <CategoryList>
             {categories.map(({ style, category, description }) => {
               const isSelected = selectedCategory === category
@@ -66,10 +67,8 @@ const AuctionCategory = ({ ...props }: AuctionCategoryProps): JSX.Element => {
                 >
                   <ButtonItems isSelected={isSelected}>
                     <div style={style} />
-                    <DescriptionCategory>
-                      <p>{description}</p>
-                    </DescriptionCategory>
                   </ButtonItems>
+                  <HoverDescription description={[description]} />
                 </ButtonCategory>
               )
             })}
