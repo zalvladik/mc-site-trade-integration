@@ -135,7 +135,7 @@ const WorldExpansionCategory = ({
                     containerStyle={{ width: 'max-content' }}
                     rightIcon={false}
                   />
-                  <DefaultButton style={{ width: 320 }}>Допомогти</DefaultButton>
+                  <DefaultButton style={{ width: 320 }}>Закинути</DefaultButton>
                 </DonationContainer>
               </BodyContainer>
             </div>

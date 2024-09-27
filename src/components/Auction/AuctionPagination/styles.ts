@@ -45,7 +45,7 @@ export const SingleButttonRight = styled.div<IsDisabledProps>`
   background-size: contain;
   background-image: url('/assets/items_for_ui/page_forward_highlighted.png');
 
-  opacity: ${props => (props.disabled ? 0 : 1)};
+  opacity: ${props => (props.disabled ? 0.2 : 1)};
   pointer-events: ${props => (props.disabled ? 'none' : 'auto')};
 `
 

@@ -75,11 +75,11 @@ const AuctionPagination = (): JSX.Element => {
       </PaginationController>
 
       <CountItems disabled={didVanishPagesInfo}>
-        сторінка {currentPage}/{totalPages}
+        {currentPage}/{totalPages}
       </CountItems>
 
       <CountLots disabled={isByeFragment || isEnchantFinderFragment}>
-        {currentUserLots}/{vipLotCount} лоти
+        {currentUserLots}/{vipLotCount}
       </CountLots>
     </Container>
   )
