@@ -162,7 +162,7 @@ export enum InventoryPartsEnum {
 
 export enum ProfilePartsEnum {
   ADVANCEMENT = 'advancemen',
-  FRIENDS = 'friends',
+  PROFILE = 'profile',
   EFFECTS = 'effecst',
   VIP = 'vip',
   TWINKS = 'twinks',

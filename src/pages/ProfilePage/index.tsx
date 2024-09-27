@@ -25,7 +25,7 @@ const ProfilePage = (): JSX.Element => {
         }}
       />
       <Container>
-        {navType === ProfilePartsEnum.FRIENDS && <ProfileComponent />}
+        {navType === ProfilePartsEnum.PROFILE && <ProfileComponent />}
         {navType === ProfilePartsEnum.ADVANCEMENT && <ProfileComponent />}
         {navType === ProfilePartsEnum.EFFECTS && <ProfileEffects />}
         {navType === ProfilePartsEnum.VIP && <ProfileVip />}

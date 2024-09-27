@@ -1,5 +1,6 @@
-import { FaList, FaRegPlusSquare } from 'react-icons/fa'
+import { CgAddR } from 'react-icons/cg'
 import { GiEvilBook } from 'react-icons/gi'
+import { IoListSharp } from 'react-icons/io5'
 import { MdOutlineHistory } from 'react-icons/md'
 import { TbZoomMoney } from 'react-icons/tb'
 import { AuctionFragment } from 'src/constants'
@@ -24,12 +25,12 @@ export const useAuctionController = (): {
     },
     {
       fragment: AuctionFragment.USER_LOTS,
-      icon: <FaList size={46} />,
+      icon: <IoListSharp size={46} />,
       text: ['Ваші лоти'],
     },
     {
       fragment: AuctionFragment.CREATE_LOTS,
-      icon: <FaRegPlusSquare size={46} />,
+      icon: <CgAddR size={46} />,
       text: ['Створити лот'],
     },
     {

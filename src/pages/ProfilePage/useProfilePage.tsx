@@ -1,11 +1,12 @@
 import { useState } from 'react'
+import { FaRegAddressCard } from 'react-icons/fa'
 import { GiFrostfire } from 'react-icons/gi'
-import { MdPeopleOutline, MdSwitchAccount } from 'react-icons/md'
+import { MdSwitchAccount } from 'react-icons/md'
 import { RiMedal2Line, RiVipCrownLine } from 'react-icons/ri'
 import { ProfilePartsEnum } from 'src/types'
 
 export const useProfilePage = (): any => {
-  const [navType, setNavType] = useState<ProfilePartsEnum>(ProfilePartsEnum.FRIENDS)
+  const [navType, setNavType] = useState<ProfilePartsEnum>(ProfilePartsEnum.PROFILE)
 
   const buttons = [
     {
@@ -17,8 +18,8 @@ export const useProfilePage = (): any => {
       navType: ProfilePartsEnum.EFFECTS,
     },
     {
-      iconComponent: <MdPeopleOutline size={46} />,
-      navType: ProfilePartsEnum.FRIENDS,
+      iconComponent: <FaRegAddressCard size={46} />,
+      navType: ProfilePartsEnum.PROFILE,
     },
     { iconComponent: <RiVipCrownLine size={46} />, navType: ProfilePartsEnum.VIP },
     {
@@ -30,7 +31,7 @@ export const useProfilePage = (): any => {
   const navTypes = [
     ProfilePartsEnum.ADVANCEMENT,
     ProfilePartsEnum.EFFECTS,
-    ProfilePartsEnum.FRIENDS,
+    ProfilePartsEnum.PROFILE,
     ProfilePartsEnum.VIP,
     ProfilePartsEnum.TWINKS,
   ]
