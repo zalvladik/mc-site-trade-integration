@@ -25,15 +25,17 @@ const NavbarLeft = (): JSX.Element => {
     isLoading,
   } = useNavbarLeft()
 
-  const handleClick = (): void => {
-    window.location.href = 'https://vinland-site.vercel.app/'
-  }
+  // const handleClick = (): void => {
+  //   window.location.href = 'https://vinland-site.vercel.app/'
+  // }
 
   return (
     <Header>
       <HeaderContainer>
         <NavEffect />
-        <ButtonBack onClick={handleClick} />
+        <ButtonBack
+        //  onClick={handleClick}
+        />
         {!isLoading && isSuccess && (
           <NavList>
             <div
