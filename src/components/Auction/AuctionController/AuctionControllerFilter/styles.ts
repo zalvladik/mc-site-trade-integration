@@ -2,20 +2,18 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
 
   gap: 8px;
   margin: auto 0px 0px 0px;
 
   justify-content: center;
 
-  padding: 16px;
   border-radius: 8px;
 
-  background: radial-gradient(
-    circle,
-    rgba(80, 80, 80, 1) 0%,
-    rgba(40, 40, 40, 1) 100%
-  );
+  padding: 12px 4px;
+
+  background: rgb(30, 30, 30);
 
   -webkit-box-shadow:
     inset 0px 0px 16px 6px rgba(0, 0, 0, 0.8),
@@ -60,8 +58,8 @@ export const MoneyFilterParam = styled.div`
     background-position: center;
 
     &:nth-child(1) {
-      width: 64px;
-      height: 64px;
+      width: 60px;
+      height: 60px;
 
       translate: -50% -50%;
     }
@@ -114,8 +112,8 @@ export const FilterParam = styled.div`
     background-position: center;
 
     &:first-child {
-      width: 64px;
-      height: 64px;
+      width: 60px;
+      height: 60px;
     }
 
     &:nth-child(2) {

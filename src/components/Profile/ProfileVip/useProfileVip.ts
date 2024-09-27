@@ -62,7 +62,7 @@ export const useProfileVip = () => {
     }
 
     if (user.vip === VipEnum.NETHERITE) {
-      return 'У вас максимальна VIP'
+      return 'У вас максимальний VIP'
     }
 
     if (!selectedVipType) return 'Виберіть VIP'

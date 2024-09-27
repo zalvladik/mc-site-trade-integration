@@ -1,6 +1,8 @@
 import styled, { css, keyframes } from 'styled-components'
 import type { Keyframes } from 'styled-components/dist/types'
 
+import Skeleton from 'src/components/Skeleton'
+
 import type { ColoredBorderContainerProps } from './types'
 
 const floatAnimation = (distance: number): Keyframes => keyframes`
@@ -73,6 +75,9 @@ export const ColoredBorderContainer = styled.div<ColoredBorderContainerProps>`
 
   & > div {
     display: flex;
+    flex-direction: column;
+
+    gap: 20px;
 
     padding: 20px;
 
@@ -122,13 +127,9 @@ export const WorldBar = styled.div`
     }
 
     & > div:first-child {
-      width: 20%;
-
       background-color: rgba(220, 220, 220, 1);
     }
     & > div:last-child {
-      width: 100%;
-
       background-color: rgba(0, 0, 0, 1);
     }
   }
@@ -147,4 +148,87 @@ export const WorldLevelList = styled.div`
 
     text-shadow: 2px 2px 1px rgba(120, 120, 120, 1);
   }
+`
+
+export const BodyContainer = styled.div`
+  display: flex;
+  padding: 20px 10px;
+  gap: 100px;
+
+  border: 1px solid gray;
+  border-radius: 8px;
+
+  background-color: rgba(20, 20, 20, 0.8);
+`
+
+export const StyledSkeleton = styled(Skeleton)`
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  padding: 10px;
+  flex: 1;
+
+  border-radius: 6px;
+
+  background: #222;
+
+  -webkit-box-shadow: inset 0px 0px 15px 5px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: inset 0px 0px 15px 5px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0px 0px 15px 5px rgba(0, 0, 0, 0.6);
+
+  & > .loadingContainer {
+    height: 66px;
+  }
+`
+
+export const MoneyStorageContainer = styled.div`
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  & > div:first-child {
+    width: 80px;
+    height: 80px;
+
+    background-image: url('/assets/items_for_ui/deepslate_diamond_ore.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+`
+
+export const MoneyStorage = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  & > div {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    font-family: 'Minecraft', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+
+    text-shadow: 2px 2px 1px rgba(120, 120, 120, 1);
+
+    &:last-child {
+      font-size: 20px;
+      color: rgb(200, 200, 200);
+      text-shadow: 2px 2px 1px rgba(120, 120, 120, 1);
+    }
+  }
+`
+
+export const DonationContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  align-items: center;
+  justify-content: center;
 `

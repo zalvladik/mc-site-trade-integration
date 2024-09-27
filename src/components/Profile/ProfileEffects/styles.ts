@@ -48,6 +48,8 @@ export const GalleryItem = styled.div`
   width: 78px;
   height: 78px;
 
+  background-color: rgba(30, 30, 30, 0.8);
+
   background-size: contain;
   background-repeat: no-repeat;
 
@@ -103,6 +105,8 @@ export const EffectStylesContainer = styled.div`
     height: 120px;
     background-size: contain;
     background-repeat: no-repeat;
+
+    background-color: rgba(30, 30, 30, 0.8);
 
     border-radius: 8px;
 
@@ -220,6 +224,8 @@ export const EffectListContainer = styled.div`
   }
 
   & > div:not(:last-child) {
+    background-color: rgba(30, 30, 30, 0.8);
+
     width: 120px;
     height: 120px;
     background-repeat: no-repeat;

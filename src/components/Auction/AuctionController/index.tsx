@@ -4,27 +4,31 @@ import {
   Container,
 } from 'src/components/Auction/AuctionController/styles'
 import { useAuctionController } from 'src/components/Auction/AuctionController/useAuctionController'
-import DefaultButton from 'src/components/DefaultButton'
+import HoverDescription from 'src/components/HoverDescription'
 
 const AuctionController = (): JSX.Element => {
-  const { buttonsTexts, auctionFragment, setAuctionFragment } =
-    useAuctionController()
+  const { buttons, auctionFragment, setAuctionFragment } = useAuctionController()
 
   return (
     <Container>
       <ButtonsContainer>
-        {buttonsTexts.map(({ fragment, text, styles }) => {
+        {buttons.map(({ fragment, icon, text }) => {
           const isCurrentFragment = fragment === auctionFragment
 
           return (
-            <DefaultButton
-              onClick={() => setAuctionFragment(fragment)}
-              style={{ width: '100%', ...styles }}
+            <div
               key={fragment}
-              disabled={isCurrentFragment}
+              style={isCurrentFragment ? { opacity: 1 } : {}}
+              onClick={() => {
+                if (isCurrentFragment) return
+
+                setAuctionFragment(fragment)
+              }}
             >
-              {text}
-            </DefaultButton>
+              <div>{icon}</div>
+
+              <HoverDescription description={text} />
+            </div>
           )
         })}
       </ButtonsContainer>

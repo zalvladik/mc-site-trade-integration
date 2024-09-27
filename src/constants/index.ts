@@ -85,6 +85,7 @@ export enum CacheKeys {
   BUYER_TRADE_HISTORY = 'buyer_trade_history',
   TRADE_HISTORY_PRICE = 'trade_history_price',
   TWINKS = 'twinks',
+  WORLD_EXPANSION = 'world_expansion',
 }
 
 export enum AuctionFragment {
@@ -118,6 +119,7 @@ export enum FetchEndpoint {
   TRADE_HISTORY = 'lot/trade_history',
   TRADE_HISTORY_PRICE = 'lot/trade_history/price',
   TWINK = 'twink',
+  WORLD_EXPANSION = 'world_expansion',
 }
 
 export enum LocalStorageKey {
@@ -512,15 +514,15 @@ export const ppEffects = [
   'witch',
 ]
 
-export const romeNumbersObject: { [key: string]: number } = {
-  I: 1,
-  II: 2,
-  III: 3,
-  IV: 4,
-  V: 5,
-  VI: 6,
-  VII: 7,
-  VIII: 8,
-  IX: 9,
-  X: 10,
+export const romeNumbersObject: { [key: number]: string } = {
+  1: 'I',
+  2: 'II',
+  3: 'III',
+  4: 'IV',
+  5: 'V',
+  6: 'VI',
+  7: 'VII',
+  8: 'VIII',
+  9: 'IX',
+  10: 'X',
 }

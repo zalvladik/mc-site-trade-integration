@@ -55,20 +55,23 @@ const ProfileVip = (): JSX.Element => {
       </VipTypeIcons>
 
       <VipInfoContainer className="heartbeat-outline">
-        <VipInfo>
-          <div>
-            Ціна: {vipPrice[selectedVipType]} <div />
-          </div>
-          <div>
-            <span>Предметів:</span> {ITEMS_COUNT * vipMultipliers[selectedVipType]}
-          </div>
-          <div>
-            <span>Шалкери:</span> {SHULKERS_COUNT * vipMultipliers[selectedVipType]}
-          </div>
-          <div>
-            <span>Лоти:</span> {LOTS_COUNT * vipMultipliers[selectedVipType]}
-          </div>
-        </VipInfo>
+        {!isLoading && user.vip !== VipEnum.NETHERITE && (
+          <VipInfo>
+            <div>
+              Ціна: {vipPrice[selectedVipType]} <div />
+            </div>
+            <div>
+              <span>Предметів:</span> {ITEMS_COUNT * vipMultipliers[selectedVipType]}
+            </div>
+            <div>
+              <span>Шалкери:</span>{' '}
+              {SHULKERS_COUNT * vipMultipliers[selectedVipType]}
+            </div>
+            <div>
+              <span>Лоти:</span> {LOTS_COUNT * vipMultipliers[selectedVipType]}
+            </div>
+          </VipInfo>
+        )}
 
         <DefaultButton
           disabled={

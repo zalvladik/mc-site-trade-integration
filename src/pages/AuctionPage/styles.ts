@@ -98,8 +98,8 @@ export const AuctionCategoryDisabled = styled.div<IsDisabeledByFragmentProps>`
 
   translate: -50% -50%;
 
-  width: 120px;
-  height: 120px;
+  width: 48px;
+  height: 48px;
 
   -webkit-box-shadow: 0px 0px 50px 5px rgba(120, 120, 120, 1);
   -moz-box-shadow: 0px 0px 50px 5px rgba(120, 120, 120, 1);
@@ -113,6 +113,6 @@ export const AuctionCategoryDisabled = styled.div<IsDisabeledByFragmentProps>`
     opacity 0.3s ease-in-out,
     transform 0.3s ease-in-out;
 
-  opacity: ${props => (props.disabled ? 1 : 0)};
+  opacity: ${props => (props.disabled ? 0.8 : 0)};
   transform: ${props => (props.disabled ? 'scale(1)' : 'scale(0)')};
 `

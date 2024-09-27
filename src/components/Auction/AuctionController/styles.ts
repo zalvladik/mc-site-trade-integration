@@ -15,17 +15,28 @@ export const Container = styled.div`
 `
 
 export const ButtonsContainer = styled.div`
-  width: 320px;
-
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-self: center;
+  gap: 16px;
 
   & > div {
-    margin: 0px auto;
+    position: relative;
+    transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
 
-    & > div {
-      font-size: 22px;
+    opacity: 0.5;
+
+    &:hover {
+      transform: scale(1.1);
+      opacity: 1;
+
+      & > .hover_description {
+        display: flex;
+        width: max-content;
+        translate: -50% -240%;
+        opacity: 1;
+      }
     }
   }
 `
