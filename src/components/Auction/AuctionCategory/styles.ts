@@ -13,11 +13,17 @@ export const Container = styled.div`
 
   border-radius: 8px;
 
-  transition: opacity 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    width 0.3s ease;
 
   -webkit-box-shadow: inset 0px 0px 16px 12px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: inset 0px 0px 16px 12px rgba(0, 0, 0, 0.6);
   box-shadow: inset 0px 0px 16px 12px rgba(0, 0, 0, 0.6);
+
+  & > div {
+    transition: width 0.3s ease;
+  }
 `
 
 export const CategoryIcon = styled.div`
@@ -59,6 +65,8 @@ export const CategoryList = styled.div`
   display: flex;
   flex-direction: column;
 
+  align-items: center;
+
   gap: 8px;
 
   padding: 0px 10px;
@@ -67,6 +75,8 @@ export const CategoryList = styled.div`
 
 export const ButtonCategory = styled.div<ButtonCategoryProps>`
   position: relative;
+
+  width: max-content;
 
   display: flex;
   padding: 2px;

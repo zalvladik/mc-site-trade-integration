@@ -40,7 +40,13 @@ const AuctionCategory = ({ ...props }: AuctionCategoryProps): JSX.Element => {
   const { enchantType: selectedEnchantType, itemType } = newEnchantSearchParams
 
   return (
-    <Container {...props}>
+    <Container
+      {...props}
+      style={{
+        ...props.style,
+        width: isFragment.isEnchantFinderFragment ? 314 : 82,
+      }}
+    >
       {!isFragment.isEnchantFinderFragment ? (
         <div>
           <CategoryIcon>
@@ -75,7 +81,7 @@ const AuctionCategory = ({ ...props }: AuctionCategoryProps): JSX.Element => {
           </CategoryList>
         </div>
       ) : (
-        <>
+        <div style={{ width: isFragment.isEnchantFinderFragment ? 306 : 82 }}>
           <EnchantTypes>
             <h1>Предмет для пошуку</h1>
             <div>
@@ -171,7 +177,7 @@ const AuctionCategory = ({ ...props }: AuctionCategoryProps): JSX.Element => {
               </EnchantSearchInfoDelete>
             </ItemSlotIcon>
           </EnchantSearchInfo>
-        </>
+        </div>
       )}
     </Container>
   )

@@ -93,17 +93,17 @@ export const AuctionCategoryWrapper = styled.div`
 export const AuctionCategoryDisabled = styled.div<IsDisabeledByFragmentProps>`
   position: absolute;
 
-  top: 50%;
+  top: 32px;
   left: 50%;
 
   translate: -50% -50%;
 
-  width: 48px;
-  height: 48px;
+  width: 54px;
+  height: 54px;
 
-  -webkit-box-shadow: 0px 0px 50px 5px rgba(120, 120, 120, 1);
-  -moz-box-shadow: 0px 0px 50px 5px rgba(120, 120, 120, 1);
-  box-shadow: 0px 0px 50px 5px rgba(120, 120, 120, 1);
+  -webkit-box-shadow: 0px 0px 20px 5px rgba(120, 120, 120, 1);
+  -moz-box-shadow: 0px 0px 20px 5px rgba(120, 120, 120, 1);
+  box-shadow: 0px 0px 20px 5px rgba(120, 120, 120, 1);
 
   background-repeat: no-repeat;
   background-size: contain;
