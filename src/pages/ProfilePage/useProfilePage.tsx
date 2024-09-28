@@ -3,9 +3,11 @@ import { FaRegAddressCard } from 'react-icons/fa'
 import { GiFrostfire } from 'react-icons/gi'
 import { MdSwitchAccount } from 'react-icons/md'
 import { RiMedal2Line, RiVipCrownLine } from 'react-icons/ri'
+import { useUser } from 'src/contexts/UserProvider/useUser'
 import { ProfilePartsEnum } from 'src/types'
 
 export const useProfilePage = (): any => {
+  const { user } = useUser()
   const [navType, setNavType] = useState<ProfilePartsEnum>(ProfilePartsEnum.PROFILE)
 
   const buttons = [
@@ -44,5 +46,6 @@ export const useProfilePage = (): any => {
     showInfoText,
     navTypes,
     buttons,
+    username: user.username,
   }
 }

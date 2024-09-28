@@ -11,22 +11,25 @@ export const RoadContainer = styled.div`
 `
 
 export const StyledSkeleton = styled(Skeleton)`
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
 `
 
 export const IconContainer = styled.div`
   position: absolute;
+
   background-position: center;
   background-repeat: no-repeat;
+
   justify-content: center;
   align-items: center;
+
   display: flex;
   width: 24px;
   height: 24px;
   translate: -50% -50%;
   cursor: pointer;
-  transition: scale 0.3s ease;
+  transition: scale 0.2s ease;
 
   &:hover {
     z-index: 99;
@@ -67,7 +70,7 @@ export const Description = styled.div`
 
 export const ContainerImage = styled.div`
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   width: 16px;
   height: 16px;
 

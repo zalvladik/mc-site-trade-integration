@@ -37,7 +37,7 @@ const AdvancementsMap = ({ username }: AdvancementsMapProps): JSX.Element => {
         initialPositionX={initialPositionX}
         maxPositionX={screenWidth}
       >
-        <TransformComponent wrapperStyle={{ width: '100%' }}>
+        <TransformComponent wrapperStyle={{ width: '100%', height: '100%' }}>
           <AdvancementsRoad />
           <RoadContainer>
             {userAdvancements.map(
