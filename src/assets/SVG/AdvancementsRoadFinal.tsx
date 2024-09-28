@@ -1,6 +1,15 @@
 const AdvancementsRoadFinal = (): JSX.Element => {
   return (
-    <svg width="1000" height="1000" viewBox="0 0 1000 1000" fill="none">
+    <svg
+      width="1000"
+      height="1000"
+      viewBox="0 0 1000 1000"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="1000" height="1000" />
+      <rect width="1000" height="1000" />
+      <rect width="1000" height="1000" />
       <line
         x1="500.75"
         y1="427"
@@ -209,7 +218,7 @@ const AdvancementsRoadFinal = (): JSX.Element => {
         stroke="#0A0A0A"
         stroke-width="0.5"
       />
-      <line x1="601" y1="514" x2="759" y2="514" stroke="white" />
+      <line x1="600" y1="514" x2="759" y2="514" stroke="white" />
       <line
         x1="601"
         y1="513.25"
@@ -237,9 +246,9 @@ const AdvancementsRoadFinal = (): JSX.Element => {
       <line x1="580" y1="490" x2="620" y2="490" stroke="white" />
       <line
         y1="-0.5"
-        x2="158"
+        x2="159"
         y2="-0.5"
-        transform="matrix(1 0 0 -1 601 465.5)"
+        transform="matrix(1 0 0 -1 600 465.5)"
         stroke="white"
       />
       <line
@@ -255,23 +264,6 @@ const AdvancementsRoadFinal = (): JSX.Element => {
         x2="159"
         y2="-0.25"
         transform="matrix(1 0 0 -1 600 465)"
-        stroke="#0A0A0A"
-        stroke-width="0.5"
-      />
-      <line x1="724" y1="375" x2="724" y2="466" stroke="white" />
-      <line
-        x1="724.75"
-        y1="375"
-        x2="724.75"
-        y2="465"
-        stroke="#0A0A0A"
-        stroke-width="0.5"
-      />
-      <line
-        x1="723.25"
-        y1="375"
-        x2="723.25"
-        y2="465"
         stroke="#0A0A0A"
         stroke-width="0.5"
       />
@@ -309,27 +301,10 @@ const AdvancementsRoadFinal = (): JSX.Element => {
         stroke="#0A0A0A"
         stroke-width="0.5"
       />
-      <line x1="758" y1="340" x2="758" y2="466" stroke="white" />
-      <line
-        x1="758.75"
-        y1="340"
-        x2="758.75"
-        y2="467"
-        stroke="#0A0A0A"
-        stroke-width="0.5"
-      />
-      <line
-        x1="757.25"
-        y1="340"
-        x2="757.25"
-        y2="465"
-        stroke="#0A0A0A"
-        stroke-width="0.5"
-      />
-      <line x1="622" y1="410" x2="622" y2="466" stroke="white" />
+      <line x1="622" y1="375" x2="622" y2="466" stroke="white" />
       <line
         x1="622.75"
-        y1="410"
+        y1="375"
         x2="622.75"
         y2="465"
         stroke="#0A0A0A"
@@ -337,8 +312,25 @@ const AdvancementsRoadFinal = (): JSX.Element => {
       />
       <line
         x1="621.25"
-        y1="410"
+        y1="375"
         x2="621.25"
+        y2="465"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line x1="724" y1="340" x2="724" y2="466" stroke="white" />
+      <line
+        x1="724.75"
+        y1="340"
+        x2="724.75"
+        y2="465"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        x1="723.25"
+        y1="340"
+        x2="723.25"
         y2="465"
         stroke="#0A0A0A"
         stroke-width="0.5"
@@ -462,14 +454,14 @@ const AdvancementsRoadFinal = (): JSX.Element => {
       />
       <line
         y1="-0.5"
-        x2="50"
+        x2="83"
         y2="-0.5"
         transform="matrix(0 -1 -1 0 399 515)"
         stroke="white"
       />
       <line
         y1="-0.25"
-        x2="50"
+        x2="83"
         y2="-0.25"
         transform="matrix(0 -1 -1 0 398.5 515)"
         stroke="#0A0A0A"
@@ -485,9 +477,9 @@ const AdvancementsRoadFinal = (): JSX.Element => {
       />
       <line
         y1="-0.5"
-        x2="192"
+        x2="193"
         y2="-0.5"
-        transform="matrix(-1 0 0 1 399 514.5)"
+        transform="matrix(-1 0 0 1 400 514.5)"
         stroke="white"
       />
       <line
@@ -508,7 +500,7 @@ const AdvancementsRoadFinal = (): JSX.Element => {
       />
       <line
         y1="-0.25"
-        x2="50"
+        x2="83"
         y2="-0.25"
         transform="matrix(0 -1 -1 0 400 515)"
         stroke="#0A0A0A"
@@ -521,20 +513,20 @@ const AdvancementsRoadFinal = (): JSX.Element => {
         transform="matrix(-1 0 0 1 420 490.5)"
         stroke="white"
       />
-      <line x1="399" y1="466" x2="207" y2="466" stroke="white" />
+      <line x1="400" y1="433" x2="173" y2="433" stroke="white" />
       <line
         x1="399"
-        y1="466.75"
-        x2="207"
-        y2="466.75"
+        y1="433.75"
+        x2="173"
+        y2="433.75"
         stroke="#0A0A0A"
         stroke-width="0.5"
       />
       <line
-        x1="400"
-        y1="465.25"
-        x2="208"
-        y2="465.25"
+        x1="400.5"
+        y1="432.25"
+        x2="173.5"
+        y2="432.25"
         stroke="#0A0A0A"
         stroke-width="0.5"
       />
@@ -542,14 +534,14 @@ const AdvancementsRoadFinal = (): JSX.Element => {
         y1="-0.5"
         x2="96"
         y2="-0.5"
-        transform="matrix(0 1 1 0 242.5 370)"
+        transform="matrix(0 1 1 0 242.5 337)"
         stroke="white"
       />
       <line
         y1="-0.25"
         x2="95"
         y2="-0.25"
-        transform="matrix(0 1 1 0 241.5 370)"
+        transform="matrix(0 1 1 0 241.5 337)"
         stroke="#0A0A0A"
         stroke-width="0.5"
       />
@@ -557,7 +549,7 @@ const AdvancementsRoadFinal = (): JSX.Element => {
         y1="-0.25"
         x2="95"
         y2="-0.25"
-        transform="matrix(0 1 1 0 243 370)"
+        transform="matrix(0 1 1 0 243 337)"
         stroke="#0A0A0A"
         stroke-width="0.5"
       />
@@ -565,14 +557,14 @@ const AdvancementsRoadFinal = (): JSX.Element => {
         y1="-0.5"
         x2="60"
         y2="-0.5"
-        transform="matrix(0 -1 -1 0 309.5 466)"
+        transform="matrix(0 -1 -1 0 309.5 433)"
         stroke="white"
       />
       <line
         y1="-0.25"
         x2="60"
         y2="-0.25"
-        transform="matrix(0 -1 -1 0 309 465)"
+        transform="matrix(0 -1 -1 0 309 432)"
         stroke="#0A0A0A"
         stroke-width="0.5"
       />
@@ -580,7 +572,7 @@ const AdvancementsRoadFinal = (): JSX.Element => {
         y1="-0.25"
         x2="60"
         y2="-0.25"
-        transform="matrix(0 -1 -1 0 310.5 465)"
+        transform="matrix(0 -1 -1 0 310.5 432)"
         stroke="#0A0A0A"
         stroke-width="0.5"
       />
@@ -889,7 +881,7 @@ const AdvancementsRoadFinal = (): JSX.Element => {
         stroke="#0A0A0A"
         stroke-width="0.5"
       />
-      <line x1="147" y1="639" x2="186" y2="639" stroke="white" />
+      <line x1="147" y1="639" x2="187" y2="639" stroke="white" />
       <line
         y1="-0.5"
         x2="138"
@@ -906,7 +898,7 @@ const AdvancementsRoadFinal = (): JSX.Element => {
         stroke-width="0.5"
       />
       <line x1="147.5" y1="621" x2="147.5" y2="657" stroke="white" />
-      <line x1="130" y1="656" x2="147" y2="656" stroke="white" />
+      <line x1="130" y1="656" x2="148" y2="656" stroke="white" />
       <line x1="167" y1="571" x2="187" y2="571" stroke="white" />
       <line
         x1="130"
@@ -924,7 +916,7 @@ const AdvancementsRoadFinal = (): JSX.Element => {
         stroke="#0A0A0A"
         stroke-width="0.5"
       />
-      <line x1="130" y1="622" x2="147" y2="622" stroke="white" />
+      <line x1="130" y1="622" x2="148" y2="622" stroke="white" />
       <line
         x1="130"
         y1="622.75"
@@ -987,14 +979,14 @@ const AdvancementsRoadFinal = (): JSX.Element => {
         y1="-0.5"
         x2="60"
         y2="-0.5"
-        transform="matrix(0 -1 -1 0 275.5 466)"
+        transform="matrix(0 -1 -1 0 275.5 433)"
         stroke="white"
       />
       <line
         y1="-0.25"
         x2="60"
         y2="-0.25"
-        transform="matrix(0 -1 -1 0 275 465)"
+        transform="matrix(0 -1 -1 0 275 432)"
         stroke="#0A0A0A"
         stroke-width="0.5"
       />
@@ -1002,11 +994,11 @@ const AdvancementsRoadFinal = (): JSX.Element => {
         y1="-0.25"
         x2="60"
         y2="-0.25"
-        transform="matrix(0 -1 -1 0 276.5 465)"
+        transform="matrix(0 -1 -1 0 276.5 432)"
         stroke="#0A0A0A"
         stroke-width="0.5"
       />
-      <line x1="378" y1="466" x2="378" y2="455" stroke="white" />
+      <line x1="378" y1="433" x2="378" y2="422" stroke="white" />
       <line
         x1="538"
         y1="717.25"
@@ -1017,34 +1009,17 @@ const AdvancementsRoadFinal = (): JSX.Element => {
       />
       <line
         x1="377.25"
-        y1="465"
+        y1="432"
         x2="377.25"
-        y2="455"
+        y2="422"
         stroke="#0A0A0A"
         stroke-width="0.5"
       />
       <line
         x1="378.75"
-        y1="465"
+        y1="432"
         x2="378.75"
-        y2="455"
-        stroke="#0A0A0A"
-        stroke-width="0.5"
-      />
-      <line x1="208" y1="466" x2="208" y2="441" stroke="white" />
-      <line
-        x1="207.25"
-        y1="467"
-        x2="207.25"
-        y2="442"
-        stroke="#0A0A0A"
-        stroke-width="0.5"
-      />
-      <line
-        x1="208.75"
-        y1="465"
-        x2="208.75"
-        y2="440"
+        y2="422"
         stroke="#0A0A0A"
         stroke-width="0.5"
       />
@@ -1250,14 +1225,14 @@ const AdvancementsRoadFinal = (): JSX.Element => {
         y1="-0.5"
         x2="60"
         y2="-0.5"
-        transform="matrix(0 -1 -1 0 343.5 466)"
+        transform="matrix(0 -1 -1 0 343.5 433)"
         stroke="white"
       />
       <line
         y1="-0.25"
         x2="60"
         y2="-0.25"
-        transform="matrix(0 -1 -1 0 343 465)"
+        transform="matrix(0 -1 -1 0 343 432)"
         stroke="#0A0A0A"
         stroke-width="0.5"
       />
@@ -1265,81 +1240,7 @@ const AdvancementsRoadFinal = (): JSX.Element => {
         y1="-0.25"
         x2="60"
         y2="-0.25"
-        transform="matrix(0 -1 -1 0 344.5 465)"
-        stroke="#0A0A0A"
-        stroke-width="0.5"
-      />
-      <line
-        y1="-0.25"
-        x2="16"
-        y2="-0.25"
-        transform="matrix(-1 0 0 1 207 442.5)"
-        stroke="#0A0A0A"
-        stroke-width="0.5"
-      />
-      <line
-        y1="-0.25"
-        x2="16"
-        y2="-0.25"
-        transform="matrix(-1 0 0 1 207 444)"
-        stroke="#0A0A0A"
-        stroke-width="0.5"
-      />
-      <line
-        x1="191.75"
-        y1="425"
-        x2="191.75"
-        y2="461"
-        stroke="#0A0A0A"
-        stroke-width="0.5"
-      />
-      <line
-        y1="-0.5"
-        x2="17"
-        y2="-0.5"
-        transform="matrix(-1 0 0 1 208 443.5)"
-        stroke="white"
-      />
-      <line
-        x1="171"
-        y1="459.25"
-        x2="191"
-        y2="459.25"
-        stroke="#0A0A0A"
-        stroke-width="0.5"
-      />
-      <line
-        x1="171"
-        y1="426.75"
-        x2="191"
-        y2="426.75"
-        stroke="#0A0A0A"
-        stroke-width="0.5"
-      />
-      <line x1="191" y1="425" x2="191" y2="461" stroke="white" />
-      <line
-        x1="171"
-        y1="425.25"
-        x2="192"
-        y2="425.25"
-        stroke="#0A0A0A"
-        stroke-width="0.5"
-      />
-      <line x1="171" y1="460" x2="191" y2="460" stroke="white" />
-      <line
-        x1="171"
-        y1="460.75"
-        x2="192"
-        y2="460.75"
-        stroke="#0A0A0A"
-        stroke-width="0.5"
-      />
-      <line x1="171" y1="426" x2="191" y2="426" stroke="white" />
-      <line
-        x1="190.25"
-        y1="427"
-        x2="190.25"
-        y2="459"
+        transform="matrix(0 -1 -1 0 344.5 432)"
         stroke="#0A0A0A"
         stroke-width="0.5"
       />
@@ -1808,6 +1709,399 @@ const AdvancementsRoadFinal = (): JSX.Element => {
         x2="32"
         y2="-0.25"
         transform="matrix(0 1 1 0 485 675)"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        x1="795"
+        y1="459.25"
+        x2="775"
+        y2="459.25"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        y1="-0.25"
+        x2="103"
+        y2="-0.25"
+        transform="matrix(0 1 1 0 776 358)"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line x1="795" y1="426" x2="775" y2="426" stroke="white" />
+      <line
+        x1="795"
+        y1="425.25"
+        x2="775"
+        y2="425.25"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        x1="795"
+        y1="426.75"
+        x2="775"
+        y2="426.75"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        y1="-0.5"
+        x2="104"
+        y2="-0.5"
+        transform="matrix(0 1 1 0 775.5 357)"
+        stroke="white"
+      />
+      <line
+        x1="795"
+        y1="460.75"
+        x2="774"
+        y2="460.75"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line x1="795" y1="460" x2="775" y2="460" stroke="white" />
+      <line
+        y1="-0.25"
+        x2="104"
+        y2="-0.25"
+        transform="matrix(0 1 1 0 774.5 357)"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line x1="796" y1="392" x2="775" y2="392" stroke="white" />
+      <line
+        x1="796"
+        y1="391.25"
+        x2="776"
+        y2="391.25"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        x1="796"
+        y1="392.75"
+        x2="776"
+        y2="392.75"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line x1="796" y1="358" x2="775" y2="358" stroke="white" />
+      <line
+        x1="796"
+        y1="357.25"
+        x2="774"
+        y2="357.25"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        x1="796"
+        y1="358.75"
+        x2="776"
+        y2="358.75"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line x1="174" y1="433" x2="174" y2="408" stroke="white" />
+      <line
+        x1="173.25"
+        y1="434"
+        x2="173.25"
+        y2="409"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        x1="174.75"
+        y1="432"
+        x2="174.75"
+        y2="407"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        y1="-0.25"
+        x2="16"
+        y2="-0.25"
+        transform="matrix(-1 0 0 1 173 409.5)"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        y1="-0.25"
+        x2="16"
+        y2="-0.25"
+        transform="matrix(-1 0 0 1 173 411)"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        x1="157.75"
+        y1="392"
+        x2="157.75"
+        y2="428"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        y1="-0.5"
+        x2="17"
+        y2="-0.5"
+        transform="matrix(-1 0 0 1 174 410.5)"
+        stroke="white"
+      />
+      <line
+        x1="137"
+        y1="426.25"
+        x2="157"
+        y2="426.25"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        x1="137"
+        y1="393.75"
+        x2="157"
+        y2="393.75"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line x1="157" y1="392" x2="157" y2="428" stroke="white" />
+      <line
+        x1="137"
+        y1="392.25"
+        x2="158"
+        y2="392.25"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line x1="137" y1="427" x2="157" y2="427" stroke="white" />
+      <line
+        x1="137"
+        y1="427.75"
+        x2="158"
+        y2="427.75"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line x1="137" y1="393" x2="157" y2="393" stroke="white" />
+      <line
+        x1="156.25"
+        y1="394"
+        x2="156.25"
+        y2="426"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        x1="207.25"
+        y1="432.5"
+        x2="207.25"
+        y2="316.5"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        x1="208.75"
+        y1="432.5"
+        x2="208.75"
+        y2="316.5"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line x1="243" y1="316" x2="105" y2="316" stroke="white" />
+      <line
+        x1="243"
+        y1="316.75"
+        x2="105"
+        y2="316.75"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line x1="208" y1="433" x2="208" y2="315" stroke="white" />
+      <line
+        x1="243"
+        y1="315.25"
+        x2="105"
+        y2="315.25"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        y1="-0.5"
+        x2="60"
+        y2="-0.5"
+        transform="matrix(0 -1 -1 0 207.5 316)"
+        stroke="white"
+      />
+      <line
+        y1="-0.25"
+        x2="60"
+        y2="-0.25"
+        transform="matrix(0 -1 -1 0 207 315)"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        y1="-0.25"
+        x2="60"
+        y2="-0.25"
+        transform="matrix(0 -1 -1 0 208.5 315)"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line x1="242" y1="316" x2="242" y2="305" stroke="white" />
+      <line
+        x1="241.25"
+        y1="315"
+        x2="241.25"
+        y2="305"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        x1="242.75"
+        y1="317"
+        x2="242.75"
+        y2="305"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line x1="174" y1="316" x2="174" y2="305" stroke="white" />
+      <line
+        x1="173.25"
+        y1="315"
+        x2="173.25"
+        y2="305"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        x1="174.75"
+        y1="315"
+        x2="174.75"
+        y2="305"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line x1="140" y1="316" x2="140" y2="305" stroke="white" />
+      <line
+        x1="139.25"
+        y1="315"
+        x2="139.25"
+        y2="305"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        x1="140.75"
+        y1="315"
+        x2="140.75"
+        y2="305"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line x1="106" y1="316" x2="106" y2="305" stroke="white" />
+      <line
+        x1="106.75"
+        y1="315"
+        x2="106.75"
+        y2="305"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        x1="379"
+        y1="456.75"
+        x2="399"
+        y2="456.75"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        x1="379"
+        y1="455.25"
+        x2="399"
+        y2="455.25"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line x1="379" y1="456" x2="399" y2="456" stroke="white" />
+      <line
+        x1="105.25"
+        y1="317"
+        x2="105.25"
+        y2="305"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        y1="-0.5"
+        x2="25"
+        y2="-0.5"
+        transform="matrix(0 -1 -1 0 757.5 466)"
+        stroke="white"
+      />
+      <line
+        y1="-0.25"
+        x2="25"
+        y2="-0.25"
+        transform="matrix(0 -1 -1 0 758.5 467)"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        y1="-0.25"
+        x2="25"
+        y2="-0.25"
+        transform="matrix(0 -1 -1 0 757 465)"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        y1="-0.25"
+        x2="15"
+        y2="-0.25"
+        transform="matrix(1 0 0 -1 759 443.5)"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        y1="-0.25"
+        x2="15"
+        y2="-0.25"
+        transform="matrix(1 0 0 -1 759 442)"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        y1="-0.5"
+        x2="17"
+        y2="-0.5"
+        transform="matrix(1 0 0 -1 758 442.5)"
+        stroke="white"
+      />
+      <line
+        y1="-0.5"
+        x2="11"
+        y2="-0.5"
+        transform="matrix(0 1 1 0 208.5 433)"
+        stroke="white"
+      />
+      <line
+        y1="-0.25"
+        x2="10"
+        y2="-0.25"
+        transform="matrix(0 1 1 0 207.5 434)"
+        stroke="#0A0A0A"
+        stroke-width="0.5"
+      />
+      <line
+        y1="-0.25"
+        x2="10"
+        y2="-0.25"
+        transform="matrix(0 1 1 0 209 434)"
         stroke="#0A0A0A"
         stroke-width="0.5"
       />

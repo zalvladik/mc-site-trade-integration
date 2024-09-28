@@ -48,6 +48,11 @@ export const Title = styled.div`
     width: 100%;
     font-size: 8px;
     font-family: 'Minecraft', sans-serif;
+
+    text-shadow:
+      0px 0px 0px #000000,
+      0px 0px 0px #000000,
+      1px 1px 1px rgba(0, 0, 0, 0.8);
   }
 `
 

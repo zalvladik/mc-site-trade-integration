@@ -143,9 +143,17 @@
     "title": "Тишком-никшом",
     "description": "Прокрадіться повз скалковий сенсор або боронителя, щоб ви залишилися не виявленими"
   },
+  "brusharmadillo": {
+    "isDone": false,
+    "top": -44,
+    "left": -122,
+    "itemIcon": "armadillo_scute",
+    "title": "Який щитрий",
+    "description": "отримайте щитки броненосця з броненосця за допомогою щітки"
+  },
   "honeyblockslide": {
     "isDone": false,
-    "top": -57,
+    "top": -90,
     "left": -122,
     "itemIcon": "honey_block",
     "title": "Прилип, як муха до меду",
@@ -153,7 +161,7 @@
   },
   "voluntaryexile": {
     "isDone": false,
-    "top": -57,
+    "top": -123,
     "left": -156,
     "itemIcon": "pillager_banner",
     "title": "Добровільне вигнання",
@@ -161,7 +169,7 @@
   },
   "salvagesherd": {
     "isDone": false,
-    "top": -57,
+    "top": -90,
     "left": -224,
     "itemIcon": "brush",
     "title": "Спадщина",
@@ -173,8 +181,8 @@
     "left": -292,
     "figure": "star",
     "itemIcon": "diamond_boots",
-    "title": "Дослідіть кожен біом",
-    "description": "Час пригод "
+    "title": "Час пригод",
+    "description": "Дослідіть кожен біом"
   },
   "arbalistic": {
     "isDone": false,
@@ -187,7 +195,7 @@
   },
   "trimwithallexclusivearmorpatterns": {
     "isDone": false,
-    "top": -90,
+    "top": -123,
     "left": -190,
     "figure": "star",
     "itemIcon": "silence_armor_trim_smithing_template",
@@ -220,7 +228,7 @@
   },
   "craftdecoratedpotusingonlysherds": {
     "isDone": false,
-    "top": -90,
+    "top": -123,
     "left": -224,
     "itemIcon": "decorated_pot",
     "title": "Трипільска культура",
@@ -296,8 +304,8 @@
   },
   "summonirongolem": {
     "isDone": false,
-    "top": -40,
-    "left": -326,
+    "top": -73,
+    "left": -370,
     "figure": "oval",
     "itemIcon": "carved_pumpkin",
     "title": "Скинулися всім селом",
@@ -322,7 +330,7 @@
   },
   "spyglassatparrot": {
     "isDone": false,
-    "top": -57,
+    "top": -90,
     "left": -258,
     "itemIcon": "spyglass",
     "title": "Це пташка?",
@@ -339,19 +347,86 @@
   },
   "spyglassatdragon": {
     "isDone": false,
-    "top": -124,
+    "top": -157,
     "left": -258,
     "itemIcon": "spyglass",
     "title": "Це літак?",
     "description": "Подивіться на дракона Енду через підзорну трубу"
   },
+  "minecrafttrialsedition": {
+    "isDone": false,
+    "top": -157,
+    "left": -292,
+    "itemIcon": "chiseled_tuff",
+    "title": "Minecraft: Випробне видання",
+    "description": "Прступіть поріг палацу"
+  },
+  "crafterscraftingcrafters": {
+    "isDone": false,
+    "top": -44,
+    "left": -292,
+    "itemIcon": "crafter",
+    "title": "Нескінченний цикл",
+    "description": "Будьте біля майструвача, коли він майструє майструвач"
+  },
+  "whoneedsrockets": {
+    "isDone": false,
+    "top": -205,
+    "left": -360,
+    "itemIcon": "wind_charge",
+    "title": "Кому потрібні ракети?",
+    "description": "Використайте заряд вітру, аби запустити себе на 8 блоків угору"
+  },
+  "blowback": {
+    "isDone": false,
+    "top": -205,
+    "left": -394,
+    "figure": "star",
+    "itemIcon": "wind_charge",
+    "title": "Як вітром здуло",
+    "description": "Убийте вітреня його ж зарядом вітру"
+  },
+  "lightenup": {
+    "isDone": false,
+    "top": -205,
+    "left": -326,
+    "itemIcon": "copper_bulb",
+    "title": "Світло кожному з нас",
+    "description": "Зішкребіть сокирою окис із мідної жарівки, щоб зробити її яскравішою"
+  },
+  "underlockandkey": {
+    "isDone": false,
+    "top": -205,
+    "left": -292,
+    "itemIcon": "trial_key",
+    "title": "Під замком і ключем",
+    "description": "Використайте ключ випробувань на сховищі"
+  },
   "tradeatworldheight": {
     "isDone": false,
-    "top": -74,
-    "left": -327,
+    "top": -108,
+    "left": -370,
     "itemIcon": "emerald",
     "title": "Зоряний торговець",
     "description": "Поторгуйтесь із селянином на межі висоти будування"
+  },
+  "revaulting": {
+    "isDone": false,
+    "top": -246,
+    "left": -292,
+    "figure": "oval",
+    "itemIcon": "ominous_trial_key",
+    "title": "Розкриття",
+    "description": "Розблокуйте зловісне сховище зловісним ключем випробувань"
+  },
+  "overoverkill": {
+    "isDone": false,
+    "top": -205,
+    "left": -258,
+    "figure": "star",
+    "itemIcon": "mace",
+    "title": "Перебір",
+    "description": "Нанесіть 50 сердець шкоди за один удар булавою"
   },
   "playjukeboxinmeadows": {
     "isDone": false,
@@ -380,15 +455,15 @@
   },
   "trade": {
     "isDone": false,
-    "top": -57,
-    "left": -292,
+    "top": -90,
+    "left": -325,
     "itemIcon": "emerald",
     "title": "Заморський купець",
     "description": "Успішно поторнуйтесь із селянином"
   },
   "spyglassatghast": {
     "isDone": false,
-    "top": -90,
+    "top": -123,
     "left": -258,
     "itemIcon": "spyglass",
     "title": "Це повітряна кулька?",
@@ -396,7 +471,7 @@
   },
   "trimwithanyarmorpattern": {
     "isDone": false,
-    "top": -57,
+    "top": -90,
     "left": -190,
     "itemIcon": "dune_armor_trim_smithing_template",
     "title": "Стиліст",
@@ -429,7 +504,7 @@
   "froglights": {
     "isDone": false,
     "top": -124,
-    "left": 224,
+    "left": 190,
     "figure": "star",
     "itemIcon": "verdant_froglight",
     "title": "Жаб'ячі вогні, дайте сил мені!",
@@ -446,7 +521,7 @@
   "tameananimal": {
     "isDone": false,
     "top": -56,
-    "left": 122,
+    "left": 258,
     "itemIcon": "lead",
     "title": "Друзі назавжди",
     "description": "Приручіть тварину"
@@ -462,7 +537,7 @@
   "leashallfrogvariants": {
     "isDone": false,
     "top": -90,
-    "left": 224,
+    "left": 190,
     "itemIcon": "lead",
     "title": "Жаб'яча веселка",
     "description": "Прив'яжіть кожен вид жаб на повідець"
@@ -470,7 +545,7 @@
   "fishybusiness": {
     "isDone": false,
     "top": -56,
-    "left": 258,
+    "left": 224,
     "itemIcon": "fishing_rod",
     "title": "На гачку",
     "description": "Спіймайте рибу"
@@ -487,7 +562,7 @@
   "tacticalfishing": {
     "isDone": false,
     "top": -90,
-    "left": 258,
+    "left": 224,
     "itemIcon": "pufferfish_bucket",
     "title": "Рибальска кмітливість",
     "description": "Спіймайте рибу... без вудки!"
@@ -495,7 +570,7 @@
   "feedsnifflet": {
     "isDone": false,
     "top": -90,
-    "left": 190,
+    "left": 156,
     "itemIcon": "torchflower_seeds",
     "title": "Перші запахи",
     "description": "Нагодуйте малого нюхача"
@@ -511,7 +586,7 @@
   "tadpoleinabucket": {
     "isDone": false,
     "top": -56,
-    "left": 224,
+    "left": 190,
     "itemIcon": "tadpole_bucket",
     "title": "Чудова кумпанія",
     "description": "Упіймайте пуголовка у відро"
@@ -519,7 +594,7 @@
   "waxoff": {
     "isDone": false,
     "top": -124,
-    "left": 156,
+    "left": 122,
     "itemIcon": "stone_axe",
     "title": "Стирай віск",
     "description": "Здеріть віск із мідного блока!"
@@ -527,7 +602,7 @@
   "obtainsnifferegg": {
     "isDone": false,
     "top": -56,
-    "left": 190,
+    "left": 156,
     "itemIcon": "sniffer_egg",
     "title": "А пахне як",
     "description": "Отримайте яйце нюхача"
@@ -544,7 +619,7 @@
   "plantanysnifferseed": {
     "isDone": false,
     "top": -124,
-    "left": 190,
+    "left": 156,
     "itemIcon": "pitcher_pod",
     "title": "Садимо минуле",
     "description": "Посадіть будь-яке насіння нюхача"
@@ -560,7 +635,7 @@
   "axolotlinabucket": {
     "isDone": false,
     "top": -124,
-    "left": 258,
+    "left": 224,
     "itemIcon": "axolotl_bucket",
     "title": "Наймиліший хижак",
     "description": "Упіймайте аксолотля у відро"
@@ -576,7 +651,7 @@
   "waxon": {
     "isDone": false,
     "top": -90,
-    "left": 156,
+    "left": 122,
     "itemIcon": "honeycomb",
     "title": "Наноси віск",
     "description": "Нанесіть медові стільники на мідний блок!"
@@ -601,7 +676,7 @@
   "safelyharvesthoney": {
     "isDone": false,
     "top": -56,
-    "left": 156,
+    "left": 122,
     "itemIcon": "honey_bottle",
     "title": "Бдж-ж-жолиний гість",
     "description": "Поставте багаття, щоб зібрати мед із вулика за допомогою пляшки, не розсердивши бджіл"
@@ -609,7 +684,7 @@
   "killaxolotltarget": {
     "isDone": false,
     "top": -158,
-    "left": 258,
+    "left": 224,
     "itemIcon": "tropical_fish_bucket",
     "title": "Дружба - це диво!",
     "description": "Об'єднайтеся з аксолотлем і виграйте бій"
@@ -624,12 +699,37 @@
   },
   "completecatalogue": {
     "isDone": false,
-    "top": -90,
-    "left": 122,
+    "top": -140,
+    "left": 292,
     "figure": "star",
     "itemIcon": "cod",
-    "title": "Повний <<каталог>>",
-    "description": "Приручіть усі види котів!"
+    "title": "Повний <<коталог>>",
+    "description": "Приручіть усі вижи котів!"
+  },
+  "repairwolfarmor": {
+    "isDone": false,
+    "top": -74,
+    "left": 292,
+    "itemIcon": "wolf_armor",
+    "title": "Як новеньке",
+    "description": "Повністю полагодьте пошкоджені вовчі обладункиза допомогою щитків броненосця усі види котів!"
+  },
+  "removewolfarmor": {
+    "isDone": false,
+    "top": -40,
+    "left": 292,
+    "itemIcon": "shears",
+    "title": "Філігранно",
+    "description": "Зніміть із вовка обладунки за допомогою ножиць"
+  },
+  "wholepack": {
+    "isDone": false,
+    "top": -108,
+    "figure": "star",
+    "left": 292,
+    "itemIcon": "bone",
+    "title": "Повний гавкет",
+    "description": "Приручіть по одному вовку кожного виду"
   },
   "killdragon": {
     "isDone": false,
@@ -722,7 +822,7 @@
     "left": -33,
     "itemIcon": "gold_ingot",
     "title": "Ох, блищить!",
-    "description": "Відверніть увагу піґлінів"
+    "description": "Відверніть увагу піґлінів золотом"
   },
   "allpotions": {
     "isDone": false,
@@ -830,7 +930,7 @@
     "left": 1,
     "itemIcon": "warped_fungus_on_a_stick",
     "title": "Як удома",
-    "description": "Здійсніть до-о-о-о-овгу"
+    "description": "Здійсніть довжелезну поїздку на блукачі по лавовому озеру у Верхньому світі"
   },
   "obtainancientdebris": {
     "isDone": false,
