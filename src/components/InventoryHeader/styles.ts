@@ -17,6 +17,11 @@ export const InventoryHeaderTitle = styled.div`
     padding-left: 20px;
     font-weight: 500;
     font-size: 30px;
+
+    text-shadow:
+      0px 0px 25px rgb(100, 100, 100),
+      0px 0px 25px rgb(100, 100, 100),
+      2px 2px 1px rgba(0, 0, 0, 1);
   }
 
   & > p:last-child {
@@ -24,5 +29,10 @@ export const InventoryHeaderTitle = styled.div`
     padding-left: 10px;
     font-weight: 500;
     font-size: 26px;
+
+    text-shadow:
+      0px 0px 25px rgb(100, 100, 100),
+      0px 0px 25px rgb(100, 100, 100),
+      2px 2px 1px rgba(0, 0, 0, 1);
   }
 `

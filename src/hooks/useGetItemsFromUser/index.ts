@@ -8,5 +8,5 @@ export const useGetItemsFromUser = () => {
     queryFn: User.getItems,
   })
 
-  return { data, isLoading, refetch, isRefetching }
+  return { data: data ?? [], isLoading, refetch, isRefetching }
 }

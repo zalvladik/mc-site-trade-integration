@@ -5,5 +5,5 @@ export type NavBarTopProps = {
   navType: string
   navTypes: string[]
   setNavType: (value: string) => void
-  buttons: { navType: string; iconComponent: JSX.Element }[]
+  buttons: { navType: string; iconComponent: JSX.Element; alertCount?: number }[]
 } & HTMLProps<HTMLDivElement>

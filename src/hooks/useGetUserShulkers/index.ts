@@ -8,5 +8,5 @@ export const useGetUserShulkers = () => {
     queryFn: Shulker.getShulkers,
   })
 
-  return { data, isLoading }
+  return { data: data ?? [], isLoading }
 }

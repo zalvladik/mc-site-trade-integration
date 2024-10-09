@@ -68,3 +68,23 @@ export const Container = styled.div`
     }
   }
 `
+
+export const AlertCountContainer = styled.div`
+  position: absolute;
+  padding: 1px 6px 3px 6px;
+  right: 6px;
+  top: 6px;
+
+  border-radius: 4px;
+
+  background-color: rgb(170, 0, 0);
+
+  font-family: 'Minecraft', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+
+  text-shadow:
+    0px 0px 25px rgb(100, 100, 100),
+    0px 0px 25px rgb(100, 100, 100),
+    2px 2px 1px rgba(0, 0, 0, 1);
+`

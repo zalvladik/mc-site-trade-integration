@@ -1,5 +1,9 @@
 import InformationButton from 'src/components/InformationButton'
-import { Container, ContainerWrapper } from 'src/components/NavBarTop/styles'
+import {
+  AlertCountContainer,
+  Container,
+  ContainerWrapper,
+} from 'src/components/NavBarTop/styles'
 import type { NavBarTopProps } from 'src/components/NavBarTop/types'
 import { useNavBarTop } from 'src/components/NavBarTop/useNavBarTop'
 
@@ -33,12 +37,16 @@ const NavBarTop = ({
             key={item.navType}
             style={{
               opacity: navType === navTypes[i] ? 1 : 0.3,
+              position: 'relative',
             }}
             onClick={() => {
               setNavType(navTypes[i])
             }}
           >
             {item.iconComponent}
+            {!!item.alertCount && (
+              <AlertCountContainer>{item.alertCount}</AlertCountContainer>
+            )}
           </div>
         ))}
       </Container>

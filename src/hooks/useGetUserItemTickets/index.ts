@@ -8,5 +8,5 @@ export const useGetUserItemTickets = () => {
     queryFn: ItemTicket.getItemTickets,
   })
 
-  return { data, isLoading, refetch, isRefetching }
+  return { data: data ?? [], isLoading, refetch, isRefetching }
 }

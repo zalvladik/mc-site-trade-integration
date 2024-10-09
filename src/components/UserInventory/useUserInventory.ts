@@ -17,7 +17,7 @@ export const useUserInventory = () => {
 
   const [page, setPage] = useState(1)
 
-  const { data = [], isLoading, isRefetching } = useGetItemsFromUser()
+  const { data = [], isLoading } = useGetItemsFromUser()
 
   const showInfo = () => {
     toast.info({
@@ -116,7 +116,7 @@ export const useUserInventory = () => {
   }
 
   const inventoryHeaderProps = {
-    isLoading: isLoading || isRefetching || isLoadingItemTicket,
+    isLoading: isLoading || isLoadingItemTicket,
     itemLength: data.length,
     submitButton,
     title: 'Інвентар',
@@ -130,7 +130,7 @@ export const useUserInventory = () => {
   }
 
   const itemListProps = {
-    isLoading: isLoading || isRefetching,
+    isLoading,
     items: itemsOnPage,
     selectToogle,
     styleForItemBorder,
