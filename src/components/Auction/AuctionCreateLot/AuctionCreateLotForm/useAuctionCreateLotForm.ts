@@ -20,13 +20,23 @@ export const useAuctionCreateLotForm = () => {
   }
 
   const handleChange = (value: string) => {
-    if (/^\d*\.?\d{0,1}$/.test(value)) {
-      const numericValue = parseFloat(value)
+    if (/^\d*\.?[1-9]{0,1}$/.test(value)) {
+      if (value === '0') {
+        if (itemPrice === '0.') {
+          setItemPrice('')
 
-      if (!Number.isNaN(numericValue) && numericValue <= 15552) {
-        setItemPrice(value)
-      } else if (value === '') {
-        setItemPrice('')
+          return
+        }
+
+        setItemPrice('0.')
+      } else {
+        const numericValue = parseFloat(value)
+
+        if (!Number.isNaN(numericValue) && numericValue <= 15552) {
+          setItemPrice(value)
+        } else if (value === '') {
+          setItemPrice('')
+        }
       }
     }
   }
