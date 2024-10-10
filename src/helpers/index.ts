@@ -67,7 +67,7 @@ export const moneyCalculator = (count: number): string => {
     return splitedCount[1] === '0' ? `${splitedCount[0]}` : `${count}`
   }
 
-  return `${Math.floor((count - remainder) / 64)} ст. ${splitedCount[1] === '0' ? '' : ` + ${remainder}`}`
+  return `${Math.floor((count - remainder) / 64)} ст. ${remainder === 0 ? '' : ` + ${remainder}`}`
 }
 
 export const generatePageNumbers = (
