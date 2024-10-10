@@ -29,6 +29,10 @@ const WorldExpansionCategory = ({
     isLoadingGetWorldExpansion,
     dataGetWorldExpansion,
     currentWorldExpansion,
+    value,
+    handleChangeValue,
+    handleError,
+    howMuchNeed,
   } = useWorldExpansionCategory(worldType)
 
   return (
@@ -99,9 +103,6 @@ const WorldExpansionCategory = ({
                   {(() => {
                     if (!dataGetWorldExpansion.length) return <div />
 
-                    const howMuchNeed =
-                      currentWorldExpansion.cost - currentWorldExpansion.moneyStorage
-
                     return (
                       <MoneyStorage>
                         <div>
@@ -121,9 +122,29 @@ const WorldExpansionCategory = ({
                   <DefaultInput
                     style={{ width: 320 }}
                     containerStyle={{ width: 'max-content' }}
-                    rightIcon={false}
+                    rightIconUrl="items_for_ui/deepslate_diamond_ore.png"
+                    rightIconSize={40}
+                    value={value}
+                    onChange={e => {
+                      const value = Number(e.target.value)
+
+                      if (value < 0) return
+
+                      if (value > howMuchNeed) handleError()
+
+                      handleChangeValue(e.target.value)
+                    }}
                   />
-                  <DefaultButton style={{ width: 320 }}>Закинути</DefaultButton>
+                  <DefaultButton
+                    style={{ width: 320 }}
+                    disabled={
+                      isLoadingGetWorldExpansion ||
+                      !Number(value) ||
+                      Number(value) > Number(howMuchNeed)
+                    }
+                  >
+                    Закинути
+                  </DefaultButton>
                 </DonationContainer>
               </BodyContainer>
             </div>

@@ -8,7 +8,7 @@ const AuctionCreateLotForm = ({
   currentItemId,
   itemCategories,
 }: AuctionCreateLotFormT): JSX.Element => {
-  const { itemPrice, setItemPrice, createLotHanlder, isLoading, handleError } =
+  const { itemPrice, handleChangeValue, createLotHanlder, isLoading, handleError } =
     useAuctionCreateLotForm()
 
   return (
@@ -24,13 +24,9 @@ const AuctionCreateLotForm = ({
 
           if (value < 0) return
 
-          if (value > 15552) {
-            handleError()
+          if (value > 15552) handleError()
 
-            return
-          }
-
-          setItemPrice(e.target.value)
+          handleChangeValue(e.target.value)
         }}
       />
       <DefaultButton

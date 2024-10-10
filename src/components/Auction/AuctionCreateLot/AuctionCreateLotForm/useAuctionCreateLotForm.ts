@@ -19,7 +19,7 @@ export const useAuctionCreateLotForm = () => {
     toast.error({ message: ['Максимальна ціна: 15552'] })
   }
 
-  const handleChange = (value: string) => {
+  const handleChangeValue = (value: string) => {
     if (/^\d*\.?[1-9]{0,1}$/.test(value)) {
       if (value === '0') {
         if (itemPrice === '0.') {
@@ -32,7 +32,7 @@ export const useAuctionCreateLotForm = () => {
       } else {
         const numericValue = parseFloat(value)
 
-        if (!Number.isNaN(numericValue) && numericValue <= 15552) {
+        if (!Number.isNaN(numericValue)) {
           setItemPrice(value)
         } else if (value === '') {
           setItemPrice('')
@@ -64,7 +64,7 @@ export const useAuctionCreateLotForm = () => {
 
   return {
     itemPrice,
-    setItemPrice: handleChange,
+    handleChangeValue,
     createLotHanlder,
     isLoading: isLoadingCreateItemLot || isLoadingCreateShulkerLot,
     handleError,
