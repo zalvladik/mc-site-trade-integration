@@ -93,7 +93,9 @@ const ModalLot = ({
         )}
 
         <DefaultButton
-          disabled={isDeleteLot ? isLoading : price > user.money || isLoading}
+          disabled={
+            isDeleteLot ? isLoading : Number(price) > Number(user.money) || isLoading
+          }
           isLoading={isLoading}
           onClick={() => toogleLot(id)}
           style={{
@@ -103,7 +105,7 @@ const ModalLot = ({
         >
           {isDeleteLot
             ? 'Видалити'
-            : user.money >= price
+            : Number(user.money) >= Number(price)
               ? 'Купити'
               : 'Недостатньо коштів'}
         </DefaultButton>

@@ -61,11 +61,13 @@ export const moneyCalculator = (count: number): string => {
 
   const remainder: number = parseFloat((count % 64).toFixed(1))
 
+  if (Number(count) === 64) return '64'
+
   if (Number(count) < 64) {
-    return splitedCount[1] === '00' ? `${splitedCount[0]} шт.` : `${count} шт.`
+    return splitedCount[1] === '0' ? `${splitedCount[0]}` : `${count}`
   }
 
-  return `${Math.floor((count - remainder) / 64)} ст. ${splitedCount[1] === '00' ? '' : `${remainder} шт.`}`
+  return `${Math.floor((count - remainder) / 64)} ст. ${splitedCount[1] === '0' ? '' : ` + ${remainder}`}`
 }
 
 export const generatePageNumbers = (

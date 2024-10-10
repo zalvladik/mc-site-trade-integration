@@ -62,11 +62,7 @@ const AuctionItemList = (): JSX.Element => {
                 <div />
 
                 <ItemPriceContainer>
-                  {price > 64 ? (
-                    <div>{moneyCalculator(price)}</div>
-                  ) : (
-                    <div>{price}</div>
-                  )}
+                  <div>{moneyCalculator(price)}</div>
                   <div />
                 </ItemPriceContainer>
               </div>

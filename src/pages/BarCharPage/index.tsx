@@ -51,20 +51,20 @@ const BarChartExample = (): JSX.Element => {
           <MoneyTransactionInfo>
             <p>
               {'⬆ '}
-              {sellerInfoSum}
+              {sellerInfoSum.toFixed(1)}
             </p>
 
             <p>
               {'⬇ '}
-              {buyerInfoSum}
+              {buyerInfoSum.toFixed(1)}
             </p>
 
             <p>
               {sellerInfoSum === buyerInfoSum
                 ? '0'
                 : sellerInfoSum - buyerInfoSum > 0
-                  ? `+${sellerInfoSum - buyerInfoSum}`
-                  : `-${buyerInfoSum - sellerInfoSum}`}
+                  ? `+${(sellerInfoSum - buyerInfoSum).toFixed(1)}`
+                  : `-${(buyerInfoSum - sellerInfoSum).toFixed(1)}`}
             </p>
           </MoneyTransactionInfo>
           <ButtonList>

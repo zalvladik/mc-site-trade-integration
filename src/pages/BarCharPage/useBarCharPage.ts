@@ -74,14 +74,15 @@ export const useBarCharPage = () => {
           if (item.isSeller) {
             chartInfo[String(`${month}/${day}`)] = {
               sellerInfo:
-                chartInfo[String(`${month}/${day}`)].sellerInfo + item.price,
+                +chartInfo[String(`${month}/${day}`)].sellerInfo + +item.price,
               buyerInfo: 0,
             }
           }
 
           if (!item.isSeller) {
             chartInfo[String(`${month}/${day}`)] = {
-              buyerInfo: chartInfo[String(`${month}/${day}`)].buyerInfo + item.price,
+              buyerInfo:
+                +chartInfo[String(`${month}/${day}`)].buyerInfo + +item.price,
               sellerInfo: 0,
             }
           }
