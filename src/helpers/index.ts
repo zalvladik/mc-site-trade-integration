@@ -61,6 +61,8 @@ export const moneyCalculator = (count: number): string => {
 
   const remainder: number = parseFloat((count % 64).toFixed(1))
 
+  if (splitedCount[0] === '0' && splitedCount[1] === '0') return '0'
+
   if (Number(count) === 64) return '64'
 
   if (Number(count) < 64) {

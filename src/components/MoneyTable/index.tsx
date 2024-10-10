@@ -16,13 +16,15 @@ const MoneyTable = ({
           <h1 style={{ opacity: 0.5, fontSize }}>{moneyTitle}</h1>
         </li>
       )}
+
       <li>
-        <h1 style={{ fontSize }}>{money}</h1>
+        <h1 style={{ fontSize }}>{Number(money) === 0 ? 0 : Number(money)}</h1>
         <div />
       </li>
-      {money > 64 && (
+
+      {Number(money) > 64 && (
         <li>
-          <h1 style={{ fontSize }}>{`[${moneyCalculator(money)}]`}</h1>
+          <h1 style={{ fontSize }}>{moneyCalculator(money)}</h1>
           <div />
         </li>
       )}

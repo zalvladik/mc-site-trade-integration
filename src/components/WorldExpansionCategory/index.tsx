@@ -105,7 +105,7 @@ const WorldExpansionCategory = ({
                     return (
                       <MoneyStorage>
                         <div>
-                          {`${Number(currentWorldExpansion.moneyStorage).toFixed()} / ${Number(currentWorldExpansion.cost).toFixed()}`}
+                          {`${+currentWorldExpansion.moneyStorage} / ${+currentWorldExpansion.cost}`}
                         </div>
                         <div>
                           {`${moneyCalculator(currentWorldExpansion.moneyStorage)} / ${moneyCalculator(currentWorldExpansion.cost)}`}
