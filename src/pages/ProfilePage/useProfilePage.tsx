@@ -46,6 +46,6 @@ export const useProfilePage = (): any => {
     showInfoText,
     navTypes,
     buttons,
-    username: user.username,
+    userId: user.id,
   }
 }

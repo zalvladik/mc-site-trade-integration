@@ -12,7 +12,7 @@ import {
 } from 'src/components/Profile'
 
 const ProfilePage = (): JSX.Element => {
-  const { navType, setNavType, showInfoText, navTypes, buttons, username } =
+  const { navType, setNavType, showInfoText, navTypes, buttons, userId } =
     useProfilePage()
 
   return (
@@ -39,7 +39,7 @@ const ProfilePage = (): JSX.Element => {
       >
         {navType === ProfilePartsEnum.PROFILE && <ProfileComponent />}
         {navType === ProfilePartsEnum.ADVANCEMENT && (
-          <AdvancementsMap username={username} />
+          <AdvancementsMap userId={userId} />
         )}
         {navType === ProfilePartsEnum.EFFECTS && <ProfileEffects />}
         {navType === ProfilePartsEnum.VIP && <ProfileVip />}

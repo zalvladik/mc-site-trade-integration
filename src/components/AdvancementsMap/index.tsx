@@ -16,13 +16,13 @@ import {
 import type { AdvancementsMapProps } from 'src/components/AdvancementsMap/types'
 import { useAdvancementsMap } from 'src/components/AdvancementsMap/useAdvancementsMap'
 
-const AdvancementsMap = ({ username }: AdvancementsMapProps): JSX.Element => {
+const AdvancementsMap = ({ userId }: AdvancementsMapProps): JSX.Element => {
   const {
     userAdvancements = [],
     isLoading,
     screenWidth,
     initialPositionX,
-  } = useAdvancementsMap(username)
+  } = useAdvancementsMap(userId)
 
   return (
     <StyledSkeleton

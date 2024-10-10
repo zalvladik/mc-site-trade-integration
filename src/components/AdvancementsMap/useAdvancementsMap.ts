@@ -3,8 +3,8 @@ import { useUserAdvancements } from 'src/hooks/useUserAdvancements'
 import schema from 'src/components/AdvancementsMap/schema.json'
 import type { Advancement } from 'src/components/AdvancementsMap/types'
 
-export const useAdvancementsMap = (username: string) => {
-  const { data, isLoading } = useUserAdvancements(username)
+export const useAdvancementsMap = (userId: number) => {
+  const { data, isLoading } = useUserAdvancements(userId)
 
   const schemaAdvancements: Record<string, Advancement> = schema
 

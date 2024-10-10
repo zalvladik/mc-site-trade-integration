@@ -10,8 +10,8 @@ class Advancements {
     return api.get(FetchEndpoint.USER_ADVANCEMENTS).json()
   }
 
-  async getUserAdvancementsApi(username: string): Promise<GetUserAdvancementsApiT> {
-    return api.get(`${FetchEndpoint.USER_ADVANCEMENTS}/${username}`).json()
+  async getUserAdvancementsApi(userId: number): Promise<GetUserAdvancementsApiT> {
+    return api.get(`${FetchEndpoint.USER_ADVANCEMENTS}/${userId}`).json()
   }
 }
 
