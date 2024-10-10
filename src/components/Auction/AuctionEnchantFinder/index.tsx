@@ -168,8 +168,6 @@ const AuctionEnchantFinder = (): JSX.Element => {
               {dataEnchantLots.map(lot => {
                 const { id, price, username } = lot
 
-                const { stack, restMoney } = moneyCalculator(price)
-
                 const lotElement = (lot?.shulker || lot?.item)!
 
                 return (
@@ -196,7 +194,7 @@ const AuctionEnchantFinder = (): JSX.Element => {
 
                     <ItemPriceContainer>
                       {price > 64 ? (
-                        <div>{`${stack} ст. ${restMoney} шт.`}</div>
+                        <div>{`${moneyCalculator(price)}`}</div>
                       ) : (
                         <div>{price}</div>
                       )}

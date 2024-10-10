@@ -99,20 +99,8 @@ const WorldExpansionCategory = ({
                   {(() => {
                     if (!dataGetWorldExpansion.length) return <div />
 
-                    const {
-                      stack: stackMoneyStorage,
-                      restMoney: restMoneyMoneyStorage,
-                    } = moneyCalculator(currentWorldExpansion.moneyStorage)
-                    const { stack: stackCost, restMoney: restMoneyCost } =
-                      moneyCalculator(currentWorldExpansion.cost)
-
                     const howMuchNeed =
                       currentWorldExpansion.cost - currentWorldExpansion.moneyStorage
-
-                    const {
-                      stack: stackhowMuchNeed,
-                      restMoney: restMoneyhowMuchNeed,
-                    } = moneyCalculator(howMuchNeed)
 
                     return (
                       <MoneyStorage>
@@ -120,10 +108,10 @@ const WorldExpansionCategory = ({
                           {`${currentWorldExpansion.moneyStorage} / ${currentWorldExpansion.cost}`}
                         </div>
                         <div>
-                          {`${stackMoneyStorage}ст.${restMoneyMoneyStorage}шт. / ${stackCost}ст.${restMoneyCost}шт.`}
+                          {`${moneyCalculator(currentWorldExpansion.moneyStorage)} / ${moneyCalculator(currentWorldExpansion.cost)}`}
                         </div>
                         <div>
-                          {`Залишилось ${howMuchNeed} [${stackhowMuchNeed}ст.${restMoneyhowMuchNeed}шт.]`}
+                          {`Залишилось ${howMuchNeed} [${moneyCalculator(howMuchNeed)}]`}
                         </div>
                       </MoneyStorage>
                     )

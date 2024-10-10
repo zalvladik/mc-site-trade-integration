@@ -56,18 +56,16 @@ export const millisecondsToTime = (milliseconds: number | string): string => {
   return formattedDateTime
 }
 
-export const moneyCalculator = (
-  count: number,
-): { stack: number; restMoney: number } => {
-  const remainder: number = count % 64
+export const moneyCalculator = (count: number): string => {
+  const splitedCount = `${count}`.split('.')
 
-  return { stack: Math.floor((count - remainder) / 64), restMoney: remainder }
-}
+  const remainder: number = parseFloat((count % 64).toFixed(1))
 
-export const moneyCalculatorShulker = (count: number): string => {
-  const shulkers: number = count / 1728.0
+  if (Number(count) < 64) {
+    return splitedCount[1] === '00' ? `${splitedCount[0]} шт.` : `${count} шт.`
+  }
 
-  return `[ ${shulkers.toFixed(2)} ]`
+  return `${Math.floor((count - remainder) / 64)} ст. ${splitedCount[1] === '00' ? '' : `${remainder} шт.`}`
 }
 
 export const generatePageNumbers = (

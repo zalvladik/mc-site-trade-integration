@@ -39,8 +39,6 @@ const AuctionUserLots = (): JSX.Element => {
             const { id, price } = lot
             const lotElement = (lot?.shulker || lot?.item)!
 
-            const { stack, restMoney } = moneyCalculator(price)
-
             return (
               <div key={id} onClick={() => openModal(lot)}>
                 <div>
@@ -61,11 +59,8 @@ const AuctionUserLots = (): JSX.Element => {
                 <div />
 
                 <ItemPriceContainer>
-                  {price > 64 ? (
-                    <div>{`${stack} ст. ${restMoney} шт.`}</div>
-                  ) : (
-                    <div>{price}</div>
-                  )}
+                  <div>{moneyCalculator(price)}</div>
+
                   <div />
                 </ItemPriceContainer>
               </div>

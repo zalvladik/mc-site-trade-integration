@@ -9,8 +9,6 @@ const MoneyTable = ({
   fontSize = 36,
   ...props
 }: MoneyTableProps): JSX.Element => {
-  const { stack, restMoney } = moneyCalculator(money)
-
   return (
     <MoneyAmountContainer {...props}>
       {moneyTitle && (
@@ -24,7 +22,7 @@ const MoneyTable = ({
       </li>
       {money > 64 && (
         <li>
-          <h1 style={{ fontSize }}>{`[${stack}ст.${restMoney}шт.]`}</h1>
+          <h1 style={{ fontSize }}>{`[${moneyCalculator(money)}]`}</h1>
           <div />
         </li>
       )}
