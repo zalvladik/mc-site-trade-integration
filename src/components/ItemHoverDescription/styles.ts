@@ -20,7 +20,7 @@ export const ItemHoverDescriptionContainer = styled.div`
   border-radius: 6px;
   pointer-events: none;
 
-  background-color: #120312;
+  background-color: rgba(18, 3, 18, 0.97);
 `
 
 export const Title = styled.div`

@@ -10,7 +10,7 @@ export const Container = styled.div`
   overflow: hidden;
   left: 50%;
   translate: -50% -120%;
-  background-color: #212121;
+  background-color: rgba(33, 33, 33, 0.95);
   pointer-events: none;
 `
 
