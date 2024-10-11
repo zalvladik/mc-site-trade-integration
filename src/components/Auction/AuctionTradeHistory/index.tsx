@@ -43,7 +43,7 @@ const AuctionTradeHistory = (): JSX.Element => {
             return (
               <>
                 {!isSameDate && (
-                  <StickyData id={day + month}>
+                  <StickyData className="stickyData" id={day + month}>
                     <ItemTextInfoContainer style={{ margin: '0px auto' }}>
                       <div>
                         <div style={{ fontSize: 26, color: 'rgb(23, 118, 173)' }}>
@@ -57,7 +57,7 @@ const AuctionTradeHistory = (): JSX.Element => {
                   <ItemTextInfoContainer>
                     <div>
                       <div style={{ color: 'rgb(230, 14, 14)', margin: '0px 16px' }}>
-                        -{lot.price}
+                        -{Number(lot.price)}
                       </div>
                     </div>
                   </ItemTextInfoContainer>
@@ -108,7 +108,7 @@ const AuctionTradeHistory = (): JSX.Element => {
             return (
               <>
                 {!isSameDate && (
-                  <StickyData id={day + month}>
+                  <StickyData className="stickyData" id={day + month}>
                     <ItemTextInfoContainer style={{ margin: '0px auto' }}>
                       <div>
                         <div style={{ fontSize: 26, color: 'rgb(23, 118, 173)' }}>
@@ -127,7 +127,7 @@ const AuctionTradeHistory = (): JSX.Element => {
                           margin: '0px 16px',
                         }}
                       >
-                        +{lot.price}
+                        +{Number(lot.price)}
                       </div>
                     </div>
                     <ItemSlotIcon

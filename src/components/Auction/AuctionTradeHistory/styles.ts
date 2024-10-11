@@ -71,7 +71,10 @@ export const HistoryListContainer = styled.div`
   padding: 0px 10px 20px 10px;
   & > div {
     display: flex;
-    margin-left: 5%;
+    &:not(.stickyData) {
+      margin-right: 24px;
+      justify-content: end;
+    }
 
     &:not(:first-child) {
       margin-top: 10px;
