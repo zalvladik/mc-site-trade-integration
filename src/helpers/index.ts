@@ -44,16 +44,31 @@ export const millisecondsToDate = (milliseconds: number | string): string => {
   return formattedDateTime
 }
 
-export const millisecondsToTime = (milliseconds: number | string): string => {
-  const date = new Date(Number(milliseconds))
+export const millisecondsToTime = (
+  milliseconds: number | string,
+): { [key: string]: string } => {
+  let totalMilliseconds = Number(milliseconds)
 
-  const hours = date.getHours().toString().padStart(2, '0')
-  const minutes = date.getMinutes().toString().padStart(2, '0')
-  const seconds = date.getSeconds().toString().padStart(2, '0')
+  const days = Math.floor(totalMilliseconds / (1000 * 60 * 60 * 24))
+    .toString()
+    .padStart(2, '0')
+  totalMilliseconds %= 1000 * 60 * 60 * 24
 
-  const formattedDateTime = `${hours}:${minutes}:${seconds}`
+  const hours = Math.floor(totalMilliseconds / (1000 * 60 * 60))
+    .toString()
+    .padStart(2, '0')
+  totalMilliseconds %= 1000 * 60 * 60
 
-  return formattedDateTime
+  const minutes = Math.floor(totalMilliseconds / (1000 * 60))
+    .toString()
+    .padStart(2, '0')
+  totalMilliseconds %= 1000 * 60
+
+  const seconds = Math.floor(totalMilliseconds / 1000)
+    .toString()
+    .padStart(2, '0')
+
+  return { days, hours, minutes, seconds }
 }
 
 export const moneyCalculator = (count: number): string => {

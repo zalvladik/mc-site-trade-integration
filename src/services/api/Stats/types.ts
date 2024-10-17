@@ -10,3 +10,8 @@ export type GetUserAdvancementsApiT = {
   rating: number
   advancements: string[] | null
 }
+
+export type GetUserPlaytimeApiT = {
+  afkTime: number
+  playTime: number
+}

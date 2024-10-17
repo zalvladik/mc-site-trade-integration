@@ -3,6 +3,7 @@ import * as skinview3d from 'skinview3d'
 import { Role, RoleUA } from 'src/constants'
 import { useToast } from 'src/contexts/ToastProvider/useToast'
 import { useUser } from 'src/contexts/UserProvider/useUser'
+import { useGetUserPlayTime } from 'src/hooks/useGetUserPlayTime'
 import { useGetUserSkin } from 'src/hooks/useGetUserSkin'
 
 export const useProfileComponent = () => {
@@ -12,6 +13,7 @@ export const useProfileComponent = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   const { data, isLoading } = useGetUserSkin()
+  const { data: dataUserPlayTime } = useGetUserPlayTime(user.id)
 
   const showRoleInfo = () => {
     toast.info({
@@ -81,5 +83,6 @@ export const useProfileComponent = () => {
     role: role(),
     roleUa: roleToUa(),
     data: data?.textures.SKIN.url,
+    dataUserPlayTime,
   }
 }

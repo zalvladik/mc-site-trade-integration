@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query'
 import { CacheKeys } from 'src/constants'
-import Advancements from 'src/services/api/Advancements'
+import Advancements from 'src/services/api/Stats'
 
 const useGetAllUsers = () => {
   const { isLoading, data } = useQuery({

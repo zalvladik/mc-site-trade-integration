@@ -3,9 +3,10 @@ import { FetchEndpoint } from 'src/constants'
 import type {
   GetAllUsersAdvancementsT,
   GetUserAdvancementsApiT,
-} from 'src/services/api/Advancements/types'
+  GetUserPlaytimeApiT,
+} from 'src/services/api/Stats/types'
 
-class Advancements {
+class Stats {
   async getAllAdvancements(): Promise<GetAllUsersAdvancementsT[]> {
     return api.get(FetchEndpoint.USER_ADVANCEMENTS).json()
   }
@@ -13,6 +14,10 @@ class Advancements {
   async getUserAdvancementsApi(userId: number): Promise<GetUserAdvancementsApiT> {
     return api.get(`${FetchEndpoint.USER_ADVANCEMENTS}/${userId}`).json()
   }
+
+  async getUserPlayTimeApi(): Promise<GetUserPlaytimeApiT> {
+    return api.get(`${FetchEndpoint.USER_PLAY_TIME}`).json()
+  }
 }
 
-export default new Advancements()
+export default new Stats()

@@ -63,6 +63,24 @@ export const SkinContainer = styled.div`
   position: relative;
 `
 
+export const PlayTimeStats = styled.div`
+  font-family: 'Minecraft', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+
+  & > span {
+    font-family: 'Minecraft', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+
+    color: gray;
+
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+  }
+`
+
 export const PlayerRoleImage = styled.div`
   width: 100px;
   height: 100px;

@@ -1,4 +1,5 @@
 import { Role } from 'src/constants'
+import { millisecondsToTime } from 'src/helpers'
 import { formatDateToUK } from 'src/helpers/formatVipExprirationDate'
 
 import HoverDescription from 'src/components/HoverDescription'
@@ -7,6 +8,7 @@ import {
   Container,
   PlayerRoleImage,
   PlayerRoleImageWrapper,
+  PlayTimeStats,
   SkinContainer,
   VipDateInfo,
   VipDateInfoContainer,
@@ -16,8 +18,15 @@ import { useProfileComponent } from 'src/components/Profile/ProfileComponent/use
 import Skeleton from 'src/components/Skeleton'
 
 const ProfileComponent = (): JSX.Element => {
-  const { isLoading, showRoleInfo, canvasRef, role, roleUa, user } =
-    useProfileComponent()
+  const {
+    isLoading,
+    showRoleInfo,
+    canvasRef,
+    role,
+    roleUa,
+    user,
+    dataUserPlayTime,
+  } = useProfileComponent()
 
   return (
     <Container className="heartbeat-outline">
@@ -54,6 +63,60 @@ const ProfileComponent = (): JSX.Element => {
           )}
         </SkinContainer>
       </Skeleton>
+      <div style={{ textAlign: 'center' }}>
+        {(() => {
+          if (!dataUserPlayTime?.playTime) return <></>
+
+          const { days, hours, minutes } = millisecondsToTime(
+            Number(dataUserPlayTime?.playTime) * 1000,
+          )
+
+          return (
+            <PlayTimeStats>
+              <span>{'Зіграно: '}</span>
+              {Number(days) ? `${Number(days)}д. ` : ''}
+              {Number(hours) ? `${Number(hours)}г. ` : ''}
+              {Number(minutes) ? `${Number(minutes)}хв. ` : ''}
+            </PlayTimeStats>
+          )
+        })()}
+
+        {(() => {
+          if (!dataUserPlayTime?.afkTime) return <></>
+
+          const { days, hours, minutes } = millisecondsToTime(
+            Number(dataUserPlayTime?.afkTime) * 1000,
+          )
+
+          return (
+            <PlayTimeStats>
+              <span>{'AFK: '}</span>
+              {Number(days) ? `${Number(days)}д. ` : ''}
+              {Number(hours) ? `${Number(hours)}г. ` : ''}
+              {Number(minutes) ? `${Number(minutes)}хв. ` : ''}
+            </PlayTimeStats>
+          )
+        })()}
+
+        {(() => {
+          if (!dataUserPlayTime?.playTime || !dataUserPlayTime?.afkTime) return <></>
+
+          const { days, hours, minutes } = millisecondsToTime(
+            (Number(dataUserPlayTime?.playTime) -
+              Number(dataUserPlayTime?.afkTime)) *
+              1000,
+          )
+
+          return (
+            <PlayTimeStats>
+              <span>{'Жива гра: '}</span>
+              {Number(days) ? `${Number(days)}д. ` : ''}
+              {Number(hours) ? `${Number(hours)}г. ` : ''}
+              {Number(minutes) ? `${Number(minutes)}хв. ` : ''}
+            </PlayTimeStats>
+          )
+        })()}
+      </div>
 
       {(() => {
         if (!user.vipExpirationDate) return <></>
