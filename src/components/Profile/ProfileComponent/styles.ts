@@ -73,7 +73,7 @@ export const PlayTimeStats = styled.div`
   & > span {
     font-family: 'Minecraft', sans-serif;
     font-weight: 500;
-    font-size: 28px;
+    font-size: 24px;
 
     color: gray;
 
