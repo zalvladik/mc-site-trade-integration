@@ -36,11 +36,17 @@ const UserProvider = ({
   }
 
   const incrementUserMoney = (dataMoney: number): void => {
-    setUser(prevUser => ({ ...prevUser, money: prevUser.money + dataMoney }))
+    setUser(prevUser => ({
+      ...prevUser,
+      money: Number(prevUser.money) + Number(dataMoney),
+    }))
   }
 
   const decrementUserMoney = (dataMoney: number): void => {
-    setUser(prevUser => ({ ...prevUser, money: prevUser.money - dataMoney }))
+    setUser(prevUser => ({
+      ...prevUser,
+      money: Number(prevUser.money) - Number(dataMoney),
+    }))
   }
 
   const updateUser = ({
