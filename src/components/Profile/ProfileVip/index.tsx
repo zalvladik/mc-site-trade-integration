@@ -5,6 +5,7 @@ import {
   vipMultipliers,
   vipPrice,
 } from 'src/constants'
+import { formatDateToUK } from 'src/helpers/formatVipExprirationDate'
 import { VipEnum } from 'src/types'
 
 import DefaultButton from 'src/components/DefaultButton'
@@ -12,6 +13,9 @@ import InformationButton from 'src/components/InformationButton'
 import {
   Container,
   DisabledVipType,
+  VipDateInfo,
+  VipDateInfoContainer,
+  VipImage,
   VipInfo,
   VipInfoContainer,
   VipTypeIcons,
@@ -33,7 +37,6 @@ const ProfileVip = (): JSX.Element => {
     <Container>
       <VipTypeIcons>
         {Object.values(VipEnum).map(item => {
-          const isDisalbed = vipPrice[user.vip as VipEnum] >= vipPrice[item]
           const isSelected = selectedVipType === item
 
           return (
@@ -44,18 +47,17 @@ const ProfileVip = (): JSX.Element => {
               }}
               style={{
                 backgroundImage: `url(/assets/items_for_ui/${item}_block.webp)`,
-                opacity: isDisalbed ? 0.4 : isSelected ? 1 : 0.4,
-                pointerEvents: isDisalbed ? 'none' : 'auto',
+                opacity: isSelected ? 1 : 0.4,
               }}
             >
-              {isDisalbed && <DisabledVipType />}
+              <DisabledVipType />
             </div>
           )
         })}
       </VipTypeIcons>
 
       <VipInfoContainer className="heartbeat-outline">
-        {!isLoading && user.vip !== VipEnum.NETHERITE && (
+        {!isLoading && (
           <VipInfo>
             <div>
               Ціна: {vipPrice[selectedVipType]} <div />
@@ -89,6 +91,36 @@ const ProfileVip = (): JSX.Element => {
           {buttonText()}
         </DefaultButton>
       </VipInfoContainer>
+
+      {(() => {
+        if (!user.vipExpirationDate) return <></>
+
+        const { day, month, hours, minutes, seconds } = formatDateToUK(
+          user.vipExpirationDate,
+        )
+
+        return (
+          <VipDateInfoContainer>
+            <VipImage
+              style={{
+                backgroundImage: `url(/assets/items_for_ui/${user.vip}_block.webp)`,
+              }}
+            />
+            <h3>Тривалість VIP</h3>
+            {user.vipExpirationDate && (
+              <VipDateInfo>
+                <div>
+                  до {day} {month}
+                </div>
+                |
+                <div>
+                  {hours} : {minutes} : {seconds}
+                </div>
+              </VipDateInfo>
+            )}
+          </VipDateInfoContainer>
+        )
+      })()}
 
       <InformationButton
         onClick={showInfo}

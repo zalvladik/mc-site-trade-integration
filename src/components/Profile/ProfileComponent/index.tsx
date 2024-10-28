@@ -1,6 +1,5 @@
 import { Role } from 'src/constants'
 import { millisecondsToTime } from 'src/helpers'
-import { formatDateToUK } from 'src/helpers/formatVipExprirationDate'
 
 import HoverDescription from 'src/components/HoverDescription'
 import {
@@ -10,23 +9,13 @@ import {
   PlayerRoleImageWrapper,
   PlayTimeStats,
   SkinContainer,
-  VipDateInfo,
-  VipDateInfoContainer,
-  VipImage,
 } from 'src/components/Profile/ProfileComponent/styles'
 import { useProfileComponent } from 'src/components/Profile/ProfileComponent/useProfileComponent'
 import Skeleton from 'src/components/Skeleton'
 
 const ProfileComponent = (): JSX.Element => {
-  const {
-    isLoading,
-    showRoleInfo,
-    canvasRef,
-    role,
-    roleUa,
-    user,
-    dataUserPlayTime,
-  } = useProfileComponent()
+  const { isLoading, showRoleInfo, canvasRef, role, roleUa, dataUserPlayTime } =
+    useProfileComponent()
 
   return (
     <Container className="heartbeat-outline">
@@ -117,36 +106,6 @@ const ProfileComponent = (): JSX.Element => {
           )
         })()}
       </div>
-
-      {(() => {
-        if (!user.vipExpirationDate) return <></>
-
-        const { day, month, hours, minutes, seconds } = formatDateToUK(
-          user.vipExpirationDate,
-        )
-
-        return (
-          <VipDateInfoContainer>
-            <VipImage
-              style={{
-                backgroundImage: `url(/assets/items_for_ui/${user.vip}_block.webp)`,
-              }}
-            />
-            <h3>Тривалість VIP</h3>
-            {user.vipExpirationDate && (
-              <VipDateInfo>
-                <div>
-                  до {day} {month}
-                </div>
-                |
-                <div>
-                  {hours} : {minutes} : {seconds}
-                </div>
-              </VipDateInfo>
-            )}
-          </VipDateInfoContainer>
-        )
-      })()}
     </Container>
   )
 }

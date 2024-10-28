@@ -92,6 +92,8 @@ export const VipInfoContainer = styled.div`
 export const VipInfo = styled.div`
   margin-bottom: 20px;
   & > div {
+    position: relative;
+
     font-family: 'Minecraft', sans-serif;
     font-size: 20px;
     font-weight: 500;
@@ -122,7 +124,7 @@ export const VipInfo = styled.div`
         height: 48px;
 
         top: 50%;
-        right: 180px;
+        right: 165px;
 
         translate: 0% -50%;
 
@@ -131,5 +133,75 @@ export const VipInfo = styled.div`
         background-repeat: no-repeat;
       }
     }
+  }
+`
+
+export const VipDateInfoContainer = styled.div`
+  margin-top: 40px;
+
+  position: relative;
+
+  background-color: rgba(30, 30, 30, 0.8);
+
+  padding: 20px 0px;
+  border-radius: 6px;
+
+  border: 2px solid rgba(50, 50, 50, 1);
+
+  text-align: center;
+
+  -webkit-box-shadow:
+    inset 0px 0px 10px 4px rgba(0, 0, 0, 1),
+    0px 0px 8px 0px rgba(255, 255, 255, 0.4);
+  -moz-box-shadow:
+    inset 0px 0px 10px 4px rgba(0, 0, 0, 1),
+    0px 0px 8px 0px rgba(255, 255, 255, 0.4);
+  box-shadow:
+    inset 0px 0px 10px 4px rgba(0, 0, 0, 1),
+    0px 0px 8px 0px rgba(255, 255, 255, 0.4);
+
+  & > h3 {
+    font-family: 'Minecraft', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+  }
+`
+
+export const VipImage = styled.div`
+  position: absolute;
+  top: 10%;
+
+  translate: 40% -60%;
+
+  right: 0px;
+  width: 50px;
+  height: 50px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+`
+
+export const VipDateInfo = styled.div`
+  display: flex;
+  gap: 6px;
+
+  margin: 0px auto;
+  margin-top: 10px;
+
+  width: max-content;
+
+  font-weight: 900;
+  font-size: 18px;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+  color: white;
+
+  & > div {
+    font-family: 'Minecraft', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
   }
 `

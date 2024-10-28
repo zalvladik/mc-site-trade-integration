@@ -13,7 +13,9 @@ export const useProfileVip = () => {
   const getUserVipTypeForSelectedVipType = (): VipEnum => {
     const vipEnumsArray = Object.values(VipEnum)
 
-    return vipEnumsArray[user.vip ? vipEnumsArray.indexOf(user.vip) + 1 : 0]
+    return user.vip === VipEnum.NETHERITE
+      ? VipEnum.IRON
+      : vipEnumsArray[user.vip ? vipEnumsArray.indexOf(user.vip) + 1 : 0]
   }
 
   const [selectedVipType, setSelectedVipType] = useState<VipEnum>(
