@@ -23,10 +23,10 @@ export class SocketApi {
     this.socket.on('message', ({ type, data }) => {
       switch (type) {
         case SocketTypes.INCREMENT_MONEY:
-          incrementUserMoney(data)
+          incrementUserMoney(Number(data))
           break
         case SocketTypes.DECREMENT_MONEY:
-          decrementUserMoney(data)
+          decrementUserMoney(Number(data))
           break
         case SocketTypes.ADD_ITEMS:
           queryClient.setQueryData<ItemT[]>(CacheKeys.USER_ITEMS, items => {
