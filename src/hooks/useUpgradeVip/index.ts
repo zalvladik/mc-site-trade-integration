@@ -1,14 +1,11 @@
 import { useMutation, useQueryClient } from 'react-query'
 import { CacheKeys } from 'src/constants'
-import { useModals } from 'src/contexts/ModalProvider/useModals'
 import { useToast } from 'src/contexts/ToastProvider/useToast'
 import { refetchToken } from 'src/hooks/useRefetchToken'
 import Vip from 'src/services/api/Vip'
 import type { VipEnum } from 'src/types'
 
 export const useUpgradeVip = () => {
-  const { onClose } = useModals()
-
   const queryClient = useQueryClient()
 
   const toast = useToast()
@@ -20,8 +17,6 @@ export const useUpgradeVip = () => {
 
       const userData = await refetchToken()
       queryClient.setQueryData(CacheKeys.USER, userData)
-
-      onClose()
     },
     onError: (error: Error) => {
       toast.error({ message: [error.message] })

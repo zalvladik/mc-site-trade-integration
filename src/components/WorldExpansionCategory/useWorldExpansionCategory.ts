@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react'
 import { useToast } from 'src/contexts/ToastProvider/useToast'
+import { useUser } from 'src/contexts/UserProvider/useUser'
 import { useGetWorldExpansion } from 'src/hooks/useGetWorldExpansion'
+import { useUpgradeWorldExpansion } from 'src/hooks/useUpgradeWorldExpansion'
 import type { WorldEnum } from 'src/types'
 
 export const useWorldExpansionCategory = (worldType: WorldEnum) => {
+  const { user, updateUserMoney } = useUser()
   const [currentWorldExpansionLvl, setCurrentWorldExpansionLvl] = useState<number>(1)
   const toast = useToast()
 
@@ -11,6 +14,15 @@ export const useWorldExpansionCategory = (worldType: WorldEnum) => {
 
   const { isLoading: isLoadingGetWorldExpansion, data: dataGetWorldExpansion } =
     useGetWorldExpansion(worldType)
+
+  const {
+    mutate: mutateUpgradeWorldExpansion,
+    isLoading: isLoadingUpgradeWorldExpansion,
+  } = useUpgradeWorldExpansion(
+    worldType,
+    updateUserMoney,
+    user.money - Number(value),
+  )
 
   useEffect(() => {
     if (dataGetWorldExpansion.length) {
@@ -50,6 +62,10 @@ export const useWorldExpansionCategory = (worldType: WorldEnum) => {
     }
   }
 
+  const handleExpansion = () => {
+    mutateUpgradeWorldExpansion({ worldType, money: Number(value) })
+  }
+
   return {
     currentWorldExpansionLvl,
     setCurrentWorldExpansionLvl,
@@ -60,5 +76,8 @@ export const useWorldExpansionCategory = (worldType: WorldEnum) => {
     value,
     handleError,
     howMuchNeed,
+    user,
+    handleExpansion,
+    isLoadingUpgradeWorldExpansion,
   }
 }

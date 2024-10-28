@@ -21,3 +21,9 @@ export type WorldExpansionT = {
 export type GetWorldExpansionProps = {
   worldType: WorldEnum
 }
+
+export type CreateWorldExpansionPaymentsProps = {
+  worldType: WorldEnum
+
+  money: number
+}

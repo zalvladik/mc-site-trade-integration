@@ -146,14 +146,20 @@ export const WorldLevelList = styled.div`
     font-size: 40px;
     font-weight: 500;
 
-    text-shadow: 2px 2px 1px rgba(120, 120, 120, 1);
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
   }
 `
 
 export const BodyContainer = styled.div`
   display: flex;
-  padding: 20px 10px;
-  gap: 100px;
+  padding: 20px 20px;
+
+  justify-content: space-between;
 
   border: 1px solid gray;
   border-radius: 8px;

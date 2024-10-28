@@ -25,14 +25,18 @@ const WorldExpansionCategory = ({
   colors,
 }: WorldExpansionCatetgoryProps): JSX.Element => {
   const {
+    currentWorldExpansionLvl,
     setCurrentWorldExpansionLvl,
     isLoadingGetWorldExpansion,
     dataGetWorldExpansion,
     currentWorldExpansion,
+    isLoadingUpgradeWorldExpansion,
     value,
     handleChangeValue,
     handleError,
+    handleExpansion,
     howMuchNeed,
+    user,
   } = useWorldExpansionCategory(worldType)
 
   return (
@@ -84,7 +88,13 @@ const WorldExpansionCategory = ({
                   <div
                     key={i + 1}
                     style={{
-                      opacity: i + 1 <= dataGetWorldExpansion.length ? 1 : 0.3,
+                      opacity: i + 1 <= dataGetWorldExpansion.length ? 1 : 0.2,
+                      color:
+                        currentWorldExpansionLvl === i + 1 ? '#03dddd' : 'white',
+                      textShadow:
+                        currentWorldExpansionLvl === i + 1
+                          ? '0px 0px 4px rgb(214, 214, 214)'
+                          : '3px 3px 1px rgba(120, 120, 120, 1)',
                     }}
                     onClick={() => {
                       if (i + 1 > dataGetWorldExpansion.length) return
@@ -140,8 +150,12 @@ const WorldExpansionCategory = ({
                     disabled={
                       isLoadingGetWorldExpansion ||
                       !Number(value) ||
-                      Number(value) > Number(howMuchNeed)
+                      Number(value) > Number(howMuchNeed) ||
+                      Number(value) > user.money ||
+                      isLoadingUpgradeWorldExpansion
                     }
+                    isLoading={isLoadingUpgradeWorldExpansion}
+                    onClick={handleExpansion}
                   >
                     Закинути
                   </DefaultButton>

@@ -122,6 +122,7 @@ export enum FetchEndpoint {
   TRADE_HISTORY_PRICE = 'lot/trade_history/price',
   TWINK = 'twink',
   WORLD_EXPANSION = 'world_expansion',
+  WORLD_EXPANSION_PAYMENTS = 'world_expansion/payments',
 }
 
 export enum LocalStorageKey {
