@@ -14,7 +14,7 @@ const AuthLayout = (): JSX.Element | null => {
   if (isLoading || isUserLoading) return <LoadingPage />
 
   return (
-    <UserProvider user={user}>
+    <UserProvider user={{ ...user, money: Number(user.money) }}>
       <ProvideItemHoverDescription>
         <ModalLayout />
       </ProvideItemHoverDescription>
