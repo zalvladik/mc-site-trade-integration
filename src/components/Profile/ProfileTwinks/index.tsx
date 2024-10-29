@@ -56,9 +56,12 @@ const ProfileTwinks = (): JSX.Element => {
           rightIcon={false}
           value={twinkName}
           onChange={e => {
-            if (e.target.value.length > 16) return
+            const { value } = e.target
+            const isValidMinecraftName = /^[a-zA-Z0-9_]{3,16}$/.test(value)
 
-            setTwinkName(e.target.value)
+            if (isValidMinecraftName || value === '') {
+              setTwinkName(value)
+            }
           }}
         />
         <DefaultButton
