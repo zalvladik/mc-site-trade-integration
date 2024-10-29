@@ -6,7 +6,7 @@ import { useUpgradeWorldExpansion } from 'src/hooks/useUpgradeWorldExpansion'
 import type { WorldEnum } from 'src/types'
 
 export const useWorldExpansionCategory = (worldType: WorldEnum) => {
-  const { user, updateUserMoney } = useUser()
+  const { user, decrementUserMoney } = useUser()
   const [currentWorldExpansionLvl, setCurrentWorldExpansionLvl] = useState<number>(1)
   const toast = useToast()
 
@@ -18,11 +18,7 @@ export const useWorldExpansionCategory = (worldType: WorldEnum) => {
   const {
     mutate: mutateUpgradeWorldExpansion,
     isLoading: isLoadingUpgradeWorldExpansion,
-  } = useUpgradeWorldExpansion(
-    worldType,
-    updateUserMoney,
-    user.money - Number(value),
-  )
+  } = useUpgradeWorldExpansion(worldType, decrementUserMoney, value)
 
   useEffect(() => {
     if (dataGetWorldExpansion.length) {

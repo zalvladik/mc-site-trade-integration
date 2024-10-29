@@ -7,7 +7,7 @@ import { Modals } from 'src/features/Modals/constants'
 
 export const useAuctionItemList = () => {
   const { onOpen } = useModals()
-  const { user, updateUserMoney } = useUser()
+  const { user, decrementUserMoney } = useUser()
   const {
     totalPages,
     currentPage,
@@ -21,7 +21,7 @@ export const useAuctionItemList = () => {
   const openModal = (lot: LotT) => {
     const afterSubmit = () => {
       if (user.username !== lot.username) {
-        updateUserMoney(user.money - lot.price)
+        decrementUserMoney(lot.price)
       }
 
       if (totalPages === currentPage && dataByeLots.length === 1) {

@@ -10,7 +10,7 @@ export const useProfileTwinks = () => {
 
   const { data, isLoading: isLoadingGetTwinks } = useGetTwinks()
   const { mutate, isLoading: isLoadingCreateTwink, isSuccess } = useCreateTwink()
-  const { user, updateUserMoney } = useUser()
+  const { user, decrementUserMoney } = useUser()
 
   const twinksCount = data.length
   const priceMap = [
@@ -35,7 +35,7 @@ export const useProfileTwinks = () => {
 
   useEffect(() => {
     if (isSuccess) {
-      updateUserMoney(user.money - priceMap[twinksCount])
+      decrementUserMoney(priceMap[twinksCount])
     }
   }, [isSuccess])
 

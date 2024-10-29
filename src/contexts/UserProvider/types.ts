@@ -14,6 +14,7 @@ export type UpdateUserT = Partial<UserT>
 
 export type UserContextDataT = {
   user: UserT
-  updateUserMoney: (value: number) => void
+  incrementUserMoney: (value: number | string) => void
+  decrementUserMoney: (value: number | string) => void
   updateUser: (value: UpdateUserT) => void
 }

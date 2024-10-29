@@ -31,21 +31,17 @@ const UserProvider = ({
     }
   }, [userData])
 
-  const updateUserMoney = (money: number): void => {
-    setUser(prevUser => ({ ...prevUser, money }))
-  }
-
-  const incrementUserMoney = (dataMoney: number): void => {
+  const incrementUserMoney = (dataMoney: number | string): void => {
     setUser(prevUser => ({
       ...prevUser,
-      money: Number(prevUser.money) + Number(dataMoney),
+      money: Number((Number(prevUser.money) + Number(dataMoney)).toFixed(1)),
     }))
   }
 
-  const decrementUserMoney = (dataMoney: number): void => {
+  const decrementUserMoney = (dataMoney: number | string): void => {
     setUser(prevUser => ({
       ...prevUser,
-      money: Number(prevUser.money) - Number(dataMoney),
+      money: Number((Number(prevUser.money) - Number(dataMoney)).toFixed(1)),
     }))
   }
 
@@ -76,7 +72,12 @@ const UserProvider = ({
   }
 
   const providerValue: UserContextDataT = useMemo(
-    () => ({ user, updateUserMoney, updateUser }),
+    () => ({
+      user,
+      updateUser,
+      incrementUserMoney,
+      decrementUserMoney,
+    }),
     [user],
   )
 

@@ -9,7 +9,7 @@ import { Modals } from 'src/features/Modals/constants'
 
 export const useAuctionEnchantFinder = () => {
   const { onOpen } = useModals()
-  const { user, updateUserMoney } = useUser()
+  const { user, decrementUserMoney } = useUser()
 
   const {
     newEnchantSearchParams,
@@ -99,7 +99,7 @@ export const useAuctionEnchantFinder = () => {
   const openModal = (lot: LotT) => {
     const afterSubmit = () => {
       if (user.username !== lot.username) {
-        updateUserMoney(user.money - lot.price)
+        decrementUserMoney(lot.price)
       }
 
       if (totalPages === currentPage && dataEnchantLots.length === 1) {

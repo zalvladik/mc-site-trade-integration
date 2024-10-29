@@ -9,7 +9,7 @@ import type { WlEndT } from 'src/services/api/WlEnd/types'
 export const useByeWlEnd = () => {
   const { onClose } = useModals()
 
-  const { updateUserMoney, user } = useUser()
+  const { decrementUserMoney } = useUser()
 
   const queryClient = useQueryClient()
 
@@ -18,7 +18,7 @@ export const useByeWlEnd = () => {
   const { mutate, isLoading } = useMutation({
     mutationFn: () => WlEnd.postWlEnd(),
     onSuccess: async (data: WlEndT) => {
-      updateUserMoney(user.money - WL_END_COST)
+      decrementUserMoney(WL_END_COST)
 
       toast.success({ message: ['Доступ успішно куплено!'] })
 

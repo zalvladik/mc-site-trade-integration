@@ -7,8 +7,8 @@ import type { WorldEnum } from 'src/types'
 
 export const useUpgradeWorldExpansion = (
   worldType: WorldEnum,
-  updateUserMoney: (value: number) => void,
-  newMoney: number,
+  decrementUserMoney: (value: number | string) => void,
+  value: string,
 ) => {
   const toast = useToast()
   const queryClient = useQueryClient()
@@ -19,7 +19,7 @@ export const useUpgradeWorldExpansion = (
     onSuccess: async () => {
       toast.success({ message: ['Успішне поповнення'] })
 
-      updateUserMoney(newMoney)
+      decrementUserMoney(value)
 
       queryClient.invalidateQueries([CacheKeys.WORLD_EXPANSION, worldType])
     },
