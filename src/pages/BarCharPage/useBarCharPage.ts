@@ -196,11 +196,11 @@ export const useBarCharPage = () => {
   }
 
   const sellerInfoSum = sellerInfo.reduce((num, item) => {
-    return num + item
+    return num + Number(item)
   }, 0)
 
   const buyerInfoSum = buyerInfo.reduce((num, item) => {
-    return num + item
+    return num + Number(item)
   }, 0)
 
   return {
