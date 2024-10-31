@@ -1,4 +1,14 @@
+import { IoDiamondOutline } from 'react-icons/io5'
 import styled from 'styled-components'
+
+export const StyledIoDiamondOutline = styled(IoDiamondOutline)`
+  stroke: #0ad7ec;
+
+  & > path {
+    stroke-width: 20;
+    fill: rgba(10, 215, 236, 0.3);
+  }
+`
 
 export const Container = styled.div`
   background-color: gray;

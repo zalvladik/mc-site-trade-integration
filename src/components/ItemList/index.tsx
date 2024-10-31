@@ -5,6 +5,7 @@ import {
   Container,
   EmptySlot,
   ItemMiddleware,
+  StyledIoDiamondOutline,
 } from 'src/components/ItemList/styles'
 import type { ItemListProps } from 'src/components/ItemList/types'
 import { UseItemList } from 'src/components/ItemList/useItemList'
@@ -47,33 +48,51 @@ const ItemList = ({
       >
         <AreaSelect ref={areaSelectRef} style={areaSelectStyle} />
         <ItemMiddleware ref={itemMiddlewareRef} />
-        {items.map(item => (
-          <ItemSlotIcon
-            key={item.id + item.categories[0]}
-            onClick={() => {
-              if (item.categories.find(item => item === CategoryEnum.SHULKERS)) {
-                openShulkerModal(item.id)
-              } else {
-                setSelectedItem(null)
-              }
+        {items.map(item => {
+          const isExistLot = item.lot ? !item.lot?.isSold : false
 
-              return selectToogle && selectToogle([item.id])
-            }}
-            style={{
-              ...(styleForItemBorder
-                ? styleForItemBorder(
-                    item.id,
-                    item.display_name,
-                    item.type,
-                    item.categories,
-                  )
-                : {}),
-              margin: 4,
-            }}
-            {...itemSlotIconProps}
-            {...item}
-          />
-        ))}
+          return (
+            <ItemSlotIcon
+              key={item.id + item.categories[0]}
+              onClick={() => {
+                if (item.categories.find(item => item === CategoryEnum.SHULKERS)) {
+                  openShulkerModal(item.id)
+                } else {
+                  setSelectedItem(null)
+                }
+
+                return selectToogle && selectToogle([item.id])
+              }}
+              style={{
+                ...(styleForItemBorder
+                  ? styleForItemBorder(
+                      item.id,
+                      item.display_name,
+                      item.type,
+                      item.categories,
+                    )
+                  : {}),
+                margin: 4,
+                opacity: isExistLot ? 0.8 : 1,
+              }}
+              {...itemSlotIconProps}
+              {...item}
+            >
+              {isExistLot && (
+                <div
+                  style={{
+                    position: 'absolute',
+                    left: '84%',
+                    top: '12%',
+                    translate: '-50% -50%',
+                  }}
+                >
+                  <StyledIoDiamondOutline size={36} />
+                </div>
+              )}
+            </ItemSlotIcon>
+          )
+        })}
 
         {Array.from({ length: 27 - items.length }).map((_, i) => (
           <EmptySlot key={i} />

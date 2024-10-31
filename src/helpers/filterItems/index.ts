@@ -18,9 +18,14 @@ export const filterItems = ({
     return type.includes(value) || item.display_name.toLowerCase().includes(value)
   })
 
-  if (!selectedCaterogies.length) return searchedItems
+  const itemsWithLot = searchedItems.filter(item => item.lot)
+  const itemsWithoutLot = searchedItems.filter(item => !item.lot)
 
-  const sorteredByCategory = searchedItems.filter(({ categories }) => {
+  const sorteredByExistLot = [...itemsWithoutLot, ...itemsWithLot]
+
+  if (!selectedCaterogies.length) return sorteredByExistLot
+
+  const sorteredByCategory = sorteredByExistLot.filter(({ categories }) => {
     return categories.find(category => !!selectedCaterogies.includes(category))
   })
 

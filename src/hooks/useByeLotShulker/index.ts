@@ -17,7 +17,7 @@ export const useByeLotShulker = (afterSubmit: (value: void) => void) => {
     onSuccess: (data: ItemT | ShulkerT) => {
       queryClient.setQueryData<ItemT[]>(CacheKeys.USER_SHULKERS, shulkers => [
         ...(shulkers ?? []),
-        data,
+        { ...data, lot: null },
       ])
 
       afterSubmit()

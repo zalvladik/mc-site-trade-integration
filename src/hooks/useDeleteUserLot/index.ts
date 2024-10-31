@@ -32,7 +32,15 @@ export const useDeleteUserLot = (afterSubmit: (value: void) => void) => {
                 queryClient.invalidateQueries(CacheKeys.USER_ITEMS)
               } else if (userItems && lot.item) {
                 queryClient.setQueryData<ItemT[]>(CacheKeys.USER_ITEMS, items => {
-                  return [...(items ?? []), lot!.item!]
+                  return (
+                    items?.map(item => {
+                      if (item.lot?.id === lot.id) {
+                        return { ...item, lot: null }
+                      }
+
+                      return item
+                    }) ?? []
+                  )
                 })
               }
 
@@ -42,7 +50,15 @@ export const useDeleteUserLot = (afterSubmit: (value: void) => void) => {
                 queryClient.setQueryData<ShulkerT[]>(
                   CacheKeys.USER_SHULKERS,
                   shulkers => {
-                    return [...(shulkers ?? []), lot!.shulker!]
+                    return (
+                      shulkers?.map(shulker => {
+                        if (shulker.lot?.id === lot.id) {
+                          return { ...shulker, lot: null }
+                        }
+
+                        return shulker
+                      }) ?? []
+                    )
                   },
                 )
               }

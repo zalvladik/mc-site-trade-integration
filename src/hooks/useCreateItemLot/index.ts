@@ -18,7 +18,13 @@ export const useCreateItemLot = (afterSuccess: (value: void) => void) => {
       ])
 
       queryClient.setQueryData<ItemT[]>(CacheKeys.USER_ITEMS, items =>
-        items!.filter(item => data.item!.id !== item.id),
+        items!.map(item => {
+          if (data.item!.id === item.id) {
+            return { ...item, lot: data }
+          }
+
+          return item
+        }),
       )
 
       afterSuccess()

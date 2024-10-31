@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import type { ItemT } from 'src/services/api/Items/types'
+import type { LotT } from 'src/services/api/Lot/types'
 
 export type ItemSlotIconProps = {
   onClick?: (value: void) => void
@@ -18,6 +19,7 @@ export type ItemSlotIconProps = {
   enchants?: string[] | null
   durability?: string | null
   children?: ReactNode
+  lot?: LotT | null
 }
 
 export type UseItemSlotIconProps = {

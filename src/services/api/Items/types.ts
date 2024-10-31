@@ -1,3 +1,5 @@
+import type { LotT } from '../Lot/types'
+
 export type ItemT = {
   id: number
   amount: number
@@ -7,6 +9,7 @@ export type ItemT = {
   enchants: string[] | null
   durability: string | null
   categories: string[]
+  lot: LotT | null
 }
 
 export type ItemTicketT = {

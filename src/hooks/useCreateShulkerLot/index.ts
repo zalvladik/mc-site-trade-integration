@@ -17,12 +17,14 @@ export const useCreateShulkerLot = (afterSuccess: (value: void) => void) => {
         data,
       ])
 
-      queryClient.setQueryData<ItemT[]>(
-        CacheKeys.USER_SHULKERS,
-        items =>
-          items?.filter(item => {
-            return data?.shulker?.id !== item.id
-          }) ?? [],
+      queryClient.setQueryData<ItemT[]>(CacheKeys.USER_SHULKERS, shulkers =>
+        shulkers!.map(shulker => {
+          if (data?.shulker?.id === shulker.id) {
+            return { ...shulker, lot: data }
+          }
+
+          return shulker
+        }),
       )
 
       afterSuccess()

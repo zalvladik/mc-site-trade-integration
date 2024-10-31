@@ -14,8 +14,10 @@ export const useDeleteItemTicket = (itemTicketId: number) => {
   const { data, mutate, isLoading } = useMutation({
     mutationFn: () => ItemTicket.deleteItemTicket(itemTicketId),
     onSuccess: () => {
-      const deletedItemTicket: ItemT[] =
-        queryClient.getQueryData([CacheKeys.ITEM_TICKET, itemTicketId]) ?? []
+      const deletedItemTicket: ItemT[] = queryClient.getQueryData([
+        CacheKeys.ITEM_TICKET,
+        itemTicketId,
+      ])!
 
       queryClient.removeQueries([CacheKeys.ITEM_TICKET, itemTicketId])
 

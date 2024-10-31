@@ -16,6 +16,8 @@ export const useDeletePp = () => {
         effects => effects?.filter(item => item.uuid !== data.uuid) ?? [],
       )
 
+      queryClient.invalidateQueries(CacheKeys.PP)
+
       toast.success({ message: ['Ефект видалено'] })
     },
     onError: (error: Error) => {

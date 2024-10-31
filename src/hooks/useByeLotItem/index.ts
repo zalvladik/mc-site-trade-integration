@@ -16,7 +16,7 @@ export const useByeLotItem = (afterSubmit: (value: void) => void) => {
     onSuccess: (data: ItemT) => {
       queryClient.setQueryData<ItemT[]>(CacheKeys.USER_ITEMS, items => [
         ...(items ?? []),
-        data,
+        { ...data, lot: null },
       ])
 
       afterSubmit()

@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from 'react-query'
 import { CacheKeys } from 'src/constants'
 import { useToast } from 'src/contexts/ToastProvider/useToast'
-import type { ItemTicketT } from 'src/services/api/Items/types'
+import type { ItemT, ItemTicketT } from 'src/services/api/Items/types'
 import ItemTicket from 'src/services/api/ItemTicket'
 import type { ErrorResponse } from 'src/types'
 
@@ -17,8 +17,8 @@ export const useCreateItemTicket = (payload: number[]) => {
         tickets => [...(tickets ?? []), data],
       )
 
-      queryClient.setQueryData<ItemTicketT[]>(CacheKeys.USER_ITEMS, tickets => [
-        ...(tickets?.filter(item => !payload.includes(item.id)) ?? []),
+      queryClient.setQueryData<ItemT[]>(CacheKeys.USER_ITEMS, items => [
+        ...(items?.filter(item => !payload.includes(item.id)) ?? []),
       ])
 
       toast.success({ message: ['Квиток створено'] })

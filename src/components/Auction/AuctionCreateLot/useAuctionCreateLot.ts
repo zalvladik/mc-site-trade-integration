@@ -38,7 +38,10 @@ export const useAuctionCreateLot = () => {
   }
 
   const items = filterItems({
-    items: [...data, ...dataUserShulkers],
+    items: [
+      ...data.filter(item => !item.lot),
+      ...dataUserShulkers.filter(shulker => !shulker.lot),
+    ],
     searchValue,
     selectedCaterogies,
   })

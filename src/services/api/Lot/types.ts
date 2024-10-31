@@ -16,6 +16,7 @@ export type LotT = {
   username: string
   item: ItemT | null
   shulker: ShulkerT | null
+  isSold: boolean | null
 }
 
 export type GetLotsResponse = {

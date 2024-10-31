@@ -1,4 +1,5 @@
 import type { ItemT } from '../Items/types'
+import type { LotT } from '../Lot/types'
 
 export type ShulkerT = {
   id: number
@@ -10,4 +11,5 @@ export type ShulkerT = {
   description: string[] | null
   enchants: string[] | null
   durability: string | null
+  lot: LotT | null
 }

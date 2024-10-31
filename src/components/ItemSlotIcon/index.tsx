@@ -20,6 +20,7 @@ const ItemSlotIcon = ({
   description,
   display_name,
   style,
+  lot,
   containerSize,
   didShowDescription = true,
   itemSize,
@@ -40,6 +41,7 @@ const ItemSlotIcon = ({
     <ItemSlotIconContainer
       ref={itemSlotIconRef}
       id={String(id)}
+      data-lot={lot ? !lot.isSold : false}
       style={{
         ...style,
         width: containerSize,

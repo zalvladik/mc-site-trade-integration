@@ -1,6 +1,10 @@
 import InformationButton from 'src/components/InformationButton'
 import Skeleton from 'src/components/Skeleton'
-import { Container, ShulkerIdWrapper } from 'src/components/UserShulkers/styles'
+import {
+  Container,
+  ShulkerIdWrapper,
+  StyledIoDiamondOutline,
+} from 'src/components/UserShulkers/styles'
 import { useShulkers } from 'src/components/UserShulkers/useShulkers'
 
 const UserShulker = (): JSX.Element => {
@@ -17,7 +21,9 @@ const UserShulker = (): JSX.Element => {
         isLoading={isLoading}
         emptyText="Шалкери відсутні"
       >
-        {data.map(({ id, type, display_name }, index) => {
+        {data.map(({ id, type, display_name, lot }, index) => {
+          const isExistLot = lot ? !lot?.isSold : false
+
           return (
             <button
               ref={el => {
@@ -36,6 +42,19 @@ const UserShulker = (): JSX.Element => {
               <ShulkerIdWrapper>
                 <div style={{ fontSize }}>{id}</div>
               </ShulkerIdWrapper>
+
+              {isExistLot && (
+                <div
+                  style={{
+                    position: 'absolute',
+                    left: '84%',
+                    top: '16%',
+                    translate: '-50% -50%',
+                  }}
+                >
+                  <StyledIoDiamondOutline size={size * 0.5} />
+                </div>
+              )}
             </button>
           )
         })}
