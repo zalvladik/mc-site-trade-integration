@@ -74,7 +74,7 @@ export const millisecondsToTime = (
 export const moneyCalculator = (count: number): string => {
   const splitedCount = `${count}`.split('.')
 
-  const remainder: number = parseFloat((count % 64).toFixed(1))
+  const remainder: number = Math.floor(count % 64)
 
   if (splitedCount[0] === '0' && splitedCount[1] === '0') return '0'
 
@@ -84,7 +84,7 @@ export const moneyCalculator = (count: number): string => {
     return splitedCount[1] === '0' ? `${splitedCount[0]}` : `${count}`
   }
 
-  return `${Math.floor((count - remainder) / 64)} ст. ${remainder === 0 ? '' : ` + ${remainder}`}`
+  return `${Math.floor(count / 64)} ст. ${remainder === 0 ? '' : `+ ${remainder}`}`
 }
 
 export const generatePageNumbers = (

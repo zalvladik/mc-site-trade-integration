@@ -57,7 +57,8 @@ const ProfileTwinks = (): JSX.Element => {
           value={twinkName}
           onChange={e => {
             const { value } = e.target
-            const isValidMinecraftName = /^[a-zA-Z0-9_]{3,16}$/.test(value)
+
+            const isValidMinecraftName = /^[a-zA-Z0-9_]{0,16}$/.test(value)
 
             if (isValidMinecraftName || value === '') {
               setTwinkName(value)

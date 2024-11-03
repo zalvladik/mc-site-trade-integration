@@ -40,6 +40,8 @@ export const useProfileTwinks = () => {
   }, [isSuccess])
 
   const createTwink = () => {
+    if (twinkName.length > 16 || twinkName.length < 4) return
+
     mutate(twinkName)
   }
 
