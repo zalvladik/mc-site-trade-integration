@@ -72,14 +72,15 @@ export const millisecondsToTime = (
 }
 
 export const moneyCalculator = (count: number): string => {
-  const fullStacks = Math.floor(count / 64) // Полные стаки
-  const remainder = (count % 64).toFixed(1) // Остаток с десятичной частью
+  const countNumber = Number(count)
+  const fullStacks = Math.floor(countNumber / 64)
+  const remainder = Number((countNumber % 64).toFixed(1))
 
-  if (count < 64) {
-    return remainder === '0.0' ? `${Math.floor(count)}` : `${count}`
+  if (countNumber < 64) {
+    return remainder === 0 ? `0` : `${countNumber}`
   }
 
-  return `${fullStacks} ст. ${remainder === '0.0' ? '' : `+ ${remainder}`}`
+  return `${fullStacks} ст. ${remainder === 0 ? '' : `+ ${remainder}`}`
 }
 
 export const generatePageNumbers = (
