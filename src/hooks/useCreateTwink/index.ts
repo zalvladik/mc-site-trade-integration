@@ -4,7 +4,7 @@ import { useToast } from 'src/contexts/ToastProvider/useToast'
 import Twink from 'src/services/api/Twink'
 import type { TwinkResponse } from 'src/services/api/Twink/types'
 
-export const useCreateTwink = () => {
+export const useCreateTwink = (funcAfter: () => void) => {
   const toast = useToast()
   const queryClient = useQueryClient()
 
@@ -16,6 +16,8 @@ export const useCreateTwink = () => {
         data,
       ])
       toast.success({ message: ['Твін успішно куплено !'] })
+
+      funcAfter()
     },
     onError: (error: Error) => {
       toast.error({ message: [error.message] })

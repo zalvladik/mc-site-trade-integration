@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { TWINKS_PRICE } from 'src/constants'
 import { useToast } from 'src/contexts/ToastProvider/useToast'
 import { useUser } from 'src/contexts/UserProvider/useUser'
@@ -8,9 +8,9 @@ import { useGetTwinks } from 'src/hooks/useGetTwinks'
 export const useProfileTwinks = () => {
   const [twinkName, setTwinkName] = useState('')
 
-  const { data, isLoading: isLoadingGetTwinks } = useGetTwinks()
-  const { mutate, isLoading: isLoadingCreateTwink, isSuccess } = useCreateTwink()
   const { user, decrementUserMoney } = useUser()
+
+  const { data, isLoading: isLoadingGetTwinks } = useGetTwinks()
 
   const twinksCount = data.length
   const priceMap = [
@@ -18,6 +18,10 @@ export const useProfileTwinks = () => {
     TWINKS_PRICE.SECOND_TWINK,
     TWINKS_PRICE.THIRD_TWINK,
   ]
+
+  const { mutate, isLoading: isLoadingCreateTwink } = useCreateTwink(() => {
+    decrementUserMoney(priceMap[twinksCount])
+  })
 
   const toast = useToast()
 
@@ -33,12 +37,6 @@ export const useProfileTwinks = () => {
     })
   }
 
-  useEffect(() => {
-    if (isSuccess) {
-      decrementUserMoney(priceMap[twinksCount])
-    }
-  }, [isSuccess])
-
   const createTwink = () => {
     if (twinkName.length > 16 || twinkName.length < 4) return
 
@@ -52,6 +50,7 @@ export const useProfileTwinks = () => {
   return {
     data: data ?? [],
     isLoading: isLoadingGetTwinks || isLoadingCreateTwink,
+    isLoadingGetTwinks,
     showInfo,
     user,
     canBuyTwink,

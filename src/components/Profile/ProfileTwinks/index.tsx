@@ -15,6 +15,7 @@ import { useProfileTwinks } from 'src/components/Profile/ProfileTwinks/useProfil
 const ProfileTwinks = (): JSX.Element => {
   const {
     data,
+    isLoadingGetTwinks,
     isLoading,
     showInfo,
     canBuyTwink,
@@ -34,14 +35,14 @@ const ProfileTwinks = (): JSX.Element => {
   return (
     <Container className="heartbeat-outline">
       <StyledSkeleton
-        isLoading={isLoading}
+        isLoading={isLoadingGetTwinks}
         isDataExist={data.length}
         skeletonLength={3}
         emptyText="Твінки відсутні"
         size={30}
       >
         <TwinkUserNameList>
-          {!isLoading && data.length
+          {!isLoadingGetTwinks && data.length
             ? data.map(item => <div key={item.id}>{item.username}</div>)
             : null}
           <div>{twinkCountText}</div>
