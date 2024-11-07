@@ -1,4 +1,5 @@
 import { CategoryEnum } from 'src/constants'
+import { useItemSelector } from 'src/hooks/useItemSelector'
 
 import {
   AreaSelect,
@@ -8,7 +9,6 @@ import {
   StyledIoDiamondOutline,
 } from 'src/components/ItemList/styles'
 import type { ItemListProps } from 'src/components/ItemList/types'
-import { UseItemList } from 'src/components/ItemList/useItemList'
 import ItemSlotIcon from 'src/components/ItemSlotIcon'
 import Skeleton from 'src/components/Skeleton'
 
@@ -31,7 +31,7 @@ const ItemList = ({
     areaSelectStyle,
     openShulkerModal,
     setSelectedItem,
-  } = UseItemList({ selectToogle, selectAreaColor, isNeedAreaSelect })
+  } = useItemSelector({ selectToogle, selectAreaColor, isNeedAreaSelect })
 
   return (
     <Container

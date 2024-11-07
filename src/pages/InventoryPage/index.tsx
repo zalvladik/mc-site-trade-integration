@@ -4,6 +4,7 @@ import { InventoryPartsEnum } from 'src/types'
 
 import NavBarTop from 'src/components/NavBarTop'
 import Skeleton from 'src/components/Skeleton'
+import UserCrystals from 'src/components/UserCrystals'
 import UserInventory from 'src/components/UserInventory'
 import UserItemTickets from 'src/components/UserItemTickets'
 import UserShulker from 'src/components/UserShulkers'
@@ -33,6 +34,7 @@ const InventoryPage = (): JSX.Element => {
           {navType === InventoryPartsEnum.ITEMS && <UserInventory />}
           {navType === InventoryPartsEnum.SHULKERS && <UserShulker />}
           {navType === InventoryPartsEnum.TICKETS && <UserItemTickets />}
+          {navType === InventoryPartsEnum.CRYSTALS && <UserCrystals />}
         </Skeleton>
       </Container>
     </>

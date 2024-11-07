@@ -81,6 +81,7 @@ export enum CacheKeys {
   USER_PLAY_TIME = 'user_play_time',
   USER_SHULKERS = 'user_shulkers',
   USER_SHULKER_ITEMS = 'user_shulker_items',
+  USER_CRYSTALS = 'user_crystals',
   WL_END = 'wl_end',
   SELLER_TRADE_HISTORY = 'seller_trade_history',
   BUYER_TRADE_HISTORY = 'buyer_trade_history',
@@ -97,6 +98,18 @@ export enum AuctionFragment {
   TRADE_HISTORY = 'trade_history',
 }
 
+export enum CrystalTypeEnum {
+  AMETIST = 'ametist',
+  EMERALD = 'emerald',
+  GODDES = 'goddes',
+}
+
+export enum CrystalItemTypeEnum {
+  TOOLS_AND_MELEE = 'toolsAndMelee',
+  BOWS = 'bows',
+  CROSSBOW = 'crossbow',
+}
+
 export enum FetchEndpoint {
   USER = 'user',
   USER_ITEMS = 'user/items',
@@ -104,17 +117,18 @@ export enum FetchEndpoint {
   USER_VIP = 'user/vip',
   USER_ADVANCEMENTS = 'user/stats/advancements',
   USER_PLAY_TIME = 'user/stats/playtime',
-  USER_ITEM_TICKETS = 'item_ticket/user_tickets',
+  USER_ITEM_TICKETS = 'user/tickets',
+  USER_SHULKERS = 'user/shulkers',
+  USER_CTYSTALS = 'user/crystals',
   LOT_SHULKER = 'lot/shulker',
   LOT = 'lot',
   LOT_ENCHANT_ITEMS = 'lot/enchant_items',
   LOT_ITEM = 'lot/item',
   LOT_USER = 'lot/user',
-  ITEM_TICKET = 'item_ticket',
+  ITEM_TICKET = 'user/tickets',
   SIGN_IN = 'auth/sign_in',
   LOG_OUT = 'auth/log_out',
   REFRESH_TOKEN = 'auth/refresh_token',
-  USER_SHULKERS = 'user/shulkers',
   WHITELIST = 'whitelist',
   PP = 'pp',
   WL_END = 'wl_end',

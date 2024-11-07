@@ -8,7 +8,7 @@ export const useCreateTwink = (funcAfter: () => void) => {
   const toast = useToast()
   const queryClient = useQueryClient()
 
-  const { mutate, isLoading, isSuccess } = useMutation({
+  const { mutate, isLoading } = useMutation({
     mutationFn: Twink.createTwink,
     onSuccess: (data: TwinkResponse) => {
       queryClient.setQueryData<TwinkResponse[]>(CacheKeys.TWINKS, twinks => [
@@ -24,5 +24,5 @@ export const useCreateTwink = (funcAfter: () => void) => {
     },
   })
 
-  return { mutate, isLoading, isSuccess }
+  return { mutate, isLoading }
 }

@@ -6,7 +6,7 @@ import type { CoordsProps, UseItemListProps } from 'src/components/ItemList/type
 
 import { Modals } from 'src/features/Modals/constants'
 
-export const UseItemList = ({
+export const useItemSelector = ({
   selectToogle,
   selectAreaColor,
   isNeedAreaSelect,

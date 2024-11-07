@@ -12,7 +12,7 @@ import DefaultButton from 'src/components/DefaultButton'
 import InformationButton from 'src/components/InformationButton'
 import {
   Container,
-  DisabledVipType,
+  // DisabledVipType,
   VipDateInfo,
   VipDateInfoContainer,
   VipImage,
@@ -50,7 +50,7 @@ const ProfileVip = (): JSX.Element => {
                 opacity: isSelected ? 1 : 0.4,
               }}
             >
-              <DisabledVipType />
+              {/* <DisabledVipType /> */}
             </div>
           )
         })}

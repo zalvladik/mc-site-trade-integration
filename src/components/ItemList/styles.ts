@@ -62,10 +62,6 @@ export const ItemMiddleware = styled.div`
 `
 
 export const EmptySlot = styled.div`
-  background-color: inherit;
-  background-size: contain;
-  background-repeat: no-repeat;
-
   border: none;
 
   margin: 4px;
@@ -81,6 +77,10 @@ export const EmptySlot = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url('/assets/items_for_ui/slot.png');
+
+  background-color: inherit;
+  background-size: contain;
+  background-repeat: no-repeat;
 
   opacity: 0.4;
 `

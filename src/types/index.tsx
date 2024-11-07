@@ -158,6 +158,7 @@ export enum InventoryPartsEnum {
   ITEMS = 'items',
   SHULKERS = 'shulkers',
   TICKETS = 'tickets',
+  CRYSTALS = 'crystals',
 }
 
 export enum ProfilePartsEnum {

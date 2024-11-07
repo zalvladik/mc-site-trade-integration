@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { BsBox } from 'react-icons/bs'
 import { IoTicketOutline } from 'react-icons/io5'
 import { PiTreasureChest } from 'react-icons/pi'
+import CrystalFragment from 'src/assets/SVG/CrystalFragment'
 import { useGetItemsFromUser } from 'src/hooks/useGetItemsFromUser'
 import { useGetUserItemTickets } from 'src/hooks/useGetUserItemTickets'
 import { useGetUserShulkers } from 'src/hooks/useGetUserShulkers'
@@ -32,12 +33,18 @@ export const useInventoryPage = (): any => {
       navType: InventoryPartsEnum.TICKETS,
       alertCount: dataTickets.length,
     },
+    {
+      iconComponent: <CrystalFragment />,
+      navType: InventoryPartsEnum.CRYSTALS,
+      alertCount: dataTickets.length,
+    },
   ]
 
   const navTypes = [
     InventoryPartsEnum.ITEMS,
     InventoryPartsEnum.SHULKERS,
     InventoryPartsEnum.TICKETS,
+    InventoryPartsEnum.CRYSTALS,
   ]
 
   const showInfoText = [
